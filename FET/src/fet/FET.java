@@ -21,29 +21,16 @@ public class FET {
      */
     public static void main(String[] args) {
         Splash s=new Splash();
-       // s.setVisible(true);
-        s.setSize(1450, 1000);
-         Login l=new Login();
-//         l.setVisible(true);
-//         l.setSize(1450, 1000);
-//         l.setExtendedState(JFrame.MAXIMIZED_BOTH);
-   //    jPanel1.setSize(width, height);
-        
-       
-       // jPanel1.setSize(width, height);
+        s.setVisible(true);
+        Login l=new Login();
         try {
             for (int i = 0; i < 100; i++) {
-            Thread.sleep(40);    
-               
-                
-            }
-             s.setVisible(true);
-//             l.setSize(width, height);
-           
-             l.setExtendedState(JFrame.MAXIMIZED_BOTH);
+            Thread.sleep(5);                     
+            }                      
+       //      l.setExtendedState(JFrame.MAXIMIZED_BOTH);
+             s.setVisible(false);
              l.setVisible(true);
-             l.setUndecorated(true);
-            
+             l.setUndecorated(true);           
         } catch (Exception e) {
         }
         
