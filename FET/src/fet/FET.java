@@ -23,11 +23,11 @@ public class FET {
         Splash s=new Splash();
         s.setVisible(true);
         Login l=new Login();
+      
         try {
             for (int i = 0; i < 100; i++) {
             Thread.sleep(5);                     
             }                      
-       //      l.setExtendedState(JFrame.MAXIMIZED_BOTH);
              s.setVisible(false);
              l.setVisible(true);
              l.setUndecorated(true);           

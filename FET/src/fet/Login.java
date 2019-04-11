@@ -34,6 +34,7 @@ public class Login extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -41,7 +42,6 @@ public class Login extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jPasswordField1 = new javax.swing.JPasswordField();
         jTextField1 = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -50,7 +50,7 @@ public class Login extends javax.swing.JFrame {
         jPanel2.setLayout(null);
 
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/college-graduation (1).png"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/college-graduation (1).png"))); // NOI18N
         jPanel2.add(jLabel3);
         jLabel3.setBounds(30, 70, 100, 70);
 
@@ -81,8 +81,18 @@ public class Login extends javax.swing.JFrame {
         jButton3.setText("Register");
         jButton3.setBorder(null);
         jButton3.setFocusable(false);
+        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jButton3MousePressed(evt);
+            }
+        });
         getContentPane().add(jButton3);
         jButton3.setBounds(1193, 60, 130, 40);
+
+        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/library-1554912167681-8420.jpg"))); // NOI18N
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(0, 0, 1366, 230);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(null);
@@ -90,10 +100,9 @@ public class Login extends javax.swing.JFrame {
         jLabel6.setBackground(new java.awt.Color(255, 255, 255));
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/show-password.png"))); // NOI18N
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/show-password.png"))); // NOI18N
         jLabel6.setLabelFor(jPasswordField1);
         jLabel6.setNextFocusableComponent(jLabel6);
-        jLabel6.setOpaque(true);
         jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jLabel6MouseEntered(evt);
@@ -103,34 +112,41 @@ public class Login extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jLabel6);
-        jLabel6.setBounds(880, 220, 40, 40);
+        jLabel6.setBounds(920, 220, 40, 40);
         jLabel6.getAccessibleContext().setAccessibleParent(jLabel6);
 
         jLabel4.setBackground(new java.awt.Color(255, 255, 255));
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel4.setText("Username");
+        jLabel4.setText("Username or Email");
         jPanel1.add(jLabel4);
-        jLabel4.setBounds(500, 150, 70, 30);
+        jLabel4.setBounds(460, 150, 130, 30);
 
         jLabel5.setBackground(new java.awt.Color(255, 255, 255));
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel5.setText("Password");
         jPanel1.add(jLabel5);
-        jLabel5.setBounds(500, 220, 80, 40);
+        jLabel5.setBounds(460, 220, 120, 40);
 
         jButton1.setBackground(new java.awt.Color(115, 217, 242));
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton1.setText("Log In");
-        jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton1.setBorder(null);
         jButton1.setFocusable(false);
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jButton1MousePressed(evt);
+            }
+        });
         jPanel1.add(jButton1);
-        jButton1.setBounds(610, 310, 310, 50);
+        jButton1.setBounds(610, 330, 310, 50);
 
+        jPasswordField1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jPasswordField1.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         jPasswordField1.setSelectionColor(new java.awt.Color(153, 153, 153));
         jPanel1.add(jPasswordField1);
         jPasswordField1.setBounds(611, 220, 310, 40);
 
+        jTextField1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jTextField1.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         jTextField1.setSelectionColor(new java.awt.Color(153, 153, 153));
         jPanel1.add(jTextField1);
@@ -139,23 +155,33 @@ public class Login extends javax.swing.JFrame {
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, 230, 1370, 540);
 
-        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/library-1554912167681-8420.jpg"))); // NOI18N
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 1366, 230);
-
         setSize(new java.awt.Dimension(1382, 807));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jLabel6MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseEntered
-      //  jLabel6.setBackground(java.awt.Color.HSBtoRGB(115, 217, 242));
+
+        jLabel6.setOpaque(true);
         jLabel6.setBackground(java.awt.Color.GRAY);
+        jPasswordField1.setEchoChar((char)0);
     }//GEN-LAST:event_jLabel6MouseEntered
 
     private void jLabel6MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseExited
+        jLabel6.setOpaque(false);
         jLabel6.setBackground(java.awt.Color.WHITE);
+         jPasswordField1.setEchoChar('*');
     }//GEN-LAST:event_jLabel6MouseExited
+
+    private void jButton3MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MousePressed
+        Register r =new Register();
+        r.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton3MousePressed
+
+    private void jButton1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MousePressed
+        jTextField1.setText("");      
+        jPasswordField1.setText("");
+    }//GEN-LAST:event_jButton1MousePressed
 
     /**
      * @param args the command line arguments
