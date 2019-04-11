@@ -18,6 +18,7 @@ public class Login extends javax.swing.JFrame {
      */
     public Login() {
         initComponents();
+       
     }
 
     /**
@@ -56,7 +57,6 @@ public class Login extends javax.swing.JFrame {
 
         jLabel2.setBackground(new java.awt.Color(115, 217, 242));
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(102, 102, 102));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Log In");
         jLabel2.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
@@ -70,7 +70,7 @@ public class Login extends javax.swing.JFrame {
 
         jButton2.setBackground(new java.awt.Color(115, 217, 242));
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton2.setText("Log In");
+        jButton2.setText("Log in");
         jButton2.setBorder(null);
         jButton2.setFocusable(false);
         getContentPane().add(jButton2);
@@ -112,45 +112,48 @@ public class Login extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jLabel6);
-        jLabel6.setBounds(920, 220, 40, 40);
+        jLabel6.setBounds(860, 240, 40, 40);
         jLabel6.getAccessibleContext().setAccessibleParent(jLabel6);
 
         jLabel4.setBackground(new java.awt.Color(255, 255, 255));
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel4.setText("Username or Email");
         jPanel1.add(jLabel4);
-        jLabel4.setBounds(460, 150, 130, 30);
+        jLabel4.setBounds(550, 110, 130, 40);
 
         jLabel5.setBackground(new java.awt.Color(255, 255, 255));
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel5.setText("Password");
         jPanel1.add(jLabel5);
-        jLabel5.setBounds(460, 220, 120, 40);
+        jLabel5.setBounds(550, 210, 120, 30);
 
         jButton1.setBackground(new java.awt.Color(115, 217, 242));
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton1.setText("Log In");
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/log-in (3).png"))); // NOI18N
+        jButton1.setText("Log in");
+        jButton1.setToolTipText("");
         jButton1.setBorder(null);
         jButton1.setFocusable(false);
+        jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 jButton1MousePressed(evt);
             }
         });
         jPanel1.add(jButton1);
-        jButton1.setBounds(610, 330, 310, 50);
+        jButton1.setBounds(550, 320, 310, 50);
 
         jPasswordField1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jPasswordField1.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         jPasswordField1.setSelectionColor(new java.awt.Color(153, 153, 153));
         jPanel1.add(jPasswordField1);
-        jPasswordField1.setBounds(611, 220, 310, 40);
+        jPasswordField1.setBounds(550, 240, 310, 40);
 
         jTextField1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jTextField1.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         jTextField1.setSelectionColor(new java.awt.Color(153, 153, 153));
         jPanel1.add(jTextField1);
-        jTextField1.setBounds(610, 150, 310, 40);
+        jTextField1.setBounds(550, 150, 310, 40);
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, 230, 1370, 540);
@@ -181,6 +184,9 @@ public class Login extends javax.swing.JFrame {
     private void jButton1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MousePressed
         jTextField1.setText("");      
         jPasswordField1.setText("");
+        Admin admin =new Admin();
+        admin.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jButton1MousePressed
 
     /**

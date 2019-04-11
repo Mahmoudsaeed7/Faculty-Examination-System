@@ -14,15 +14,16 @@ import fet.Splash;
  *
  * @author Pharaoh
  */
+ 
 public class FET {
-
+ 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         Splash s=new Splash();
         s.setVisible(true);
-        Login l=new Login();
+       Login l=new Login();
       
         try {
             for (int i = 0; i < 100; i++) {

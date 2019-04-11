@@ -185,6 +185,8 @@ public class Register extends javax.swing.JFrame {
         jTextField1.setText("");
         jTextField2.setText("");
         jPasswordField1.setText("");
+        Login login=new Login ();
+        login.setVisible(true);
     }//GEN-LAST:event_jButton3MousePressed
 
     /**
