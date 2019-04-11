@@ -104,7 +104,7 @@ public class Register extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jLabel7);
-        jLabel7.setBounds(850, 290, 40, 40);
+        jLabel7.setBounds(850, 300, 40, 40);
 
         jButton3.setBackground(new java.awt.Color(0, 204, 0));
         jButton3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
