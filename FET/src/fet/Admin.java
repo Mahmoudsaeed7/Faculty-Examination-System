@@ -28,18 +28,29 @@ public class Admin extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
-        jPanel1.setBackground(new java.awt.Color(115, 217, 242));
+        jPanel1.setBackground(new java.awt.Color(39, 42, 54));
         jPanel1.setLayout(null);
+
+        jLabel4.setBackground(new java.awt.Color(39, 42, 54));
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/menu.png"))); // NOI18N
+        jLabel4.setEnabled(false);
+        jLabel4.setFocusable(false);
+        jLabel4.setOpaque(true);
+        jPanel1.add(jLabel4);
+        jLabel4.setBounds(0, 0, 40, 40);
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
@@ -49,35 +60,75 @@ public class Admin extends javax.swing.JFrame {
         jPanel1.add(jLabel1);
         jLabel1.setBounds(0, 0, 90, 40);
 
-        jLabel4.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/icons8-menu-32.png"))); // NOI18N
-        jPanel1.add(jLabel4);
-        jLabel4.setBounds(150, 0, 40, 40);
-
+        jLabel5.setBackground(new java.awt.Color(39, 42, 54));
         jLabel5.setText("jLabel5");
+        jLabel5.setFocusable(false);
+        jLabel5.setOpaque(true);
+        jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabel5MouseEntered(evt);
+            }
+        });
         jPanel1.add(jLabel5);
         jLabel5.setBounds(0, 120, 190, 60);
 
+        jLabel6.setBackground(new java.awt.Color(39, 42, 54));
         jLabel6.setText("jLabel6");
+        jLabel6.setFocusable(false);
+        jLabel6.setOpaque(true);
         jPanel1.add(jLabel6);
-        jLabel6.setBounds(50, 210, 34, 14);
+        jLabel6.setBounds(0, 180, 190, 60);
 
+        jLabel7.setBackground(new java.awt.Color(39, 42, 54));
         jLabel7.setText("jLabel7");
+        jLabel7.setFocusable(false);
+        jLabel7.setOpaque(true);
         jPanel1.add(jLabel7);
-        jLabel7.setBounds(60, 270, 34, 14);
+        jLabel7.setBounds(0, 240, 190, 60);
 
+        jLabel8.setBackground(new java.awt.Color(39, 42, 54));
         jLabel8.setText("jLabel8");
+        jLabel8.setFocusable(false);
+        jLabel8.setOpaque(true);
         jPanel1.add(jLabel8);
-        jLabel8.setBounds(50, 310, 34, 14);
+        jLabel8.setBounds(0, 300, 190, 60);
+
+        jLabel9.setBackground(new java.awt.Color(39, 42, 54));
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/menu.png"))); // NOI18N
+        jLabel9.setFocusable(false);
+        jLabel9.setOpaque(true);
+        jLabel9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabel9MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabel9MouseExited(evt);
+            }
+        });
+        jPanel1.add(jLabel9);
+        jLabel9.setBounds(150, 0, 40, 40);
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 0, 190, 760);
+        jPanel1.setBounds(0, 0, 190, 770);
 
         setSize(new java.awt.Dimension(1382, 807));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+Color R;
+    private void jLabel9MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseEntered
+        R=jLabel9. getBackground();
+        jLabel9.setBackground(Color.DARK_GRAY);
+    }//GEN-LAST:event_jLabel9MouseEntered
+
+    private void jLabel9MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseExited
+       jLabel9.setBackground(R);
+    }//GEN-LAST:event_jLabel9MouseExited
+
+    private void jLabel5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseEntered
+         jLabel5.setBackground(Color.DARK_GRAY);
+    }//GEN-LAST:event_jLabel5MouseEntered
 
     /**
      * @param args the command line arguments
@@ -121,6 +172,7 @@ public class Admin extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
