@@ -16,6 +16,8 @@ public class Admin extends javax.swing.JFrame {
   
     public Admin() {
         initComponents();
+        jLabel4.setVisible(false);
+        jLabel2.setVisible(false);
     }
 
     /**
@@ -28,13 +30,14 @@ public class Admin extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -42,13 +45,24 @@ public class Admin extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(39, 42, 54));
         jPanel1.setLayout(null);
 
+        jLabel2.setBackground(new java.awt.Color(39, 42, 54));
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("Admin");
+        jPanel1.add(jLabel2);
+        jLabel2.setBounds(50, 0, 80, 40);
+
         jLabel4.setBackground(new java.awt.Color(39, 42, 54));
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/menu.png"))); // NOI18N
-        jLabel4.setEnabled(false);
         jLabel4.setFocusable(false);
         jLabel4.setOpaque(true);
+        jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jLabel4MousePressed(evt);
+            }
+        });
         jPanel1.add(jLabel4);
         jLabel4.setBounds(0, 0, 40, 40);
 
@@ -61,7 +75,11 @@ public class Admin extends javax.swing.JFrame {
         jLabel1.setBounds(0, 0, 90, 40);
 
         jLabel5.setBackground(new java.awt.Color(39, 42, 54));
-        jLabel5.setText("jLabel5");
+        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/add (2).png"))); // NOI18N
+        jLabel5.setText("ADD");
+        jLabel5.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jLabel5.setFocusable(false);
         jLabel5.setOpaque(true);
         jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -70,28 +88,21 @@ public class Admin extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jLabel5);
-        jLabel5.setBounds(0, 120, 190, 60);
-
-        jLabel6.setBackground(new java.awt.Color(39, 42, 54));
-        jLabel6.setText("jLabel6");
-        jLabel6.setFocusable(false);
-        jLabel6.setOpaque(true);
-        jPanel1.add(jLabel6);
-        jLabel6.setBounds(0, 180, 190, 60);
+        jLabel5.setBounds(0, 130, 200, 60);
 
         jLabel7.setBackground(new java.awt.Color(39, 42, 54));
         jLabel7.setText("jLabel7");
         jLabel7.setFocusable(false);
         jLabel7.setOpaque(true);
         jPanel1.add(jLabel7);
-        jLabel7.setBounds(0, 240, 190, 60);
+        jLabel7.setBounds(0, 250, 200, 60);
 
         jLabel8.setBackground(new java.awt.Color(39, 42, 54));
         jLabel8.setText("jLabel8");
         jLabel8.setFocusable(false);
         jLabel8.setOpaque(true);
         jPanel1.add(jLabel8);
-        jLabel8.setBounds(0, 300, 190, 60);
+        jLabel8.setBounds(0, 310, 200, 60);
 
         jLabel9.setBackground(new java.awt.Color(39, 42, 54));
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
@@ -106,12 +117,25 @@ public class Admin extends javax.swing.JFrame {
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 jLabel9MouseExited(evt);
             }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jLabel9MousePressed(evt);
+            }
         });
         jPanel1.add(jLabel9);
-        jLabel9.setBounds(150, 0, 40, 40);
+        jLabel9.setBounds(160, 0, 40, 40);
+
+        jLabel6.setBackground(new java.awt.Color(39, 42, 54));
+        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/test (5).png"))); // NOI18N
+        jLabel6.setText("Create Exam Session");
+        jLabel6.setFocusable(false);
+        jLabel6.setOpaque(true);
+        jPanel1.add(jLabel6);
+        jLabel6.setBounds(0, 190, 200, 60);
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 0, 190, 770);
+        jPanel1.setBounds(0, 0, 200, 770);
 
         setSize(new java.awt.Dimension(1382, 807));
         setLocationRelativeTo(null);
@@ -120,6 +144,7 @@ Color R;
     private void jLabel9MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseEntered
         R=jLabel9. getBackground();
         jLabel9.setBackground(Color.DARK_GRAY);
+        
     }//GEN-LAST:event_jLabel9MouseEntered
 
     private void jLabel9MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseExited
@@ -129,6 +154,20 @@ Color R;
     private void jLabel5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseEntered
          jLabel5.setBackground(Color.DARK_GRAY);
     }//GEN-LAST:event_jLabel5MouseEntered
+
+    private void jLabel9MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MousePressed
+        jPanel1.setSize(28, 770);
+         jLabel4.setVisible(true);
+         jLabel1.setVisible(false);
+         jLabel2.setVisible(true);
+    }//GEN-LAST:event_jLabel9MousePressed
+
+    private void jLabel4MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MousePressed
+         jPanel1.setSize(200, 770);
+         jLabel4.setVisible(false);
+         jLabel1.setVisible(true);
+          jLabel2.setVisible(false);
+    }//GEN-LAST:event_jLabel4MousePressed
 
     /**
      * @param args the command line arguments
@@ -167,6 +206,7 @@ Color R;
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
