@@ -5,6 +5,8 @@
  */
 package fet;
 
+import javax.swing.JLabel;
+
 /**
  *
  * @author Pharaoh
@@ -27,21 +29,165 @@ public class Register extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel7 = new javax.swing.JLabel();
+        BTn_reg = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        Tf_mail = new javax.swing.JTextField();
+        Tf_pass = new javax.swing.JPasswordField();
+        Tf_usname = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1366, 768));
         setSize(new java.awt.Dimension(1366, 768));
         getContentPane().setLayout(null);
 
+        jButton1.setBackground(new java.awt.Color(0, 204, 0));
+        jButton1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButton1.setText("Log In");
+        jButton1.setBorder(null);
+        jButton1.setFocusable(false);
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jButton1MousePressed(evt);
+            }
+        });
+        getContentPane().add(jButton1);
+        jButton1.setBounds(1030, 60, 130, 40);
+
+        jButton2.setBackground(new java.awt.Color(0, 204, 0));
+        jButton2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButton2.setText("Register");
+        jButton2.setBorder(null);
+        jButton2.setFocusable(false);
+        getContentPane().add(jButton2);
+        jButton2.setBounds(1193, 60, 130, 40);
+
+        jPanel2.setBackground(new java.awt.Color(0, 204, 0));
+        jPanel2.setLayout(null);
+
+        jLabel1.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/register3.jpg"))); // NOI18N
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 1370, 310);
+        jLabel1.setText("Register");
+        jPanel2.add(jLabel1);
+        jLabel1.setBounds(0, 150, 160, 50);
+
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/college-graduation (1).png"))); // NOI18N
+        jPanel2.add(jLabel3);
+        jLabel3.setBounds(30, 70, 100, 70);
+
+        getContentPane().add(jPanel2);
+        jPanel2.setBounds(120, 110, 160, 210);
+
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setLayout(null);
+
+        jLabel7.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/show-password.png"))); // NOI18N
+        jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabel7MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabel7MouseExited(evt);
+            }
+        });
+        jPanel1.add(jLabel7);
+        jLabel7.setBounds(850, 300, 40, 40);
+
+        BTn_reg.setBackground(new java.awt.Color(0, 204, 0));
+        BTn_reg.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        BTn_reg.setText("Register");
+        BTn_reg.setBorder(null);
+        BTn_reg.setFocusable(false);
+        BTn_reg.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                BTn_regMousePressed(evt);
+            }
+        });
+        jPanel1.add(BTn_reg);
+        BTn_reg.setBounds(540, 390, 310, 50);
+
+        jLabel4.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel4.setText("Password");
+        jPanel1.add(jLabel4);
+        jLabel4.setBounds(540, 270, 90, 30);
+
+        jLabel5.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel5.setText("Username");
+        jPanel1.add(jLabel5);
+        jLabel5.setBounds(540, 170, 74, 40);
+
+        jLabel6.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel6.setText("Email");
+        jPanel1.add(jLabel6);
+        jLabel6.setBounds(540, 90, 90, 30);
+
+        Tf_mail.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        Tf_mail.setSelectionColor(new java.awt.Color(153, 153, 153));
+        jPanel1.add(Tf_mail);
+        Tf_mail.setBounds(540, 120, 310, 40);
+
+        Tf_pass.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        Tf_pass.setSelectionColor(new java.awt.Color(153, 153, 153));
+        jPanel1.add(Tf_pass);
+        Tf_pass.setBounds(540, 300, 310, 40);
+
+        Tf_usname.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        Tf_usname.setSelectionColor(new java.awt.Color(153, 153, 153));
+        jPanel1.add(Tf_usname);
+        Tf_usname.setBounds(540, 210, 310, 40);
+
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(0, 230, 1370, 540);
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/books-1554919110705-3428.jpg"))); // NOI18N
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(0, 0, 1366, 230);
 
         setSize(new java.awt.Dimension(1382, 807));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jLabel7MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseEntered
+         jLabel7.setOpaque(true);
+        jLabel7.setBackground(java.awt.Color.GRAY);
+         Tf_pass.setEchoChar((char)0);
+    }//GEN-LAST:event_jLabel7MouseEntered
+
+    private void jLabel7MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseExited
+        jLabel7.setOpaque(false);
+        jLabel7.setBackground(java.awt.Color.WHITE);
+         Tf_pass.setEchoChar('*');
+    }//GEN-LAST:event_jLabel7MouseExited
+
+    private void jButton1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MousePressed
+        Login l=new Login();
+        l.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton1MousePressed
+
+    private void BTn_regMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BTn_regMousePressed
+        Tf_mail.setText("");
+        Tf_usname.setText("");
+        Tf_pass.setText("");
+        Login login=new Login ();
+        login.setVisible(true);
+    }//GEN-LAST:event_BTn_regMousePressed
 
     /**
      * @param args the command line arguments
@@ -79,6 +225,20 @@ public class Register extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BTn_reg;
+    private javax.swing.JTextField Tf_mail;
+    private javax.swing.JPasswordField Tf_pass;
+    private javax.swing.JTextField Tf_usname;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 }

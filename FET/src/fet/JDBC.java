@@ -6,6 +6,7 @@
 package fet;
 import java.sql.*;
 import fet.Person.*;
+import fet.Register.*;
 
 /**
  *
