@@ -5,7 +5,7 @@
  */
 package fet;
 
-import javafx.scene.paint.Color;
+//import javafx.scene.paint.Color;
 
 /**
  *
@@ -140,6 +140,11 @@ public class Login extends javax.swing.JFrame {
                 jButton1MousePressed(evt);
             }
         });
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButton1);
         jButton1.setBounds(550, 320, 310, 50);
 
@@ -188,6 +193,10 @@ public class Login extends javax.swing.JFrame {
         admin.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jButton1MousePressed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
