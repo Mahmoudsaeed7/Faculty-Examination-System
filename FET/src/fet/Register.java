@@ -6,13 +6,17 @@
 package fet;
 
 import javax.swing.JLabel;
+import fet.JDBC.*;
 
 /**
  *
  * @author Pharaoh
  */
+
 public class Register extends javax.swing.JFrame {
 
+    JDBC j = new JDBC();
+    
     /**
      * Creates new form Register
      */
@@ -111,11 +115,6 @@ public class Register extends javax.swing.JFrame {
         Btn_reg.setText("Register");
         Btn_reg.setBorder(null);
         Btn_reg.setFocusable(false);
-        Btn_reg.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                Btn_regMousePressed(evt);
-            }
-        });
         Btn_reg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Btn_regActionPerformed(evt);
@@ -188,24 +187,19 @@ public class Register extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_jButton1MousePressed
 
-    private void Btn_regMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Btn_regMousePressed
-        Tf_mail.setText("");
-        Tf_usname.setText("");
-        Tf_pass.setText("");
-        Login login=new Login ();
-        login.setVisible(true);
-    }//GEN-LAST:event_Btn_regMousePressed
-
     private void BTn_regMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BTn_regMousePressed
-        Tf_mail.setText("");
-        Tf_usname.setText("");
-        Tf_pass.setText("");
-        Login login=new Login ();
-        login.setVisible(true);
+
     }//GEN-LAST:event_BTn_regMousePressed
 
     private void Btn_regActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_regActionPerformed
         // TODO add your handling code here:
+        j.usName = Tf_usname.getText();
+        j.mail = Tf_mail.getText();
+        j.usPass = Tf_pass.getText();
+        j.registration(j);
+        Tf_mail.setText("");
+        Tf_usname.setText("");
+        Tf_pass.setText("");
     }//GEN-LAST:event_Btn_regActionPerformed
 
 
