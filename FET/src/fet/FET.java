@@ -21,6 +21,8 @@ public class FET {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+//        Userform f= new Userform();
+//        f.setVisible(true);
         Splash s=new Splash();
         s.setVisible(true);
        Login l=new Login();

@@ -50,20 +50,48 @@ public class Admin extends javax.swing.JFrame {
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        homepanel = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel();
+        jButton6 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        exampanel = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable6 = new javax.swing.JTable();
+        jComboBox2 = new javax.swing.JComboBox();
+        jButton8 = new javax.swing.JButton();
+        jButton9 = new javax.swing.JButton();
+        jTextField2 = new javax.swing.JTextField();
+        jLabel23 = new javax.swing.JLabel();
+        instructor = new javax.swing.JPanel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTable2 = new javax.swing.JTable();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        student = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTable3 = new javax.swing.JTable();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        jTable4 = new javax.swing.JTable();
+        jLabel21 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
         addpanel = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
-        addadmin = new javax.swing.JPanel();
+        admin = new javax.swing.JPanel();
         jLabel16 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
         jLabel17 = new javax.swing.JLabel();
         jButton4 = new javax.swing.JButton();
         jLabel18 = new javax.swing.JLabel();
         jPasswordField1 = new javax.swing.JPasswordField();
-        homepanel = new javax.swing.JPanel();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
+        jScrollPane6 = new javax.swing.JScrollPane();
+        jTable5 = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -112,6 +140,9 @@ public class Admin extends javax.swing.JFrame {
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/test (6).png"))); // NOI18N
         jLabel10.setOpaque(true);
         jLabel10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel10MouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jLabel10MouseEntered(evt);
             }
@@ -163,6 +194,9 @@ public class Admin extends javax.swing.JFrame {
         jLabel5.setFocusable(false);
         jLabel5.setOpaque(true);
         jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel5MouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jLabel5MouseEntered(evt);
             }
@@ -222,6 +256,9 @@ public class Admin extends javax.swing.JFrame {
         jLabel6.setFocusable(false);
         jLabel6.setOpaque(true);
         jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel6MouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jLabel6MouseEntered(evt);
             }
@@ -250,6 +287,9 @@ public class Admin extends javax.swing.JFrame {
         jLabel12.setText("Add Instructor");
         jLabel12.setOpaque(true);
         jLabel12.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel12MouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jLabel12MouseEntered(evt);
             }
@@ -266,6 +306,9 @@ public class Admin extends javax.swing.JFrame {
         jLabel13.setText("Add Student");
         jLabel13.setOpaque(true);
         jLabel13.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel13MouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jLabel13MouseEntered(evt);
             }
@@ -298,6 +341,294 @@ public class Admin extends javax.swing.JFrame {
         getContentPane().add(jPanel4);
         jPanel4.setBounds(200, 210, 170, 150);
 
+        homepanel.setBackground(new java.awt.Color(255, 255, 255));
+        homepanel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        homepanel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                homepanelMouseEntered(evt);
+            }
+        });
+        homepanel.setLayout(null);
+
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setLayout(null);
+
+        jButton6.setBackground(new java.awt.Color(51, 255, 51));
+        jButton6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/graduate-student-avatar.png"))); // NOI18N
+        jButton6.setText("Student");
+        jButton6.setFocusable(false);
+        jButton6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton6.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButton6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton6MouseClicked(evt);
+            }
+        });
+        jPanel1.add(jButton6);
+        jButton6.setBounds(690, 90, 280, 250);
+
+        jButton5.setBackground(new java.awt.Color(0, 153, 255));
+        jButton5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/instructor-lecture-with-sceen-projection-tool.png"))); // NOI18N
+        jButton5.setText("Instructor");
+        jButton5.setFocusable(false);
+        jButton5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton5.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButton5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton5MouseClicked(evt);
+            }
+        });
+        jPanel1.add(jButton5);
+        jButton5.setBounds(370, 90, 280, 250);
+
+        jButton7.setBackground(new java.awt.Color(255, 255, 0));
+        jButton7.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/test1.png"))); // NOI18N
+        jButton7.setText("Exam Session");
+        jButton7.setFocusable(false);
+        jButton7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton7.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButton7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton7MouseClicked(evt);
+            }
+        });
+        jPanel1.add(jButton7);
+        jButton7.setBounds(30, 90, 280, 250);
+
+        homepanel.add(jPanel1);
+        jPanel1.setBounds(230, 230, 1030, 440);
+
+        jLabel14.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/question (2).png"))); // NOI18N
+        jLabel14.setOpaque(true);
+        homepanel.add(jLabel14);
+        jLabel14.setBounds(610, 230, 290, 310);
+
+        jLabel15.setBackground(new java.awt.Color(255, 153, 153));
+        jLabel15.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel15.setText("0 Pending Request");
+        jLabel15.setOpaque(true);
+        homepanel.add(jLabel15);
+        jLabel15.setBounds(430, 170, 610, 50);
+
+        getContentPane().add(homepanel);
+        homepanel.setBounds(0, 0, 1370, 770);
+
+        exampanel.setBackground(new java.awt.Color(255, 255, 255));
+        exampanel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                exampanelMouseEntered(evt);
+            }
+        });
+        exampanel.setLayout(null);
+
+        jScrollPane1.setBackground(new java.awt.Color(255, 255, 255));
+        jScrollPane1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jScrollPane1MouseEntered(evt);
+            }
+        });
+
+        jTable6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jTable6.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jTable6.setGridColor(new java.awt.Color(255, 255, 255));
+        jTable6.setIntercellSpacing(new java.awt.Dimension(0, 0));
+        jTable6.setSelectionBackground(new java.awt.Color(255, 255, 0));
+        jTable6.setShowHorizontalLines(false);
+        jTable6.setShowVerticalLines(false);
+        jScrollPane1.setViewportView(jTable6);
+
+        exampanel.add(jScrollPane1);
+        jScrollPane1.setBounds(320, 100, 880, 200);
+
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        exampanel.add(jComboBox2);
+        jComboBox2.setBounds(610, 540, 240, 30);
+
+        jButton8.setText("Assign");
+        exampanel.add(jButton8);
+        jButton8.setBounds(680, 610, 100, 30);
+
+        jButton9.setText("Create");
+        exampanel.add(jButton9);
+        jButton9.setBounds(780, 360, 160, 40);
+        exampanel.add(jTextField2);
+        jTextField2.setBounds(470, 370, 170, 30);
+
+        jLabel23.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel23.setText("ID");
+        exampanel.add(jLabel23);
+        jLabel23.setBounds(400, 370, 60, 30);
+
+        getContentPane().add(exampanel);
+        exampanel.setBounds(0, 0, 1370, 770);
+
+        instructor.setBackground(new java.awt.Color(255, 255, 255));
+        instructor.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                instructorMouseEntered(evt);
+            }
+        });
+        instructor.setLayout(null);
+
+        jScrollPane4.setBackground(new java.awt.Color(255, 255, 255));
+
+        jTable1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jTable1.setGridColor(new java.awt.Color(255, 255, 255));
+        jTable1.setIntercellSpacing(new java.awt.Dimension(0, 0));
+        jTable1.setSelectionBackground(new java.awt.Color(0, 204, 204));
+        jTable1.setSelectionForeground(new java.awt.Color(0, 0, 0));
+        jTable1.setShowHorizontalLines(false);
+        jTable1.setShowVerticalLines(false);
+        jTable1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jTable1MouseEntered(evt);
+            }
+        });
+        jScrollPane4.setViewportView(jTable1);
+
+        instructor.add(jScrollPane4);
+        jScrollPane4.setBounds(210, 100, 1010, 290);
+
+        jScrollPane3.setBackground(new java.awt.Color(255, 255, 255));
+
+        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jTable2.setGridColor(new java.awt.Color(255, 255, 255));
+        jTable2.setIntercellSpacing(new java.awt.Dimension(0, 0));
+        jTable2.setSelectionBackground(new java.awt.Color(0, 204, 204));
+        jTable2.setSelectionForeground(new java.awt.Color(0, 0, 0));
+        jTable2.setShowHorizontalLines(false);
+        jTable2.setShowVerticalLines(false);
+        jScrollPane3.setViewportView(jTable2);
+
+        instructor.add(jScrollPane3);
+        jScrollPane3.setBounds(210, 460, 1010, 300);
+
+        jLabel19.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel19.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel19.setText("Instructors List :");
+        instructor.add(jLabel19);
+        jLabel19.setBounds(210, 420, 160, 40);
+
+        jLabel20.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel20.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel20.setText("Request List :");
+        instructor.add(jLabel20);
+        jLabel20.setBounds(210, 60, 130, 40);
+
+        getContentPane().add(instructor);
+        instructor.setBounds(0, 0, 1370, 770);
+
+        student.setBackground(new java.awt.Color(255, 255, 255));
+        student.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                studentMouseEntered(evt);
+            }
+        });
+        student.setLayout(null);
+
+        jScrollPane2.setBackground(new java.awt.Color(255, 255, 255));
+        jScrollPane2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jScrollPane2MouseEntered(evt);
+            }
+        });
+
+        jTable3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jTable3.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jTable3.setGridColor(new java.awt.Color(255, 255, 255));
+        jTable3.setIntercellSpacing(new java.awt.Dimension(0, 0));
+        jTable3.setSelectionBackground(new java.awt.Color(0, 204, 51));
+        jTable3.setSelectionForeground(new java.awt.Color(0, 0, 0));
+        jTable3.setShowHorizontalLines(false);
+        jTable3.setShowVerticalLines(false);
+        jScrollPane2.setViewportView(jTable3);
+
+        student.add(jScrollPane2);
+        jScrollPane2.setBounds(210, 100, 1030, 270);
+
+        jTable4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jTable4.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jTable4.setIntercellSpacing(new java.awt.Dimension(0, 0));
+        jTable4.setSelectionBackground(new java.awt.Color(0, 204, 51));
+        jTable4.setShowHorizontalLines(false);
+        jTable4.setShowVerticalLines(false);
+        jScrollPane5.setViewportView(jTable4);
+
+        student.add(jScrollPane5);
+        jScrollPane5.setBounds(210, 470, 1030, 280);
+
+        jLabel21.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel21.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel21.setText("Request List : ");
+        student.add(jLabel21);
+        jLabel21.setBounds(210, 60, 140, 30);
+
+        jLabel22.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel22.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel22.setText("Students List :");
+        student.add(jLabel22);
+        jLabel22.setBounds(210, 430, 140, 40);
+
+        getContentPane().add(student);
+        student.setBounds(0, 0, 1370, 770);
+
         addpanel.setBackground(new java.awt.Color(255, 255, 255));
         addpanel.setLayout(null);
 
@@ -327,6 +658,11 @@ public class Admin extends javax.swing.JFrame {
         jButton2.setFocusable(false);
         jButton2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton2MouseClicked(evt);
+            }
+        });
         addpanel.add(jButton2);
         jButton2.setBounds(640, 210, 280, 250);
 
@@ -337,35 +673,45 @@ public class Admin extends javax.swing.JFrame {
         jButton3.setFocusable(false);
         jButton3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton3.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton3MouseClicked(evt);
+            }
+        });
         addpanel.add(jButton3);
         jButton3.setBounds(960, 210, 280, 250);
 
         getContentPane().add(addpanel);
         addpanel.setBounds(0, 0, 1370, 770);
 
-        addadmin.setBackground(new java.awt.Color(255, 255, 255));
-        addadmin.setLayout(null);
+        admin.setBackground(new java.awt.Color(255, 255, 255));
+        admin.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                adminMouseEntered(evt);
+            }
+        });
+        admin.setLayout(null);
 
         jLabel16.setBackground(new java.awt.Color(255, 255, 255));
         jLabel16.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel16.setText("Username");
-        addadmin.add(jLabel16);
-        jLabel16.setBounds(510, 290, 80, 30);
-        addadmin.add(jTextField1);
-        jTextField1.setBounds(510, 330, 300, 40);
+        admin.add(jLabel16);
+        jLabel16.setBounds(500, 80, 80, 30);
+        admin.add(jTextField1);
+        jTextField1.setBounds(500, 120, 300, 40);
 
         jLabel17.setBackground(new java.awt.Color(255, 255, 255));
         jLabel17.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel17.setText("Passwrod");
-        addadmin.add(jLabel17);
-        jLabel17.setBounds(510, 380, 80, 30);
+        admin.add(jLabel17);
+        jLabel17.setBounds(500, 170, 80, 30);
 
         jButton4.setBackground(new java.awt.Color(39, 42, 54));
         jButton4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButton4.setForeground(new java.awt.Color(255, 255, 255));
         jButton4.setText("Add Admin");
-        addadmin.add(jButton4);
-        jButton4.setBounds(510, 490, 300, 60);
+        admin.add(jButton4);
+        jButton4.setBounds(500, 280, 300, 60);
 
         jLabel18.setBackground(new java.awt.Color(255, 255, 255));
         jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -378,41 +724,38 @@ public class Admin extends javax.swing.JFrame {
                 jLabel18MouseExited(evt);
             }
         });
-        addadmin.add(jLabel18);
-        jLabel18.setBounds(810, 420, 40, 40);
-        addadmin.add(jPasswordField1);
-        jPasswordField1.setBounds(511, 420, 300, 40);
+        admin.add(jLabel18);
+        jLabel18.setBounds(800, 210, 40, 40);
+        admin.add(jPasswordField1);
+        jPasswordField1.setBounds(500, 210, 300, 40);
 
-        getContentPane().add(addadmin);
-        addadmin.setBounds(0, 0, 1370, 770);
-
-        homepanel.setBackground(new java.awt.Color(255, 255, 255));
-        homepanel.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                homepanelMouseEntered(evt);
+        jTable5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jTable5.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
             }
-        });
-        homepanel.setLayout(null);
+        ));
+        jTable5.setGridColor(new java.awt.Color(255, 255, 255));
+        jTable5.setIntercellSpacing(new java.awt.Dimension(0, 0));
+        jTable5.setSelectionBackground(new java.awt.Color(255, 0, 102));
+        jTable5.setSelectionForeground(new java.awt.Color(0, 0, 0));
+        jTable5.setShowHorizontalLines(false);
+        jTable5.setShowVerticalLines(false);
+        jScrollPane6.setViewportView(jTable5);
 
-        jLabel14.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/question (2).png"))); // NOI18N
-        jLabel14.setOpaque(true);
-        homepanel.add(jLabel14);
-        jLabel14.setBounds(610, 230, 290, 310);
+        admin.add(jScrollPane6);
+        jScrollPane6.setBounds(250, 470, 870, 290);
 
-        jLabel15.setBackground(new java.awt.Color(255, 153, 153));
-        jLabel15.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel15.setText("0 Pending Request");
-        jLabel15.setOpaque(true);
-        homepanel.add(jLabel15);
-        jLabel15.setBounds(430, 170, 610, 50);
+        getContentPane().add(admin);
+        admin.setBounds(0, 0, 1370, 770);
 
-        getContentPane().add(homepanel);
-        homepanel.setBounds(0, 0, 1370, 770);
-
-        setSize(new java.awt.Dimension(1382, 807));
+        setSize(new java.awt.Dimension(1382, 808));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -537,12 +880,21 @@ public class Admin extends javax.swing.JFrame {
     }//GEN-LAST:event_homepanelMouseEntered
 
     private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
-          homepanel.setVisible(true);
-          
+          student.setVisible(false);
+         homepanel.setVisible(true);
+        addpanel.setVisible(false);
+        admin.setVisible(false);
+        instructor.setVisible(false);
+        exampanel.setVisible(false);
     }//GEN-LAST:event_jLabel3MouseClicked
 
     private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
-        homepanel.setVisible(true);
+         student.setVisible(false);
+         homepanel.setVisible(true);
+        addpanel.setVisible(false);
+        admin.setVisible(false);
+        instructor.setVisible(false);
+        exampanel.setVisible(false);
     }//GEN-LAST:event_jLabel7MouseClicked
 
     private void jButton1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseEntered
@@ -550,8 +902,12 @@ public class Admin extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1MouseEntered
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
-         addadmin.setVisible(true);
+         student.setVisible(false);
+         homepanel.setVisible(false);
         addpanel.setVisible(false);
+        admin.setVisible(true);
+        instructor.setVisible(false);
+        exampanel.setVisible(false);
     }//GEN-LAST:event_jButton1MouseClicked
 
     private void jLabel18MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel18MouseEntered
@@ -567,14 +923,131 @@ public class Admin extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel18MouseExited
 
     private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
-        addadmin.setVisible(true);
+        student.setVisible(false);
+         homepanel.setVisible(false);
         addpanel.setVisible(false);
+        admin.setVisible(true);
+        instructor.setVisible(false);
+        exampanel.setVisible(false);
     }//GEN-LAST:event_jLabel4MouseClicked
 
     private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
+      student.setVisible(false);
+         homepanel.setVisible(false);
         addpanel.setVisible(true);
-        addadmin.setVisible(false);
+        admin.setVisible(false);
+        instructor.setVisible(false);
+        exampanel.setVisible(false);
     }//GEN-LAST:event_jLabel8MouseClicked
+
+    private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
+       student.setVisible(true);
+         homepanel.setVisible(false);
+        addpanel.setVisible(true);
+        admin.setVisible(false);
+        instructor.setVisible(false);
+        exampanel.setVisible(false);
+    }//GEN-LAST:event_jLabel5MouseClicked
+
+    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
+        student.setVisible(false);
+         homepanel.setVisible(false);
+        addpanel.setVisible(false);
+        admin.setVisible(false);
+        instructor.setVisible(true);
+        exampanel.setVisible(false);
+    }//GEN-LAST:event_jButton2MouseClicked
+
+    private void jLabel12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel12MouseClicked
+         homepanel.setVisible(false);
+        addpanel.setVisible(false);
+        admin.setVisible(false);
+        instructor.setVisible(true);
+        student.setVisible(false);
+        exampanel.setVisible(false);
+    }//GEN-LAST:event_jLabel12MouseClicked
+
+    private void adminMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_adminMouseEntered
+        jPanel4.setVisible(false);
+    }//GEN-LAST:event_adminMouseEntered
+
+    private void jLabel13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel13MouseClicked
+        student.setVisible(true);
+         homepanel.setVisible(false);
+        addpanel.setVisible(false);
+        admin.setVisible(false);
+        instructor.setVisible(false);
+        exampanel.setVisible(false);
+    }//GEN-LAST:event_jLabel13MouseClicked
+
+    private void studentMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_studentMouseEntered
+        jPanel4.setVisible(false);
+    }//GEN-LAST:event_studentMouseEntered
+
+    private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
+        student.setVisible(true);
+         homepanel.setVisible(false);
+        addpanel.setVisible(false);
+        admin.setVisible(false);
+        instructor.setVisible(false);
+        exampanel.setVisible(false);
+    }//GEN-LAST:event_jButton3MouseClicked
+
+    private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
+        exampanel.setVisible(true);
+    }//GEN-LAST:event_jLabel6MouseClicked
+
+    private void jLabel10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MouseClicked
+        exampanel.setVisible(true);
+    }//GEN-LAST:event_jLabel10MouseClicked
+
+    private void exampanelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exampanelMouseEntered
+        jPanel4.setVisible(false);
+    }//GEN-LAST:event_exampanelMouseEntered
+
+    private void jScrollPane1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jScrollPane1MouseEntered
+        jPanel4.setVisible(false);
+    }//GEN-LAST:event_jScrollPane1MouseEntered
+
+    private void jScrollPane2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jScrollPane2MouseEntered
+        jPanel4.setVisible(false);
+    }//GEN-LAST:event_jScrollPane2MouseEntered
+
+    private void jTable1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseEntered
+        jPanel4.setVisible(false);
+    }//GEN-LAST:event_jTable1MouseEntered
+
+    private void instructorMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_instructorMouseEntered
+        jPanel4.setVisible(false);
+        
+    }//GEN-LAST:event_instructorMouseEntered
+
+    private void jButton6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton6MouseClicked
+         student.setVisible(true);
+         homepanel.setVisible(false);
+        addpanel.setVisible(false);
+        admin.setVisible(false);
+        instructor.setVisible(false);
+        exampanel.setVisible(false);
+    }//GEN-LAST:event_jButton6MouseClicked
+
+    private void jButton5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseClicked
+         student.setVisible(false);
+         homepanel.setVisible(false);
+        addpanel.setVisible(false);
+        admin.setVisible(false);
+        instructor.setVisible(true);
+        exampanel.setVisible(false);
+    }//GEN-LAST:event_jButton5MouseClicked
+
+    private void jButton7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton7MouseClicked
+        student.setVisible(false);
+         homepanel.setVisible(false);
+        addpanel.setVisible(false);
+        admin.setVisible(false);
+        instructor.setVisible(false);
+        exampanel.setVisible(true);
+    }//GEN-LAST:event_jButton7MouseClicked
            
     /**
      * @param args the command line arguments
@@ -612,15 +1085,23 @@ public class Admin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel addadmin;
     private javax.swing.JPanel addpanel;
+    private javax.swing.JPanel admin;
     private javax.swing.JPanel collapsedbar;
+    private javax.swing.JPanel exampanel;
     private javax.swing.JPanel expandedbar;
     private javax.swing.JPanel homepanel;
+    private javax.swing.JPanel instructor;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
+    private javax.swing.JComboBox jComboBox2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -631,7 +1112,12 @@ public class Admin extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -639,8 +1125,23 @@ public class Admin extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPasswordField jPasswordField1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JScrollPane jScrollPane6;
+    private javax.swing.JTable jTable1;
+    private javax.swing.JTable jTable2;
+    private javax.swing.JTable jTable3;
+    private javax.swing.JTable jTable4;
+    private javax.swing.JTable jTable5;
+    private javax.swing.JTable jTable6;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JPanel student;
     // End of variables declaration//GEN-END:variables
 }
