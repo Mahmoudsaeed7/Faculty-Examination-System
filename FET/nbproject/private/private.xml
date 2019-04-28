@@ -3,6 +3,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/C:/Users/Pharaoh/Documents/Faculty-Examination-Test/FET/src/fet/Register.java</file>
             <file>file:/C:/Users/Pharaoh/Documents/Faculty-Examination-Test/FET/src/fet/Admin.java</file>
             <file>file:/C:/Users/Pharaoh/Documents/Faculty-Examination-Test/FET/src/fet/Splash.java</file>
@@ -10,6 +11,11 @@
             <file>file:/C:/Users/Pharaoh/Documents/Faculty-Examination-Test/FET/src/fet/NewJPanel.java</file>
             <file>file:/C:/Users/Pharaoh/Documents/Faculty-Examination-Test/FET/src/fet/Userform.java</file>
             <file>file:/C:/Users/Pharaoh/Documents/Faculty-Examination-Test/FET/src/fet/FET.java</file>
+=======
+            <file>file:/C:/Users/MAHMOUD%20SAEED/Documents/GitHub/Faculty-Examination-System/FET/src/fet/Register.java</file>
+            <file>file:/C:/Users/MAHMOUD%20SAEED/Documents/GitHub/Faculty-Examination-System/FET/src/fet/JDBC.java</file>
+            <file>file:/C:/Users/MAHMOUD%20SAEED/Documents/GitHub/Faculty-Examination-System/FET/src/fet/Login.java</file>
+>>>>>>> 83687b83e16ca4242ac33ff4610740e6ac7bbc8a
         </group>
     </open-files>
 </project-private>

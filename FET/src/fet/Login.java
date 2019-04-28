@@ -4,8 +4,9 @@
  * and open the template in the editor.
  */
 package fet;
+import fet.JDBC.*;
 
-import javafx.scene.paint.Color;
+//import javafx.scene.paint.Color;
 
 /**
  *
@@ -13,6 +14,7 @@ import javafx.scene.paint.Color;
  */
 public class Login extends javax.swing.JFrame {
 
+    JDBC j = new JDBC();
     /**
      * Creates new form Login
      */
@@ -41,8 +43,8 @@ public class Login extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        jPasswordField1 = new javax.swing.JPasswordField();
-        jTextField1 = new javax.swing.JTextField();
+        Tf_pass = new javax.swing.JPasswordField();
+        Tf_usname = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -101,7 +103,7 @@ public class Login extends javax.swing.JFrame {
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/show-password.png"))); // NOI18N
-        jLabel6.setLabelFor(jPasswordField1);
+        jLabel6.setLabelFor(Tf_pass);
         jLabel6.setNextFocusableComponent(jLabel6);
         jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -135,25 +137,25 @@ public class Login extends javax.swing.JFrame {
         jButton1.setBorder(null);
         jButton1.setFocusable(false);
         jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
-        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                jButton1MousePressed(evt);
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
             }
         });
         jPanel1.add(jButton1);
         jButton1.setBounds(550, 320, 310, 50);
 
-        jPasswordField1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jPasswordField1.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
-        jPasswordField1.setSelectionColor(new java.awt.Color(153, 153, 153));
-        jPanel1.add(jPasswordField1);
-        jPasswordField1.setBounds(550, 240, 310, 40);
+        Tf_pass.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        Tf_pass.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        Tf_pass.setSelectionColor(new java.awt.Color(153, 153, 153));
+        jPanel1.add(Tf_pass);
+        Tf_pass.setBounds(550, 240, 310, 40);
 
-        jTextField1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jTextField1.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
-        jTextField1.setSelectionColor(new java.awt.Color(153, 153, 153));
-        jPanel1.add(jTextField1);
-        jTextField1.setBounds(550, 150, 310, 40);
+        Tf_usname.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        Tf_usname.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        Tf_usname.setSelectionColor(new java.awt.Color(153, 153, 153));
+        jPanel1.add(Tf_usname);
+        Tf_usname.setBounds(550, 150, 310, 40);
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, 230, 1370, 540);
@@ -166,13 +168,13 @@ public class Login extends javax.swing.JFrame {
 
         jLabel6.setOpaque(true);
         jLabel6.setBackground(java.awt.Color.GRAY);
-        jPasswordField1.setEchoChar((char)0);
+        Tf_pass.setEchoChar((char)0);
     }//GEN-LAST:event_jLabel6MouseEntered
 
     private void jLabel6MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseExited
         jLabel6.setOpaque(false);
         jLabel6.setBackground(java.awt.Color.WHITE);
-         jPasswordField1.setEchoChar('*');
+         Tf_pass.setEchoChar('*');
     }//GEN-LAST:event_jLabel6MouseExited
 
     private void jButton3MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MousePressed
@@ -181,13 +183,14 @@ public class Login extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_jButton3MousePressed
 
-    private void jButton1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MousePressed
-        jTextField1.setText("");      
-        jPasswordField1.setText("");
-        Admin admin =new Admin();
-        admin.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_jButton1MousePressed
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        j.usName = Tf_usname.getText();
+        j.usPass = Tf_pass.getText();
+        j.Login(j);
+        Tf_usname.setText("");
+        Tf_pass.setText("");
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -225,6 +228,8 @@ public class Login extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPasswordField Tf_pass;
+    private javax.swing.JTextField Tf_usname;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
@@ -236,7 +241,5 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }

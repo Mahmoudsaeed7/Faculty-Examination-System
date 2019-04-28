@@ -6,13 +6,17 @@
 package fet;
 
 import javax.swing.JLabel;
+import fet.JDBC.*;
 
 /**
  *
  * @author Pharaoh
  */
+
 public class Register extends javax.swing.JFrame {
 
+    JDBC j = new JDBC();
+    
     /**
      * Creates new form Register
      */
@@ -36,13 +40,13 @@ public class Register extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
-        jButton3 = new javax.swing.JButton();
+        Btn_reg = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jPasswordField1 = new javax.swing.JPasswordField();
-        jTextField2 = new javax.swing.JTextField();
+        Tf_mail = new javax.swing.JTextField();
+        Tf_pass = new javax.swing.JPasswordField();
+        Tf_usname = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -106,18 +110,18 @@ public class Register extends javax.swing.JFrame {
         jPanel1.add(jLabel7);
         jLabel7.setBounds(850, 300, 40, 40);
 
-        jButton3.setBackground(new java.awt.Color(0, 204, 0));
-        jButton3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jButton3.setText("Register");
-        jButton3.setBorder(null);
-        jButton3.setFocusable(false);
-        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                jButton3MousePressed(evt);
+        Btn_reg.setBackground(new java.awt.Color(0, 204, 0));
+        Btn_reg.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        Btn_reg.setText("Register");
+        Btn_reg.setBorder(null);
+        Btn_reg.setFocusable(false);
+        Btn_reg.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Btn_regActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton3);
-        jButton3.setBounds(540, 390, 310, 50);
+        jPanel1.add(Btn_reg);
+        Btn_reg.setBounds(540, 390, 310, 50);
 
         jLabel4.setBackground(new java.awt.Color(255, 255, 255));
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -129,7 +133,7 @@ public class Register extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel5.setText("Username");
         jPanel1.add(jLabel5);
-        jLabel5.setBounds(540, 170, 69, 40);
+        jLabel5.setBounds(540, 170, 74, 40);
 
         jLabel6.setBackground(new java.awt.Color(255, 255, 255));
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -137,20 +141,20 @@ public class Register extends javax.swing.JFrame {
         jPanel1.add(jLabel6);
         jLabel6.setBounds(540, 90, 90, 30);
 
-        jTextField1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jTextField1.setSelectionColor(new java.awt.Color(153, 153, 153));
-        jPanel1.add(jTextField1);
-        jTextField1.setBounds(540, 120, 310, 40);
+        Tf_mail.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        Tf_mail.setSelectionColor(new java.awt.Color(153, 153, 153));
+        jPanel1.add(Tf_mail);
+        Tf_mail.setBounds(540, 120, 310, 40);
 
-        jPasswordField1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jPasswordField1.setSelectionColor(new java.awt.Color(153, 153, 153));
-        jPanel1.add(jPasswordField1);
-        jPasswordField1.setBounds(540, 300, 310, 40);
+        Tf_pass.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        Tf_pass.setSelectionColor(new java.awt.Color(153, 153, 153));
+        jPanel1.add(Tf_pass);
+        Tf_pass.setBounds(540, 300, 310, 40);
 
-        jTextField2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jTextField2.setSelectionColor(new java.awt.Color(153, 153, 153));
-        jPanel1.add(jTextField2);
-        jTextField2.setBounds(540, 210, 310, 40);
+        Tf_usname.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        Tf_usname.setSelectionColor(new java.awt.Color(153, 153, 153));
+        jPanel1.add(Tf_usname);
+        Tf_usname.setBounds(540, 210, 310, 40);
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, 230, 1370, 540);
@@ -166,13 +170,15 @@ public class Register extends javax.swing.JFrame {
     private void jLabel7MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseEntered
          jLabel7.setOpaque(true);
         jLabel7.setBackground(java.awt.Color.GRAY);
-         jPasswordField1.setEchoChar((char)0);
+         Tf_pass.setEchoChar((char)0);
+         Tf_pass.setEchoChar((char)0);
     }//GEN-LAST:event_jLabel7MouseEntered
 
     private void jLabel7MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseExited
         jLabel7.setOpaque(false);
         jLabel7.setBackground(java.awt.Color.WHITE);
-         jPasswordField1.setEchoChar('*');
+         Tf_pass.setEchoChar('*');
+         Tf_pass.setEchoChar('*');
     }//GEN-LAST:event_jLabel7MouseExited
 
     private void jButton1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MousePressed
@@ -181,13 +187,21 @@ public class Register extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_jButton1MousePressed
 
-    private void jButton3MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MousePressed
-        jTextField1.setText("");
-        jTextField2.setText("");
-        jPasswordField1.setText("");
-        Login login=new Login ();
-        login.setVisible(true);
-    }//GEN-LAST:event_jButton3MousePressed
+    private void BTn_regMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BTn_regMousePressed
+
+    }//GEN-LAST:event_BTn_regMousePressed
+
+    private void Btn_regActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_regActionPerformed
+        // TODO add your handling code here:
+        j.usName = Tf_usname.getText();
+        j.mail = Tf_mail.getText();
+        j.usPass = Tf_pass.getText();
+        j.registration(j);
+        Tf_mail.setText("");
+        Tf_usname.setText("");
+        Tf_pass.setText("");
+    }//GEN-LAST:event_Btn_regActionPerformed
+
 
     /**
      * @param args the command line arguments
@@ -225,9 +239,12 @@ public class Register extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Btn_reg;
+    private javax.swing.JTextField Tf_mail;
+    private javax.swing.JPasswordField Tf_pass;
+    private javax.swing.JTextField Tf_usname;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -237,8 +254,5 @@ public class Register extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
     // End of variables declaration//GEN-END:variables
 }
