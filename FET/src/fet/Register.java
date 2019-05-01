@@ -133,7 +133,7 @@ public class Register extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel5.setText("Username");
         jPanel1.add(jLabel5);
-        jLabel5.setBounds(540, 170, 74, 40);
+        jLabel5.setBounds(540, 170, 100, 40);
 
         jLabel6.setBackground(new java.awt.Color(255, 255, 255));
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
