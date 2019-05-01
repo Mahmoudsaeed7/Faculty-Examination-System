@@ -121,7 +121,7 @@ public class Login extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel4.setText("Username or Email");
         jPanel1.add(jLabel4);
-        jLabel4.setBounds(550, 110, 130, 40);
+        jLabel4.setBounds(550, 110, 170, 40);
 
         jLabel5.setBackground(new java.awt.Color(255, 255, 255));
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
