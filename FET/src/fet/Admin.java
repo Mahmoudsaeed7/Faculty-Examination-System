@@ -49,17 +49,19 @@ public class Admin extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        collapsedbar = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
         expandedbar = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        collapsedbar = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         add_inst = new javax.swing.JLabel();
@@ -110,6 +112,111 @@ public class Admin extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
+
+        expandedbar.setBackground(new java.awt.Color(39, 42, 54));
+        expandedbar.setLayout(null);
+
+        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Admin");
+        expandedbar.add(jLabel1);
+        jLabel1.setBounds(0, 0, 90, 40);
+
+        jLabel5.setBackground(new java.awt.Color(39, 42, 54));
+        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/add (2).png"))); // NOI18N
+        jLabel5.setText("   Add");
+        jLabel5.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jLabel5.setFocusable(false);
+        jLabel5.setOpaque(true);
+        jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel5MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabel5MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabel5MouseExited(evt);
+            }
+        });
+        expandedbar.add(jLabel5);
+        jLabel5.setBounds(10, 210, 190, 60);
+
+        jLabel7.setBackground(new java.awt.Color(39, 42, 54));
+        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/home-icon-silhouette.png"))); // NOI18N
+        jLabel7.setText("   Home");
+        jLabel7.setFocusable(false);
+        jLabel7.setOpaque(true);
+        jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel7MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabel7MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabel7MouseExited(evt);
+            }
+        });
+        expandedbar.add(jLabel7);
+        jLabel7.setBounds(10, 150, 190, 60);
+
+        jLabel9.setBackground(new java.awt.Color(39, 42, 54));
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/menu.png"))); // NOI18N
+        jLabel9.setFocusable(false);
+        jLabel9.setOpaque(true);
+        jLabel9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabel9MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabel9MouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jLabel9MousePressed(evt);
+            }
+        });
+        expandedbar.add(jLabel9);
+        jLabel9.setBounds(160, 0, 40, 40);
+
+        jLabel6.setBackground(new java.awt.Color(39, 42, 54));
+        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/test (5).png"))); // NOI18N
+        jLabel6.setText("   Exam Session");
+        jLabel6.setFocusable(false);
+        jLabel6.setOpaque(true);
+        jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel6MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabel6MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabel6MouseExited(evt);
+            }
+        });
+        expandedbar.add(jLabel6);
+        jLabel6.setBounds(10, 270, 190, 60);
+
+        jLabel13.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/logout.png"))); // NOI18N
+        jLabel13.setText("  Log Out");
+        expandedbar.add(jLabel13);
+        jLabel13.setBounds(10, 710, 190, 60);
+
+        getContentPane().add(expandedbar);
+        expandedbar.setBounds(0, 0, 200, 770);
 
         collapsedbar.setBackground(new java.awt.Color(39, 42, 54));
         collapsedbar.setLayout(null);
@@ -186,106 +293,13 @@ public class Admin extends javax.swing.JFrame {
         collapsedbar.add(jLabel11);
         jLabel11.setBounds(0, 0, 80, 40);
 
+        jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/logout.png"))); // NOI18N
+        collapsedbar.add(jLabel12);
+        jLabel12.setBounds(0, 710, 80, 60);
+
         getContentPane().add(collapsedbar);
         collapsedbar.setBounds(0, 0, 80, 770);
-
-        expandedbar.setBackground(new java.awt.Color(39, 42, 54));
-        expandedbar.setLayout(null);
-
-        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Admin");
-        expandedbar.add(jLabel1);
-        jLabel1.setBounds(0, 0, 90, 40);
-
-        jLabel5.setBackground(new java.awt.Color(39, 42, 54));
-        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/add (2).png"))); // NOI18N
-        jLabel5.setText("   Add");
-        jLabel5.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jLabel5.setFocusable(false);
-        jLabel5.setOpaque(true);
-        jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel5MouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jLabel5MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jLabel5MouseExited(evt);
-            }
-        });
-        expandedbar.add(jLabel5);
-        jLabel5.setBounds(0, 210, 200, 60);
-
-        jLabel7.setBackground(new java.awt.Color(39, 42, 54));
-        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/home-icon-silhouette.png"))); // NOI18N
-        jLabel7.setText("   Home");
-        jLabel7.setFocusable(false);
-        jLabel7.setOpaque(true);
-        jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel7MouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jLabel7MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jLabel7MouseExited(evt);
-            }
-        });
-        expandedbar.add(jLabel7);
-        jLabel7.setBounds(0, 150, 200, 60);
-
-        jLabel9.setBackground(new java.awt.Color(39, 42, 54));
-        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/menu.png"))); // NOI18N
-        jLabel9.setFocusable(false);
-        jLabel9.setOpaque(true);
-        jLabel9.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jLabel9MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jLabel9MouseExited(evt);
-            }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                jLabel9MousePressed(evt);
-            }
-        });
-        expandedbar.add(jLabel9);
-        jLabel9.setBounds(160, 0, 40, 40);
-
-        jLabel6.setBackground(new java.awt.Color(39, 42, 54));
-        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/test (5).png"))); // NOI18N
-        jLabel6.setText("   Exam Session");
-        jLabel6.setFocusable(false);
-        jLabel6.setOpaque(true);
-        jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel6MouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jLabel6MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jLabel6MouseExited(evt);
-            }
-        });
-        expandedbar.add(jLabel6);
-        jLabel6.setBounds(0, 270, 200, 60);
-
-        getContentPane().add(expandedbar);
-        expandedbar.setBounds(0, 0, 200, 770);
 
         jLabel2.setBackground(new java.awt.Color(39, 42, 54));
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
@@ -456,17 +470,28 @@ public class Admin extends javax.swing.JFrame {
         jTable6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jTable6.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Title 1", "Title 2", "Title 3", "Title 4", "Add", "Delete"
             }
-        ));
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Boolean.class, java.lang.Boolean.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        jTable6.setEnabled(false);
+        jTable6.setFocusable(false);
         jTable6.setGridColor(new java.awt.Color(255, 255, 255));
         jTable6.setIntercellSpacing(new java.awt.Dimension(0, 0));
+        jTable6.setRowHeight(30);
         jTable6.setSelectionBackground(new java.awt.Color(255, 255, 0));
         jTable6.setShowHorizontalLines(false);
         jTable6.setShowVerticalLines(false);
@@ -513,11 +538,28 @@ public class Admin extends javax.swing.JFrame {
 
             },
             new String [] {
-                "ID", "Name", "Mail"
+                "ID", "Name", "Mail", "Add", "Delete"
             }
-        ));
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Boolean.class, java.lang.Boolean.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, true, true
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        req_table.setFocusable(false);
         req_table.setGridColor(new java.awt.Color(255, 255, 255));
         req_table.setIntercellSpacing(new java.awt.Dimension(0, 0));
+        req_table.setRowHeight(30);
         req_table.setSelectionBackground(new java.awt.Color(0, 204, 204));
         req_table.setSelectionForeground(new java.awt.Color(0, 0, 0));
         req_table.setShowHorizontalLines(false);
@@ -536,17 +578,25 @@ public class Admin extends javax.swing.JFrame {
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Title 1", "Title 2", "Title 3", "Title 4", "Title 5", "Title 6"
             }
-        ));
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Boolean.class, java.lang.Boolean.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        jTable2.setEnabled(false);
+        jTable2.setFocusable(false);
         jTable2.setGridColor(new java.awt.Color(255, 255, 255));
         jTable2.setIntercellSpacing(new java.awt.Dimension(0, 0));
+        jTable2.setRowHeight(30);
         jTable2.setSelectionBackground(new java.awt.Color(0, 204, 204));
         jTable2.setSelectionForeground(new java.awt.Color(0, 0, 0));
         jTable2.setShowHorizontalLines(false);
@@ -592,11 +642,22 @@ public class Admin extends javax.swing.JFrame {
 
             },
             new String [] {
-                "ID", "Name", "Mail"
+                "ID", "Name", "Mail", "Add", "Delete"
             }
-        ));
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Boolean.class, java.lang.Boolean.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        stud_req.setEnabled(false);
+        stud_req.setFocusable(false);
         stud_req.setGridColor(new java.awt.Color(255, 255, 255));
         stud_req.setIntercellSpacing(new java.awt.Dimension(0, 0));
+        stud_req.setRowHeight(30);
         stud_req.setSelectionBackground(new java.awt.Color(0, 204, 51));
         stud_req.setSelectionForeground(new java.awt.Color(0, 0, 0));
         stud_req.setShowHorizontalLines(false);
@@ -609,19 +670,37 @@ public class Admin extends javax.swing.JFrame {
         jTable4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jTable4.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Title 1", "Title 2", "Title 3", "Title 4", "Add", "Delete"
             }
-        ));
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Boolean.class, java.lang.Boolean.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, true, true
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jTable4.setFocusable(false);
         jTable4.setIntercellSpacing(new java.awt.Dimension(0, 0));
+        jTable4.setRowHeight(30);
         jTable4.setSelectionBackground(new java.awt.Color(0, 204, 51));
         jTable4.setShowHorizontalLines(false);
         jTable4.setShowVerticalLines(false);
+        jTable4.getTableHeader().setReorderingAllowed(false);
         jScrollPane5.setViewportView(jTable4);
 
         student.add(jScrollPane5);
@@ -1172,6 +1251,8 @@ public class Admin extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
