@@ -39,9 +39,9 @@ abstract class Person {
     class instructors extends Person{
         int id;
         int age;
-        String courses;
+        int courses;
         
-        instructors(String inst_name , String inst_mail , String inst_phone , int inst_age , String inst_courses , int inst_id){
+        instructors(String inst_name , String inst_mail , String inst_phone , int inst_age , int inst_courses , int inst_id){
             
             super(inst_name,inst_mail,inst_phone);
             

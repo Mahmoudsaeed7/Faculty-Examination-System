@@ -10,7 +10,7 @@ package fet;
  * @author MAHMOUD SAEED
  */
 public class inst_requests {
-    private int id;
+        private int id;
         private String name,mail;
         
         public inst_requests(int ID , String Name , String Mail){

@@ -86,14 +86,15 @@ public class Admin extends javax.swing.JFrame {
         jScrollPane4 = new javax.swing.JScrollPane();
         req_table = new javax.swing.JTable();
         jScrollPane3 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
+        inst_list = new javax.swing.JTable();
         jLabel19 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
+        btn_action = new javax.swing.JButton();
         student = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         stud_req = new javax.swing.JTable();
         jScrollPane5 = new javax.swing.JScrollPane();
-        jTable4 = new javax.swing.JTable();
+        stud_list = new javax.swing.JTable();
         jLabel21 = new javax.swing.JLabel();
         jLabel22 = new javax.swing.JLabel();
         addpanel = new javax.swing.JPanel();
@@ -576,32 +577,24 @@ public class Admin extends javax.swing.JFrame {
 
         jScrollPane3.setBackground(new java.awt.Color(255, 255, 255));
 
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+        inst_list.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4", "Title 5", "Title 6"
+                "ID", "Name", "Mail", "Phone", "Age", "Courses"
             }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Boolean.class, java.lang.Boolean.class
-            };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-        });
-        jTable2.setEnabled(false);
-        jTable2.setFocusable(false);
-        jTable2.setGridColor(new java.awt.Color(255, 255, 255));
-        jTable2.setIntercellSpacing(new java.awt.Dimension(0, 0));
-        jTable2.setRowHeight(30);
-        jTable2.setSelectionBackground(new java.awt.Color(0, 204, 204));
-        jTable2.setSelectionForeground(new java.awt.Color(0, 0, 0));
-        jTable2.setShowHorizontalLines(false);
-        jTable2.setShowVerticalLines(false);
-        jScrollPane3.setViewportView(jTable2);
+        ));
+        inst_list.setEnabled(false);
+        inst_list.setFocusable(false);
+        inst_list.setGridColor(new java.awt.Color(255, 255, 255));
+        inst_list.setIntercellSpacing(new java.awt.Dimension(0, 0));
+        inst_list.setRowHeight(30);
+        inst_list.setSelectionBackground(new java.awt.Color(0, 204, 204));
+        inst_list.setSelectionForeground(new java.awt.Color(0, 0, 0));
+        inst_list.setShowHorizontalLines(false);
+        inst_list.setShowVerticalLines(false);
+        jScrollPane3.setViewportView(inst_list);
 
         instructor.add(jScrollPane3);
         jScrollPane3.setBounds(210, 460, 1010, 300);
@@ -617,6 +610,10 @@ public class Admin extends javax.swing.JFrame {
         jLabel20.setText("Request List :");
         instructor.add(jLabel20);
         jLabel20.setBounds(210, 60, 130, 40);
+
+        btn_action.setText("Action");
+        instructor.add(btn_action);
+        btn_action.setBounds(1230, 400, 120, 50);
 
         getContentPane().add(instructor);
         instructor.setBounds(0, 0, 1370, 770);
@@ -667,41 +664,31 @@ public class Admin extends javax.swing.JFrame {
         student.add(jScrollPane2);
         jScrollPane2.setBounds(210, 120, 1030, 250);
 
-        jTable4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jTable4.setModel(new javax.swing.table.DefaultTableModel(
+        stud_list.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        stud_list.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
+
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4", "Add", "Delete"
+                "ID", "Name", "Phone", "Mail", "Sessions", "Grades"
             }
         ) {
-            Class[] types = new Class [] {
-                java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Boolean.class, java.lang.Boolean.class
-            };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, true, true
+                false, false, false, true, true, true
             };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
                 return canEdit [columnIndex];
             }
         });
-        jTable4.setFocusable(false);
-        jTable4.setIntercellSpacing(new java.awt.Dimension(0, 0));
-        jTable4.setRowHeight(30);
-        jTable4.setSelectionBackground(new java.awt.Color(0, 204, 51));
-        jTable4.setShowHorizontalLines(false);
-        jTable4.setShowVerticalLines(false);
-        jTable4.getTableHeader().setReorderingAllowed(false);
-        jScrollPane5.setViewportView(jTable4);
+        stud_list.setFocusable(false);
+        stud_list.setIntercellSpacing(new java.awt.Dimension(0, 0));
+        stud_list.setRowHeight(30);
+        stud_list.setSelectionBackground(new java.awt.Color(0, 204, 51));
+        stud_list.setShowHorizontalLines(false);
+        stud_list.setShowVerticalLines(false);
+        stud_list.getTableHeader().setReorderingAllowed(false);
+        jScrollPane5.setViewportView(stud_list);
 
         student.add(jScrollPane5);
         jScrollPane5.setBounds(210, 470, 1030, 280);
@@ -1070,8 +1057,10 @@ public class Admin extends javax.swing.JFrame {
         exampanel.setVisible(false);
         
         j.instReqTable = (DefaultTableModel)req_table.getModel();
+        j.instListTable = (DefaultTableModel)inst_list.getModel();
         if(r.reg){
             j.showInstData();
+            j.instData();
             r.reg = false;
         }
         
@@ -1089,8 +1078,10 @@ public class Admin extends javax.swing.JFrame {
         instructor.setVisible(false);
         exampanel.setVisible(false);
         j.studReqTable = (DefaultTableModel)stud_req.getModel();
+        j.studListTable = (DefaultTableModel)stud_list.getModel();
         if(r.reg2){
             j.showStudData();
+            j.studData();
             r.reg2 = false;
         }
     }//GEN-LAST:event_add_studMouseClicked
@@ -1145,8 +1136,10 @@ public class Admin extends javax.swing.JFrame {
         instructor.setVisible(false);
         exampanel.setVisible(false);
         j.studReqTable = (DefaultTableModel)stud_req.getModel();
+        j.studListTable = (DefaultTableModel)stud_list.getModel();
         if(r.reg2){
             j.showStudData();
+            j.studData();
             r.reg2 = false;
         }
     }//GEN-LAST:event_btn_studMouseClicked
@@ -1159,8 +1152,10 @@ public class Admin extends javax.swing.JFrame {
         instructor.setVisible(true);
         exampanel.setVisible(false);
         j.instReqTable = (DefaultTableModel)req_table.getModel();
+        j.instListTable = (DefaultTableModel)inst_list.getModel();
         if(r.reg){
             j.showInstData();
+            j.instData();
             r.reg = false;
         }
     }//GEN-LAST:event_btn_instMouseClicked
@@ -1234,12 +1229,14 @@ public class Admin extends javax.swing.JFrame {
     private javax.swing.JPanel admin;
     private javax.swing.JTextField admin_name;
     private javax.swing.JPasswordField admin_pass;
+    private javax.swing.JButton btn_action;
     private javax.swing.JButton btn_inst;
     private javax.swing.JButton btn_stud;
     private javax.swing.JPanel collapsedbar;
     private javax.swing.JPanel exampanel;
     private javax.swing.JPanel expandedbar;
     private javax.swing.JPanel homepanel;
+    private javax.swing.JTable inst_list;
     private javax.swing.JPanel instructor;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
@@ -1279,12 +1276,11 @@ public class Admin extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
-    private javax.swing.JTable jTable2;
-    private javax.swing.JTable jTable4;
     private javax.swing.JTable jTable5;
     private javax.swing.JTable jTable6;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTable req_table;
+    private javax.swing.JTable stud_list;
     private javax.swing.JTable stud_req;
     private javax.swing.JPanel student;
     // End of variables declaration//GEN-END:variables
