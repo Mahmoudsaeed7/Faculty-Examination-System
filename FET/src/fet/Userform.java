@@ -35,33 +35,6 @@ public class Userform extends javax.swing.JFrame {
     private void initComponents() {
 
         instructor_panel = new javax.swing.JPanel();
-        collpanel = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        expandpanel = new javax.swing.JPanel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        expanel = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        jLabel27 = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
-        jLabel28 = new javax.swing.JLabel();
-        jTextField7 = new javax.swing.JTextField();
-        jLabel30 = new javax.swing.JLabel();
-        jTextField9 = new javax.swing.JTextField();
-        jLabel31 = new javax.swing.JLabel();
-        jTextField10 = new javax.swing.JTextField();
-        jButton5 = new javax.swing.JButton();
         profilepanel = new javax.swing.JPanel();
         jLabel20 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
@@ -81,6 +54,49 @@ public class Userform extends javax.swing.JFrame {
         jLabel26 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        collpanel = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        expandpanel = new javax.swing.JPanel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        expanel = new javax.swing.JPanel();
+        jPanel4 = new javax.swing.JPanel();
+        jLabel29 = new javax.swing.JLabel();
+        jLabel32 = new javax.swing.JLabel();
+        jTextField8 = new javax.swing.JTextField();
+        jLabel33 = new javax.swing.JLabel();
+        jTextField11 = new javax.swing.JTextField();
+        jLabel37 = new javax.swing.JLabel();
+        jTextField12 = new javax.swing.JTextField();
+        jLabel39 = new javax.swing.JLabel();
+        jTextField14 = new javax.swing.JTextField();
+        jLabel40 = new javax.swing.JLabel();
+        jTextField15 = new javax.swing.JTextField();
+        jButton6 = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
+        jComboBox2 = new javax.swing.JComboBox();
+        jComboBox3 = new javax.swing.JComboBox();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        jLabel27 = new javax.swing.JLabel();
+        jTextField6 = new javax.swing.JTextField();
+        jLabel28 = new javax.swing.JLabel();
+        jTextField7 = new javax.swing.JTextField();
+        jLabel30 = new javax.swing.JLabel();
+        jTextField9 = new javax.swing.JTextField();
+        jLabel31 = new javax.swing.JLabel();
+        jTextField10 = new javax.swing.JTextField();
+        jButton5 = new javax.swing.JButton();
         hm = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         jLabel15 = new javax.swing.JLabel();
@@ -97,6 +113,100 @@ public class Userform extends javax.swing.JFrame {
         instructor_panel.setBackground(new java.awt.Color(255, 255, 255));
         instructor_panel.setPreferredSize(new java.awt.Dimension(1366, 769));
         instructor_panel.setLayout(null);
+
+        profilepanel.setBackground(new java.awt.Color(255, 255, 255));
+        profilepanel.setLayout(null);
+
+        jLabel20.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/FET/src/fet/Images/user.png"))); // NOI18N
+        profilepanel.add(jLabel20);
+        jLabel20.setBounds(280, 50, 190, 170);
+
+        jButton1.setBackground(new java.awt.Color(39, 42, 54));
+        jButton1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("Upload Photo");
+        jButton1.setBorder(null);
+        profilepanel.add(jButton1);
+        jButton1.setBounds(310, 230, 130, 40);
+
+        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel3.setLayout(null);
+
+        jLabel25.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel25.setText("Name");
+        jPanel3.add(jLabel25);
+        jLabel25.setBounds(110, 90, 80, 20);
+
+        jTextField5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jPanel3.add(jTextField5);
+        jTextField5.setBounds(230, 80, 230, 40);
+
+        jLabel21.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel21.setText("Mobile Number");
+        jPanel3.add(jLabel21);
+        jLabel21.setBounds(110, 180, 100, 20);
+
+        jTextField1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jPanel3.add(jTextField1);
+        jTextField1.setBounds(230, 170, 230, 40);
+
+        jLabel24.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel24.setText("Add Course");
+        jPanel3.add(jLabel24);
+        jLabel24.setBounds(110, 500, 90, 20);
+
+        jTextField4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jPanel3.add(jTextField4);
+        jTextField4.setBounds(230, 260, 230, 40);
+
+        jLabel22.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel22.setText("Email Address");
+        jPanel3.add(jLabel22);
+        jLabel22.setBounds(110, 270, 100, 20);
+
+        jTextField2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jPanel3.add(jTextField2);
+        jTextField2.setBounds(230, 350, 230, 40);
+
+        jLabel23.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel23.setText("Age");
+        jPanel3.add(jLabel23);
+        jLabel23.setBounds(110, 360, 70, 20);
+
+        jTextField3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jPanel3.add(jTextField3);
+        jTextField3.setBounds(230, 490, 230, 40);
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "List Of Courses", " " }));
+        jPanel3.add(jComboBox1);
+        jComboBox1.setBounds(230, 440, 230, 20);
+
+        jButton4.setBackground(new java.awt.Color(39, 42, 54));
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/add (2).png"))); // NOI18N
+        jPanel3.add(jButton4);
+        jButton4.setBounds(470, 490, 40, 40);
+
+        jLabel26.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel26.setText("Courses");
+        jPanel3.add(jLabel26);
+        jLabel26.setBounds(110, 440, 90, 17);
+
+        profilepanel.add(jPanel3);
+        jPanel3.setBounds(510, 50, 540, 570);
+
+        jButton2.setBackground(new java.awt.Color(39, 42, 54));
+        jButton2.setText("Edit");
+        profilepanel.add(jButton2);
+        jButton2.setBounds(620, 640, 130, 40);
+
+        jButton3.setBackground(new java.awt.Color(39, 42, 54));
+        jButton3.setText("Save");
+        profilepanel.add(jButton3);
+        jButton3.setBounds(860, 640, 130, 40);
+
+        instructor_panel.add(profilepanel);
+        profilepanel.setBounds(0, 0, 1370, 770);
 
         collpanel.setBackground(new java.awt.Color(39, 42, 54));
         collpanel.setLayout(null);
@@ -198,6 +308,77 @@ public class Userform extends javax.swing.JFrame {
         expanel.setBackground(new java.awt.Color(255, 255, 255));
         expanel.setLayout(null);
 
+        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel4.setLayout(null);
+
+        jLabel29.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
+        jLabel29.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel29.setText("Question ");
+        jPanel4.add(jLabel29);
+        jLabel29.setBounds(620, 20, 290, 120);
+
+        jLabel32.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel32.setText("Question");
+        jPanel4.add(jLabel32);
+        jLabel32.setBounds(350, 260, 70, 20);
+        jPanel4.add(jTextField8);
+        jTextField8.setBounds(430, 250, 720, 40);
+
+        jLabel33.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel33.setText("Choose 3:");
+        jPanel4.add(jLabel33);
+        jLabel33.setBounds(430, 560, 80, 30);
+        jPanel4.add(jTextField11);
+        jTextField11.setBounds(430, 590, 650, 30);
+
+        jLabel37.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel37.setText("Choose 4:");
+        jPanel4.add(jLabel37);
+        jLabel37.setBounds(430, 640, 80, 30);
+        jPanel4.add(jTextField12);
+        jTextField12.setBounds(430, 670, 650, 30);
+
+        jLabel39.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel39.setText("Choose 1:");
+        jPanel4.add(jLabel39);
+        jLabel39.setBounds(430, 410, 80, 30);
+        jPanel4.add(jTextField14);
+        jTextField14.setBounds(430, 440, 650, 30);
+
+        jLabel40.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel40.setText("Choose 2:");
+        jPanel4.add(jLabel40);
+        jLabel40.setBounds(430, 480, 80, 30);
+        jPanel4.add(jTextField15);
+        jTextField15.setBounds(430, 510, 650, 30);
+
+        jButton6.setText("Next");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+        jPanel4.add(jButton6);
+        jButton6.setBounds(1110, 710, 120, 40);
+
+        jButton7.setText("Finish");
+        jButton7.setToolTipText("");
+        jPanel4.add(jButton7);
+        jButton7.setBounds(1250, 710, 110, 40);
+
+        jComboBox2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Choose the correct answer", "1", "2", "3", "4", " ", " " }));
+        jPanel4.add(jComboBox2);
+        jComboBox2.setBounds(570, 370, 330, 30);
+
+        jComboBox3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Choose the Nomber of Questions", "2", "3", "4", " ", " " }));
+        jPanel4.add(jComboBox3);
+        jComboBox3.setBounds(570, 320, 330, 30);
+
+        expanel.add(jPanel4);
+        jPanel4.setBounds(0, 0, 1370, 770);
+
         jScrollPane1.setBackground(new java.awt.Color(255, 255, 255));
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
@@ -265,100 +446,6 @@ public class Userform extends javax.swing.JFrame {
         instructor_panel.add(expanel);
         expanel.setBounds(0, 0, 1370, 770);
 
-        profilepanel.setBackground(new java.awt.Color(255, 255, 255));
-        profilepanel.setLayout(null);
-
-        jLabel20.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/FET/src/fet/Images/user.png"))); // NOI18N
-        profilepanel.add(jLabel20);
-        jLabel20.setBounds(280, 50, 190, 170);
-
-        jButton1.setBackground(new java.awt.Color(39, 42, 54));
-        jButton1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Upload Photo");
-        jButton1.setBorder(null);
-        profilepanel.add(jButton1);
-        jButton1.setBounds(310, 230, 130, 40);
-
-        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel3.setLayout(null);
-
-        jLabel25.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel25.setText("Name");
-        jPanel3.add(jLabel25);
-        jLabel25.setBounds(110, 90, 80, 20);
-
-        jTextField5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jPanel3.add(jTextField5);
-        jTextField5.setBounds(230, 80, 230, 40);
-
-        jLabel21.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel21.setText("Mobile Number");
-        jPanel3.add(jLabel21);
-        jLabel21.setBounds(110, 180, 100, 20);
-
-        jTextField1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jPanel3.add(jTextField1);
-        jTextField1.setBounds(230, 170, 230, 40);
-
-        jLabel24.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel24.setText("Add Course");
-        jPanel3.add(jLabel24);
-        jLabel24.setBounds(110, 500, 90, 20);
-
-        jTextField4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jPanel3.add(jTextField4);
-        jTextField4.setBounds(230, 260, 230, 40);
-
-        jLabel22.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel22.setText("Email Address");
-        jPanel3.add(jLabel22);
-        jLabel22.setBounds(110, 270, 100, 20);
-
-        jTextField2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jPanel3.add(jTextField2);
-        jTextField2.setBounds(230, 350, 230, 40);
-
-        jLabel23.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel23.setText("Age");
-        jPanel3.add(jLabel23);
-        jLabel23.setBounds(110, 360, 70, 20);
-
-        jTextField3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jPanel3.add(jTextField3);
-        jTextField3.setBounds(230, 490, 230, 40);
-
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "List Of Courses", " " }));
-        jPanel3.add(jComboBox1);
-        jComboBox1.setBounds(230, 440, 230, 20);
-
-        jButton4.setBackground(new java.awt.Color(39, 42, 54));
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/add (2).png"))); // NOI18N
-        jPanel3.add(jButton4);
-        jButton4.setBounds(470, 490, 40, 40);
-
-        jLabel26.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel26.setText("Courses");
-        jPanel3.add(jLabel26);
-        jLabel26.setBounds(110, 440, 90, 17);
-
-        profilepanel.add(jPanel3);
-        jPanel3.setBounds(510, 50, 540, 570);
-
-        jButton2.setBackground(new java.awt.Color(39, 42, 54));
-        jButton2.setText("Edit");
-        profilepanel.add(jButton2);
-        jButton2.setBounds(620, 640, 130, 40);
-
-        jButton3.setBackground(new java.awt.Color(39, 42, 54));
-        jButton3.setText("Save");
-        profilepanel.add(jButton3);
-        jButton3.setBounds(860, 640, 130, 40);
-
-        instructor_panel.add(profilepanel);
-        profilepanel.setBounds(0, 0, 1370, 770);
-
         hm.setBackground(new java.awt.Color(255, 255, 255));
         hm.setLayout(null);
 
@@ -418,6 +505,10 @@ public class Userform extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        
+    }//GEN-LAST:event_jButton6ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -464,7 +555,11 @@ public class Userform extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
     private javax.swing.JComboBox jComboBox1;
+    private javax.swing.JComboBox jComboBox2;
+    private javax.swing.JComboBox jComboBox3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -486,10 +581,16 @@ public class Userform extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel37;
+    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel40;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
@@ -498,16 +599,22 @@ public class Userform extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField10;
+    private javax.swing.JTextField jTextField11;
+    private javax.swing.JTextField jTextField12;
+    private javax.swing.JTextField jTextField14;
+    private javax.swing.JTextField jTextField15;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField7;
+    private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
     private javax.swing.JPanel profilepanel;
     // End of variables declaration//GEN-END:variables
