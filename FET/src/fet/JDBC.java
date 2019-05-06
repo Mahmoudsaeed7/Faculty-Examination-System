@@ -254,6 +254,9 @@ public class JDBC {
             row[3] = lst.get(i).phone;
             row[4] = lst.get(i).age;
            //row[5] = lst.get(i).coursesCode;
+<<<<<<< HEAD
+>>>>>>> parent of 32787f9... ......
+=======
 >>>>>>> parent of 32787f9... ......
             model.addRow(row);
         }
@@ -280,6 +283,9 @@ public class JDBC {
 
                 //stud = new Student(rst.getInt("id"),rst.getString("name"), rst.getString("emailAddress"),rst.getString("mobileNumber"),rst.getInt("enrolledExamSessionsId"),rst.getInt("grades"));
                 //List.add(stud);
+<<<<<<< HEAD
+>>>>>>> parent of 32787f9... ......
+=======
 >>>>>>> parent of 32787f9... ......
             }
         }catch(SQLException e){

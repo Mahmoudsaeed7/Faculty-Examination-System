@@ -46,7 +46,10 @@ public class Userform extends javax.swing.JFrame {
 
         instructor_panel = new javax.swing.JPanel();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of 32787f9... ......
         profilepanel = new javax.swing.JPanel();
         jLabel20 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
@@ -66,6 +69,9 @@ public class Userform extends javax.swing.JFrame {
         jLabel26 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+<<<<<<< HEAD
+>>>>>>> parent of 32787f9... ......
+=======
 >>>>>>> parent of 32787f9... ......
         collpanel = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
@@ -82,6 +88,7 @@ public class Userform extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+<<<<<<< HEAD
 <<<<<<< HEAD
         hm = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
@@ -111,6 +118,8 @@ public class Userform extends javax.swing.JFrame {
         jButton5 = new javax.swing.JButton();
         questpanel = new javax.swing.JPanel();
 =======
+=======
+>>>>>>> parent of 32787f9... ......
         expanel = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
 >>>>>>> parent of 32787f9... ......
@@ -129,6 +138,7 @@ public class Userform extends javax.swing.JFrame {
         jButton7 = new javax.swing.JButton();
         jComboBox2 = new javax.swing.JComboBox();
         jComboBox3 = new javax.swing.JComboBox();
+<<<<<<< HEAD
 <<<<<<< HEAD
         stdpanel = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -153,6 +163,8 @@ public class Userform extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
 =======
+=======
+>>>>>>> parent of 32787f9... ......
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jLabel27 = new javax.swing.JLabel();
@@ -183,7 +195,10 @@ public class Userform extends javax.swing.JFrame {
         instructor_panel.setLayout(null);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of 32787f9... ......
         profilepanel.setBackground(new java.awt.Color(255, 255, 255));
         profilepanel.setLayout(null);
 
@@ -202,6 +217,84 @@ public class Userform extends javax.swing.JFrame {
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setLayout(null);
+<<<<<<< HEAD
+=======
+
+        jLabel25.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel25.setText("Name");
+        jPanel3.add(jLabel25);
+        jLabel25.setBounds(110, 90, 80, 20);
+
+        jTextField5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jPanel3.add(jTextField5);
+        jTextField5.setBounds(230, 80, 230, 40);
+
+        jLabel21.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel21.setText("Mobile Number");
+        jPanel3.add(jLabel21);
+        jLabel21.setBounds(110, 180, 100, 20);
+
+        jTextField1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jPanel3.add(jTextField1);
+        jTextField1.setBounds(230, 170, 230, 40);
+
+        jLabel24.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel24.setText("Add Course");
+        jPanel3.add(jLabel24);
+        jLabel24.setBounds(110, 500, 90, 20);
+
+        jTextField4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jPanel3.add(jTextField4);
+        jTextField4.setBounds(230, 260, 230, 40);
+
+        jLabel22.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel22.setText("Email Address");
+        jPanel3.add(jLabel22);
+        jLabel22.setBounds(110, 270, 100, 20);
+
+        jTextField2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jPanel3.add(jTextField2);
+        jTextField2.setBounds(230, 350, 230, 40);
+
+        jLabel23.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel23.setText("Age");
+        jPanel3.add(jLabel23);
+        jLabel23.setBounds(110, 360, 70, 20);
+
+        jTextField3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jPanel3.add(jTextField3);
+        jTextField3.setBounds(230, 490, 230, 40);
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "List Of Courses", " " }));
+        jPanel3.add(jComboBox1);
+        jComboBox1.setBounds(230, 440, 230, 20);
+
+        jButton4.setBackground(new java.awt.Color(39, 42, 54));
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/add (2).png"))); // NOI18N
+        jPanel3.add(jButton4);
+        jButton4.setBounds(470, 490, 40, 40);
+
+        jLabel26.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel26.setText("Courses");
+        jPanel3.add(jLabel26);
+        jLabel26.setBounds(110, 440, 90, 17);
+
+        profilepanel.add(jPanel3);
+        jPanel3.setBounds(510, 50, 540, 570);
+
+        jButton2.setBackground(new java.awt.Color(39, 42, 54));
+        jButton2.setText("Edit");
+        profilepanel.add(jButton2);
+        jButton2.setBounds(620, 640, 130, 40);
+
+        jButton3.setBackground(new java.awt.Color(39, 42, 54));
+        jButton3.setText("Save");
+        profilepanel.add(jButton3);
+        jButton3.setBounds(860, 640, 130, 40);
+
+        instructor_panel.add(profilepanel);
+        profilepanel.setBounds(0, 0, 1370, 770);
+>>>>>>> parent of 32787f9... ......
 
         jLabel25.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel25.setText("Name");
@@ -314,12 +407,16 @@ public class Userform extends javax.swing.JFrame {
 
         jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 <<<<<<< HEAD
+<<<<<<< HEAD
         jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/male-university-graduate-silhouette-with-the-cap.png"))); // NOI18N
         jLabel12.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel12MouseClicked(evt);
             }
         });
+=======
+        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/FET/src/fet/Images/male-university-graduate-silhouette-with-the-cap.png"))); // NOI18N
+>>>>>>> parent of 32787f9... ......
 =======
         jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/FET/src/fet/Images/male-university-graduate-silhouette-with-the-cap.png"))); // NOI18N
 >>>>>>> parent of 32787f9... ......
@@ -416,7 +513,11 @@ public class Userform extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 <<<<<<< HEAD
+<<<<<<< HEAD
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/icons8-customer-40.png"))); // NOI18N
+=======
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/FET/src/fet/Images/icons8-customer-40.png"))); // NOI18N
+>>>>>>> parent of 32787f9... ......
 =======
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/FET/src/fet/Images/icons8-customer-40.png"))); // NOI18N
 >>>>>>> parent of 32787f9... ......
@@ -425,9 +526,12 @@ public class Userform extends javax.swing.JFrame {
         jLabel1.setBounds(1230, 0, 140, 60);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         hm.setBackground(new java.awt.Color(255, 255, 255));
         hm.setLayout(null);
 =======
+=======
+>>>>>>> parent of 32787f9... ......
         expanel.setBackground(new java.awt.Color(255, 255, 255));
         expanel.setLayout(null);
 >>>>>>> parent of 32787f9... ......
@@ -533,6 +637,9 @@ public class Userform extends javax.swing.JFrame {
 =======
         expanel.add(jPanel4);
         jPanel4.setBounds(0, 0, 1370, 770);
+<<<<<<< HEAD
+>>>>>>> parent of 32787f9... ......
+=======
 >>>>>>> parent of 32787f9... ......
 
         jScrollPane1.setBackground(new java.awt.Color(255, 255, 255));
@@ -622,6 +729,7 @@ public class Userform extends javax.swing.JFrame {
         questpanel.add(jTextField11);
         jTextField11.setBounds(430, 590, 650, 30);
 
+<<<<<<< HEAD
         jLabel37.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel37.setText("Choose 4:");
         questpanel.add(jLabel37);
@@ -800,6 +908,8 @@ public class Userform extends javax.swing.JFrame {
         instructor_panel.add(profilepanel);
         profilepanel.setBounds(0, 0, 1370, 770);
 =======
+=======
+>>>>>>> parent of 32787f9... ......
         hm.setBackground(new java.awt.Color(255, 255, 255));
         hm.setLayout(null);
 
