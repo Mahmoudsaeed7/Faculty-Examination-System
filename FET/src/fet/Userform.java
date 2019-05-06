@@ -37,6 +37,7 @@ public class Userform extends javax.swing.JFrame {
         instructor_panel = new javax.swing.JPanel();
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> parent of 32787f9... ......
@@ -63,6 +64,8 @@ public class Userform extends javax.swing.JFrame {
 >>>>>>> parent of 32787f9... ......
 =======
 >>>>>>> parent of 32787f9... ......
+=======
+>>>>>>> parent of 01c5b2a... ///
         collpanel = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
@@ -81,6 +84,9 @@ public class Userform extends javax.swing.JFrame {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 01c5b2a... ///
         hm = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         jLabel15 = new javax.swing.JLabel();
@@ -112,12 +118,15 @@ public class Userform extends javax.swing.JFrame {
         jButton5 = new javax.swing.JButton();
 <<<<<<< HEAD
         questpanel = new javax.swing.JPanel();
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> parent of 32787f9... ......
         expanel = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
 >>>>>>> parent of 32787f9... ......
+=======
+>>>>>>> parent of 01c5b2a... ///
         jLabel29 = new javax.swing.JLabel();
         jLabel32 = new javax.swing.JLabel();
         jTextField8 = new javax.swing.JTextField();
@@ -135,6 +144,9 @@ public class Userform extends javax.swing.JFrame {
         jComboBox3 = new javax.swing.JComboBox();
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 01c5b2a... ///
         stdpanel = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
@@ -159,6 +171,7 @@ public class Userform extends javax.swing.JFrame {
         jLabel26 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -189,6 +202,8 @@ public class Userform extends javax.swing.JFrame {
 >>>>>>> parent of 32787f9... ......
 =======
 >>>>>>> parent of ed0627c... Merge branch 'master' into MyFu-Branch
+=======
+>>>>>>> parent of 01c5b2a... ///
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -197,6 +212,7 @@ public class Userform extends javax.swing.JFrame {
         instructor_panel.setPreferredSize(new java.awt.Dimension(1366, 769));
         instructor_panel.setLayout(null);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -375,6 +391,8 @@ public class Userform extends javax.swing.JFrame {
         profilepanel.setBounds(0, 0, 1370, 770);
 
 >>>>>>> parent of 32787f9... ......
+=======
+>>>>>>> parent of 01c5b2a... ///
         collpanel.setBackground(new java.awt.Color(39, 42, 54));
         collpanel.setLayout(null);
 
@@ -397,12 +415,16 @@ public class Userform extends javax.swing.JFrame {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 01c5b2a... ///
         jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/male-university-graduate-silhouette-with-the-cap.png"))); // NOI18N
         jLabel12.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel12MouseClicked(evt);
             }
         });
+<<<<<<< HEAD
 =======
         jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/FET/src/fet/Images/male-university-graduate-silhouette-with-the-cap.png"))); // NOI18N
 >>>>>>> parent of 32787f9... ......
@@ -412,6 +434,8 @@ public class Userform extends javax.swing.JFrame {
 =======
         jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/FET/src/fet/Images/male-university-graduate-silhouette-with-the-cap.png"))); // NOI18N
 >>>>>>> parent of ed0627c... Merge branch 'master' into MyFu-Branch
+=======
+>>>>>>> parent of 01c5b2a... ///
         collpanel.add(jLabel12);
         jLabel12.setBounds(0, 320, 80, 60);
 
@@ -449,7 +473,7 @@ public class Userform extends javax.swing.JFrame {
         jLabel2.setBounds(160, 0, 40, 40);
 
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/FET/src/fet/Images/icons8-customer-64.png"))); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/icons8-customer-64.png"))); // NOI18N
         expandpanel.add(jLabel5);
         jLabel5.setBounds(50, 70, 100, 60);
 
@@ -487,6 +511,7 @@ public class Userform extends javax.swing.JFrame {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/icons8-customer-40.png"))); // NOI18N
 =======
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/FET/src/fet/Images/icons8-customer-40.png"))); // NOI18N
@@ -497,10 +522,14 @@ public class Userform extends javax.swing.JFrame {
 =======
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/FET/src/fet/Images/icons8-customer-40.png"))); // NOI18N
 >>>>>>> parent of ed0627c... Merge branch 'master' into MyFu-Branch
+=======
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/icons8-customer-40.png"))); // NOI18N
+>>>>>>> parent of 01c5b2a... ///
         jLabel1.setText("Name");
         instructor_panel.add(jLabel1);
         jLabel1.setBounds(1230, 0, 140, 60);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -512,6 +541,10 @@ public class Userform extends javax.swing.JFrame {
         expanel.setBackground(new java.awt.Color(255, 255, 255));
         expanel.setLayout(null);
 >>>>>>> parent of 32787f9... ......
+=======
+        hm.setBackground(new java.awt.Color(255, 255, 255));
+        hm.setLayout(null);
+>>>>>>> parent of 01c5b2a... ///
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(null);
@@ -608,9 +641,9 @@ public class Userform extends javax.swing.JFrame {
         exampanel.add(sessionpanel);
         sessionpanel.setBounds(0, 0, 1370, 770);
 
-<<<<<<< HEAD
         createexam.setBackground(new java.awt.Color(255, 255, 255));
         createexam.setLayout(null);
+<<<<<<< HEAD
 =======
         expanel.add(jPanel4);
         jPanel4.setBounds(0, 0, 1370, 770);
@@ -622,6 +655,8 @@ public class Userform extends javax.swing.JFrame {
         expanel.setBackground(new java.awt.Color(255, 255, 255));
         expanel.setLayout(null);
 >>>>>>> parent of ed0627c... Merge branch 'master' into MyFu-Branch
+=======
+>>>>>>> parent of 01c5b2a... ///
 
         jScrollPane1.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -799,7 +834,6 @@ public class Userform extends javax.swing.JFrame {
         expanel.setBounds(0, 0, 1370, 770);
 >>>>>>> parent of ed0627c... Merge branch 'master' into MyFu-Branch
 
-<<<<<<< HEAD
         profilepanel.setBackground(new java.awt.Color(255, 255, 255));
         profilepanel.setLayout(null);
 
@@ -893,6 +927,7 @@ public class Userform extends javax.swing.JFrame {
 
         instructor_panel.add(profilepanel);
         profilepanel.setBounds(0, 0, 1370, 770);
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> parent of 32787f9... ......
@@ -948,6 +983,8 @@ public class Userform extends javax.swing.JFrame {
         instructor_panel.add(hm);
         hm.setBounds(0, 0, 1370, 770);
 >>>>>>> parent of 32787f9... ......
+=======
+>>>>>>> parent of 01c5b2a... ///
 
         hm.setBackground(new java.awt.Color(255, 255, 255));
         hm.setLayout(null);

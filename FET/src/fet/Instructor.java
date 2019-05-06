@@ -9,21 +9,11 @@ package fet;
  *
  * @author MAHMOUD SAEED
  */
-<<<<<<< HEAD
 public class Instructor {
     private int id,age,courses;
     private String name,mail,phone;
     
     public Instructor(int ID , String Name , String Mail , String Phone , int Age , int Courses){
-=======
-public class Instructor extends User {
-    public int id,age;
-    ArrayList<String> coursesCodes;
-   public String name,mail,phone;
-    
-    public Instructor(int ID , String Name , String Mail , String Phone , int Age , ArrayList<String> Courses){
-        super(Name , Phone , Mail );
->>>>>>> parent of 32787f9... ......
         this.id = ID;
         this.name = Name;
         this.mail = Mail;
