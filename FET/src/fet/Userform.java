@@ -23,11 +23,15 @@ public class Userform extends javax.swing.JFrame {
   
     public Userform() {
         initComponents();
-       
-       DefaultTableModel model = (DefaultTableModel)jTable3.getModel();
-        TableColumnModel cm=jTable3.getColumnModel();
-        cm.getColumn(4).setCellEditor(new DefaultCellEditor(
-    new JComboBox(new DefaultComboBoxModel(new String[]{} ))));
+       collpanel.setVisible(false);
+       hm.setVisible(true);
+       exampanel.setVisible(false);
+       stdpanel.setVisible(false);
+       profilepanel.setVisible(false);
+//       DefaultTableModel model = (DefaultTableModel)jTable3.getModel();
+//        TableColumnModel cm=jTable3.getColumnModel();
+//        cm.getColumn(4).setCellEditor(new DefaultCellEditor(
+//    new JComboBox(new DefaultComboBoxModel(new String[]{} ))));
     
     }
 
@@ -41,6 +45,30 @@ public class Userform extends javax.swing.JFrame {
     private void initComponents() {
 
         instructor_panel = new javax.swing.JPanel();
+        collpanel = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        expandpanel = new javax.swing.JPanel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        hm = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
         exampanel = new javax.swing.JPanel();
         sessionpanel = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
@@ -74,30 +102,6 @@ public class Userform extends javax.swing.JFrame {
         jButton7 = new javax.swing.JButton();
         jComboBox2 = new javax.swing.JComboBox();
         jComboBox3 = new javax.swing.JComboBox();
-        hm = new javax.swing.JPanel();
-        jPanel1 = new javax.swing.JPanel();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
-        collpanel = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        expandpanel = new javax.swing.JPanel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
         stdpanel = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
@@ -127,6 +131,195 @@ public class Userform extends javax.swing.JFrame {
         instructor_panel.setBackground(new java.awt.Color(255, 255, 255));
         instructor_panel.setPreferredSize(new java.awt.Dimension(1366, 769));
         instructor_panel.setLayout(null);
+
+        collpanel.setBackground(new java.awt.Color(39, 42, 54));
+        collpanel.setLayout(null);
+
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/menu (1).png"))); // NOI18N
+        jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel3MouseClicked(evt);
+            }
+        });
+        collpanel.add(jLabel3);
+        jLabel3.setBounds(0, 0, 80, 40);
+
+        jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/home-icon-silhouette (2).png"))); // NOI18N
+        jLabel10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel10MouseClicked(evt);
+            }
+        });
+        collpanel.add(jLabel10);
+        jLabel10.setBounds(0, 200, 80, 60);
+
+        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/test (6).png"))); // NOI18N
+        jLabel11.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel11MouseClicked(evt);
+            }
+        });
+        collpanel.add(jLabel11);
+        jLabel11.setBounds(0, 260, 80, 60);
+
+        jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/male-university-graduate-silhouette-with-the-cap.png"))); // NOI18N
+        jLabel12.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel12MouseClicked(evt);
+            }
+        });
+        collpanel.add(jLabel12);
+        jLabel12.setBounds(0, 320, 80, 60);
+
+        jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/logout.png"))); // NOI18N
+        collpanel.add(jLabel13);
+        jLabel13.setBounds(0, 710, 80, 60);
+
+        instructor_panel.add(collpanel);
+        collpanel.setBounds(0, 0, 80, 770);
+
+        expandpanel.setBackground(new java.awt.Color(39, 42, 54));
+        expandpanel.setLayout(null);
+
+        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/home-icon-silhouette (2).png"))); // NOI18N
+        jLabel6.setText("   Home");
+        jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel6MouseClicked(evt);
+            }
+        });
+        expandpanel.add(jLabel6);
+        jLabel6.setBounds(10, 200, 190, 60);
+
+        jLabel4.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setText("Name");
+        expandpanel.add(jLabel4);
+        jLabel4.setBounds(50, 130, 100, 40);
+
+        jLabel2.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/menu.png"))); // NOI18N
+        jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel2MouseClicked(evt);
+            }
+        });
+        expandpanel.add(jLabel2);
+        jLabel2.setBounds(160, 0, 40, 40);
+
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/icons8-customer-64.png"))); // NOI18N
+        expandpanel.add(jLabel5);
+        jLabel5.setBounds(50, 70, 100, 60);
+
+        jLabel7.setBackground(new java.awt.Color(39, 42, 54));
+        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/test (6).png"))); // NOI18N
+        jLabel7.setText("   Exam");
+        jLabel7.setOpaque(true);
+        jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel7MouseClicked(evt);
+            }
+        });
+        expandpanel.add(jLabel7);
+        jLabel7.setBounds(10, 260, 190, 60);
+
+        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/FET/src/fet/Images/logout.png"))); // NOI18N
+        jLabel8.setText("    Log Out");
+        expandpanel.add(jLabel8);
+        jLabel8.setBounds(10, 710, 190, 60);
+
+        jLabel9.setBackground(new java.awt.Color(39, 42, 54));
+        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/FET/src/fet/Images/male-university-graduate-silhouette-with-the-cap.png"))); // NOI18N
+        jLabel9.setText("   Students");
+        jLabel9.setOpaque(true);
+        jLabel9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel9MouseClicked(evt);
+            }
+        });
+        expandpanel.add(jLabel9);
+        jLabel9.setBounds(10, 320, 190, 60);
+
+        instructor_panel.add(expandpanel);
+        expandpanel.setBounds(0, 0, 200, 770);
+
+        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/icons8-customer-40.png"))); // NOI18N
+        jLabel1.setText("Name");
+        instructor_panel.add(jLabel1);
+        jLabel1.setBounds(1230, 0, 140, 60);
+
+        hm.setBackground(new java.awt.Color(255, 255, 255));
+        hm.setLayout(null);
+
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setLayout(null);
+
+        jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/test (7).png"))); // NOI18N
+        jPanel1.add(jLabel15);
+        jLabel15.setBounds(0, 0, 180, 140);
+
+        jLabel16.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel16.setText("Num of exams");
+        jPanel1.add(jLabel16);
+        jLabel16.setBounds(20, 140, 140, 30);
+
+        jLabel19.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel19.setText("Exams");
+        jPanel1.add(jLabel19);
+        jLabel19.setBounds(40, 180, 100, 30);
+
+        hm.add(jPanel1);
+        jPanel1.setBounds(830, 240, 180, 210);
+
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setLayout(null);
+
+        jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/icons8-students-100.png"))); // NOI18N
+        jPanel2.add(jLabel14);
+        jLabel14.setBounds(30, 30, 140, 100);
+
+        jLabel17.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel17.setText("Number of Students");
+        jPanel2.add(jLabel17);
+        jLabel17.setBounds(0, 140, 190, 30);
+
+        jLabel18.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel18.setText("Students");
+        jPanel2.add(jLabel18);
+        jLabel18.setBounds(40, 180, 120, 30);
+
+        hm.add(jPanel2);
+        jPanel2.setBounds(470, 240, 190, 220);
+
+        instructor_panel.add(hm);
+        hm.setBounds(0, 0, 1370, 770);
 
         exampanel.setBackground(new java.awt.Color(255, 255, 255));
         exampanel.setMinimumSize(new java.awt.Dimension(1370, 770));
@@ -318,155 +511,6 @@ public class Userform extends javax.swing.JFrame {
         instructor_panel.add(exampanel);
         exampanel.setBounds(0, 0, 1370, 770);
 
-        hm.setBackground(new java.awt.Color(255, 255, 255));
-        hm.setLayout(null);
-
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setLayout(null);
-
-        jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/test (7).png"))); // NOI18N
-        jPanel1.add(jLabel15);
-        jLabel15.setBounds(0, 0, 180, 140);
-
-        jLabel16.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel16.setText("Num of exams");
-        jPanel1.add(jLabel16);
-        jLabel16.setBounds(20, 140, 140, 30);
-
-        jLabel19.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel19.setText("Exams");
-        jPanel1.add(jLabel19);
-        jLabel19.setBounds(40, 180, 100, 30);
-
-        hm.add(jPanel1);
-        jPanel1.setBounds(830, 240, 180, 210);
-
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel2.setLayout(null);
-
-        jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/icons8-students-100.png"))); // NOI18N
-        jPanel2.add(jLabel14);
-        jLabel14.setBounds(30, 30, 140, 100);
-
-        jLabel17.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel17.setText("Number of Students");
-        jPanel2.add(jLabel17);
-        jLabel17.setBounds(0, 140, 190, 30);
-
-        jLabel18.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel18.setText("Students");
-        jPanel2.add(jLabel18);
-        jLabel18.setBounds(40, 180, 120, 30);
-
-        hm.add(jPanel2);
-        jPanel2.setBounds(470, 240, 190, 220);
-
-        instructor_panel.add(hm);
-        hm.setBounds(0, 0, 1370, 770);
-
-        collpanel.setBackground(new java.awt.Color(39, 42, 54));
-        collpanel.setLayout(null);
-
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/menu (1).png"))); // NOI18N
-        collpanel.add(jLabel3);
-        jLabel3.setBounds(0, 0, 80, 40);
-
-        jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/home-icon-silhouette (2).png"))); // NOI18N
-        collpanel.add(jLabel10);
-        jLabel10.setBounds(0, 200, 80, 60);
-
-        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/test (6).png"))); // NOI18N
-        collpanel.add(jLabel11);
-        jLabel11.setBounds(0, 260, 80, 60);
-
-        jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/male-university-graduate-silhouette-with-the-cap.png"))); // NOI18N
-        collpanel.add(jLabel12);
-        jLabel12.setBounds(0, 320, 80, 60);
-
-        jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/logout.png"))); // NOI18N
-        collpanel.add(jLabel13);
-        jLabel13.setBounds(0, 710, 80, 60);
-
-        instructor_panel.add(collpanel);
-        collpanel.setBounds(0, 0, 80, 770);
-
-        expandpanel.setBackground(new java.awt.Color(39, 42, 54));
-        expandpanel.setLayout(null);
-
-        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/home-icon-silhouette (2).png"))); // NOI18N
-        jLabel6.setText("   Home");
-        expandpanel.add(jLabel6);
-        jLabel6.setBounds(10, 200, 190, 60);
-
-        jLabel4.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("Name");
-        expandpanel.add(jLabel4);
-        jLabel4.setBounds(50, 130, 100, 40);
-
-        jLabel2.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/menu.png"))); // NOI18N
-        expandpanel.add(jLabel2);
-        jLabel2.setBounds(160, 0, 40, 40);
-
-        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/icons8-customer-64.png"))); // NOI18N
-        expandpanel.add(jLabel5);
-        jLabel5.setBounds(50, 70, 100, 60);
-
-        jLabel7.setBackground(new java.awt.Color(39, 42, 54));
-        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/test (6).png"))); // NOI18N
-        jLabel7.setText("   Exam");
-        jLabel7.setOpaque(true);
-        expandpanel.add(jLabel7);
-        jLabel7.setBounds(10, 260, 190, 60);
-
-        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/FET/src/fet/Images/logout.png"))); // NOI18N
-        jLabel8.setText("    Log Out");
-        expandpanel.add(jLabel8);
-        jLabel8.setBounds(10, 710, 190, 60);
-
-        jLabel9.setBackground(new java.awt.Color(39, 42, 54));
-        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/FET/src/fet/Images/male-university-graduate-silhouette-with-the-cap.png"))); // NOI18N
-        jLabel9.setText("   Students");
-        jLabel9.setOpaque(true);
-        expandpanel.add(jLabel9);
-        jLabel9.setBounds(10, 320, 190, 60);
-
-        instructor_panel.add(expandpanel);
-        expandpanel.setBounds(0, 0, 200, 770);
-
-        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/icons8-customer-40.png"))); // NOI18N
-        jLabel1.setText("Name");
-        instructor_panel.add(jLabel1);
-        jLabel1.setBounds(1230, 0, 140, 60);
-
         stdpanel.setBackground(new java.awt.Color(255, 255, 255));
         stdpanel.setLayout(null);
 
@@ -604,6 +648,58 @@ public class Userform extends javax.swing.JFrame {
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
+        expandpanel.setVisible(false);
+        collpanel.setVisible(true);
+    }//GEN-LAST:event_jLabel2MouseClicked
+
+    private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
+        expandpanel.setVisible(true);
+        collpanel.setVisible(false);
+    }//GEN-LAST:event_jLabel3MouseClicked
+
+    private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
+       hm.setVisible(true);
+       exampanel.setVisible(false);
+       stdpanel.setVisible(false);
+       profilepanel.setVisible(false);
+    }//GEN-LAST:event_jLabel6MouseClicked
+
+    private void jLabel10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MouseClicked
+       hm.setVisible(true);
+       exampanel.setVisible(false);
+       stdpanel.setVisible(false);
+       profilepanel.setVisible(false);
+    }//GEN-LAST:event_jLabel10MouseClicked
+
+    private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
+       hm.setVisible(false);
+       exampanel.setVisible(true);
+       stdpanel.setVisible(false);
+       profilepanel.setVisible(false);
+    }//GEN-LAST:event_jLabel7MouseClicked
+
+    private void jLabel11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11MouseClicked
+        hm.setVisible(false);
+       exampanel.setVisible(true);
+       stdpanel.setVisible(false);
+       profilepanel.setVisible(false);
+    }//GEN-LAST:event_jLabel11MouseClicked
+
+    private void jLabel12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel12MouseClicked
+        hm.setVisible(false);
+       exampanel.setVisible(false);
+       stdpanel.setVisible(true);
+       profilepanel.setVisible(false);
+    }//GEN-LAST:event_jLabel12MouseClicked
+
+    private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseClicked
+        hm.setVisible(false);
+       exampanel.setVisible(false);
+       stdpanel.setVisible(true);
+       profilepanel.setVisible(false);
+    }//GEN-LAST:event_jLabel9MouseClicked
 
     /**
      * @param args the command line arguments
