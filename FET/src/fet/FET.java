@@ -24,20 +24,20 @@ public class FET {
 //        Userform f= new Userform();
 //        f.setVisible(true);
        
-        Splash s=new Splash();
-        s.setVisible(true);
-     //  Login l=new Login();
+//        Splash s=new Splash();
+//        s.setVisible(true);
+//       Login l=new Login();
       Userform uf =new Userform();
       uf.setVisible(true);
-        try {
-            for (int i = 0; i < 100; i++) {
-            Thread.sleep(5);                     
-            }                      
-             s.setVisible(false);
-             l.setVisible(true);
-             l.setUndecorated(true);           
-        } catch (Exception e) {
-        }
+//        try {
+//            for (int i = 0; i < 100; i++) {
+//            Thread.sleep(5);                     
+//            }                      
+//             s.setVisible(false);
+//             l.setVisible(true);
+//             l.setUndecorated(true);           
+//        } catch (Exception e) {
+//        }
         
      
      
