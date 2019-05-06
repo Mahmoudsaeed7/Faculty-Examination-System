@@ -11,9 +11,9 @@ import java.util.ArrayList;
  * @author MAHMOUD SAEED
  */
 public class Instructor extends User {
-    protected int id,age;
+    public int id,age;
     ArrayList<String> coursesCodes;
-    protected String name,mail,phone;
+   public String name,mail,phone;
     
     public Instructor(int ID , String Name , String Mail , String Phone , int Age , ArrayList<String> Courses){
         super(Name , Phone , Mail );

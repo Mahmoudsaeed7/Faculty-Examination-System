@@ -21,16 +21,16 @@ public class FET {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-//        Userform f= new Userform();
-//        f.setVisible(true);
+          Userform f= new Userform();
+      f.setVisible(true);
        
         Splash s=new Splash();
         s.setVisible(true);
-     //  Login l=new Login();
+       Login l=new Login();
       Userform uf =new Userform();
       uf.setVisible(true);
         try {
-            for (int i = 0; i < 1000; i++) {
+            for (int i = 0; i < 100; i++) {
             Thread.sleep(5);                     
             }                      
              s.setVisible(false);

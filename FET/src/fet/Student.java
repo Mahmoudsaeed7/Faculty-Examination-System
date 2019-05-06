@@ -12,11 +12,11 @@ import java.util.ArrayList;
 
      class Student extends User{
         int id;
-        ArrayList<String> enrolledExamSessionsId = new ArrayList<String>();
-        ArrayList<String> grades = new ArrayList<String>();
+        int enrolledExamSessionsId;
+        int grades ;
         
         
-        Student(String stud_name , String stud_mail , String stud_phone , ArrayList<String> stud_grades ,  ArrayList<String> stud_sessions , int stud_id){
+        Student(String stud_name , String stud_mail , String stud_phone , int stud_grades ,  int stud_sessions , int stud_id){
             
             super(stud_name,stud_phone,stud_mail);
             

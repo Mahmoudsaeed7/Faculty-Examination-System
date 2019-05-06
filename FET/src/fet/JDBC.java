@@ -5,7 +5,7 @@
  */
 package fet;
 import java.sql.*;
-import fet.Person.*;
+//import fet.Person.*;
 import java.awt.*;
 import java.util.ArrayList;
 import javax.swing.JLabel;
@@ -216,8 +216,8 @@ public class JDBC {
             
             while(rst.next())
             {
-                inst = new Instructor(rst.getInt("inst_id"),rst.getString("inst_name"), rst.getString("inst_mail"),rst.getString("inst_phone"),rst.getInt("inst_age"),rst.getInt("inst_courses"));
-                List.add(inst);
+               // inst = new Instructor(rst.getInt("inst_id"),rst.getString("inst_name"), rst.getString("inst_mail"),rst.getString("inst_phone"),rst.getInt("inst_age"),rst.getInt("inst_courses"));
+                //List.add(inst);
             }
         }catch(SQLException e){
             System.err.println(e);
@@ -232,12 +232,12 @@ public class JDBC {
         Object[] row = new Object[6];
         for(int i=0; i<lst.size(); i++)
         {
-            row[0] = lst.get(i).getId();
-            row[1] = lst.get(i).getName();
-            row[2] = lst.get(i).getMail();
-            row[3] = lst.get(i).getPhone();
-            row[4] = lst.get(i).getAge();
-            row[5] = lst.get(i).getCourses();
+            row[0] = lst.get(i).id;
+            row[1] = lst.get(i).name;
+            row[2] = lst.get(i).mail;
+            row[3] = lst.get(i).phone;
+            row[4] = lst.get(i).age;
+           //row[5] = lst.get(i).coursesCode;
             model.addRow(row);
         }
     }
@@ -255,8 +255,10 @@ public class JDBC {
             
             while(rst.next())
             {
-                stud = new Student(rst.getInt("stud_id"),rst.getString("stud_name"), rst.getString("stud_mail"),rst.getString("stud_phone"),rst.getInt("stud_sessions"),rst.getInt("stud_grades"));
-                List.add(stud);
+                   //stud = new Student(String name, String emailAddress,String mobileNumber,int grades, int enrolledExamSessionsId,int id);
+
+                //stud = new Student(rst.getInt("id"),rst.getString("name"), rst.getString("emailAddress"),rst.getString("mobileNumber"),rst.getInt("enrolledExamSessionsId"),rst.getInt("grades"));
+                //List.add(stud);
             }
         }catch(SQLException e){
             System.err.println(e);
@@ -271,12 +273,12 @@ public class JDBC {
         Object[] row = new Object[6];
         for(int i=0; i<lst.size(); i++)
         {
-            row[0] = lst.get(i).getId();
-            row[1] = lst.get(i).getName();
-            row[2] = lst.get(i).getMail();
-            row[3] = lst.get(i).getPhone();
-            row[4] = lst.get(i).getSessions();
-            row[5] = lst.get(i).getGardes();
+            row[0] = lst.get(i).id;
+            row[1] = lst.get(i).name;
+            row[2] = lst.get(i).emailAddress;
+            row[3] = lst.get(i).mobileNumber;
+            row[4] = lst.get(i).enrolledExamSessionsId;
+            row[5] = lst.get(i).grades;
             model.addRow(row);
         }
     }

@@ -6,13 +6,12 @@
 package fet;
 import java.util.ArrayList;
 import java.util.Timer;
-import java.util.TimerTask;
 /**
  *
  * @author admin
  */
 public class Exam {
-    public String courseCode;
+    public String courseName;
     public int duration;
     public Timer timer;
     public boolean acceptanceStatus;
@@ -23,7 +22,8 @@ public class Exam {
     public ArrayList<Announcement> announcements;
     
 
-    public Exam(int duration, Timer timer, boolean acceptanceStatus, String releaseDate, String instructorName, int totalGrades, ArrayList<Question> questions, ArrayList<Announcement> announcements) {
+    public Exam(String courseName,int duration, Timer timer, boolean acceptanceStatus, String releaseDate, String instructorName, int totalGrades, ArrayList<Question> questions, ArrayList<Announcement> announcements) {
+        this.courseName= courseName;
         this.duration = duration;
         this.timer = timer;
         this.acceptanceStatus = acceptanceStatus;
