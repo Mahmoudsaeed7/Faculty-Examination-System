@@ -12,10 +12,10 @@ import java.util.ArrayList;
  */
 public class Instructor extends User {
     public int id,age;
-    ArrayList<String> coursesCodes;
+    int coursesCodes;
    public String name,mail,phone;
     
-    public Instructor(int ID , String Name , String Mail , String Phone , int Age , ArrayList<String> Courses){
+    public Instructor(int ID , String Name , String Mail , String Phone , int Age , int Courses){
         super(Name , Phone , Mail );
         this.id = ID;
         this.age = Age;

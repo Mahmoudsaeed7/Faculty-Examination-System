@@ -49,6 +49,14 @@ public class AdminPanel extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        instructor = new javax.swing.JPanel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        req_table = new javax.swing.JTable();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        inst_list = new javax.swing.JTable();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        btn_action = new javax.swing.JButton();
         expandedbar = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -82,14 +90,6 @@ public class AdminPanel extends javax.swing.JFrame {
         jButton9 = new javax.swing.JButton();
         jTextField2 = new javax.swing.JTextField();
         jLabel23 = new javax.swing.JLabel();
-        instructor = new javax.swing.JPanel();
-        jScrollPane4 = new javax.swing.JScrollPane();
-        req_table = new javax.swing.JTable();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        inst_list = new javax.swing.JTable();
-        jLabel19 = new javax.swing.JLabel();
-        jLabel20 = new javax.swing.JLabel();
-        btn_action = new javax.swing.JButton();
         student = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         stud_req = new javax.swing.JTable();
@@ -113,6 +113,101 @@ public class AdminPanel extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
+
+        instructor.setBackground(new java.awt.Color(255, 255, 255));
+        instructor.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                instructorMouseEntered(evt);
+            }
+        });
+        instructor.setLayout(null);
+
+        jScrollPane4.setBackground(new java.awt.Color(255, 255, 255));
+
+        req_table.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        req_table.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "ID", "Name", "Mail", "Add", "Delete"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Boolean.class, java.lang.Boolean.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, true, true
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        req_table.setFocusable(false);
+        req_table.setGridColor(new java.awt.Color(255, 255, 255));
+        req_table.setIntercellSpacing(new java.awt.Dimension(0, 0));
+        req_table.setRowHeight(30);
+        req_table.setSelectionBackground(new java.awt.Color(0, 204, 204));
+        req_table.setSelectionForeground(new java.awt.Color(0, 0, 0));
+        req_table.setShowHorizontalLines(false);
+        req_table.setShowVerticalLines(false);
+        req_table.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                req_tableMouseEntered(evt);
+            }
+        });
+        jScrollPane4.setViewportView(req_table);
+
+        instructor.add(jScrollPane4);
+        jScrollPane4.setBounds(210, 100, 1010, 290);
+
+        jScrollPane3.setBackground(new java.awt.Color(255, 255, 255));
+
+        inst_list.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "ID", "Name", "Mail", "Phone", "Age", "Courses"
+            }
+        ));
+        inst_list.setEnabled(false);
+        inst_list.setFocusable(false);
+        inst_list.setGridColor(new java.awt.Color(255, 255, 255));
+        inst_list.setIntercellSpacing(new java.awt.Dimension(0, 0));
+        inst_list.setRowHeight(30);
+        inst_list.setSelectionBackground(new java.awt.Color(0, 204, 204));
+        inst_list.setSelectionForeground(new java.awt.Color(0, 0, 0));
+        inst_list.setShowHorizontalLines(false);
+        inst_list.setShowVerticalLines(false);
+        jScrollPane3.setViewportView(inst_list);
+
+        instructor.add(jScrollPane3);
+        jScrollPane3.setBounds(210, 460, 1010, 300);
+
+        jLabel19.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel19.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel19.setText("Instructors List :");
+        instructor.add(jLabel19);
+        jLabel19.setBounds(210, 420, 160, 40);
+
+        jLabel20.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel20.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel20.setText("Request List :");
+        instructor.add(jLabel20);
+        jLabel20.setBounds(210, 60, 130, 40);
+
+        btn_action.setText("Action");
+        instructor.add(btn_action);
+        btn_action.setBounds(1230, 400, 120, 50);
+
+        getContentPane().add(instructor);
+        instructor.setBounds(0, 0, 1370, 770);
 
         expandedbar.setBackground(new java.awt.Color(39, 42, 54));
         expandedbar.setLayout(null);
@@ -522,101 +617,6 @@ public class AdminPanel extends javax.swing.JFrame {
 
         getContentPane().add(exampanel);
         exampanel.setBounds(0, 0, 1370, 770);
-
-        instructor.setBackground(new java.awt.Color(255, 255, 255));
-        instructor.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                instructorMouseEntered(evt);
-            }
-        });
-        instructor.setLayout(null);
-
-        jScrollPane4.setBackground(new java.awt.Color(255, 255, 255));
-
-        req_table.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        req_table.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-                "ID", "Name", "Mail", "Add", "Delete"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Boolean.class, java.lang.Boolean.class
-            };
-            boolean[] canEdit = new boolean [] {
-                false, false, false, true, true
-            };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        req_table.setFocusable(false);
-        req_table.setGridColor(new java.awt.Color(255, 255, 255));
-        req_table.setIntercellSpacing(new java.awt.Dimension(0, 0));
-        req_table.setRowHeight(30);
-        req_table.setSelectionBackground(new java.awt.Color(0, 204, 204));
-        req_table.setSelectionForeground(new java.awt.Color(0, 0, 0));
-        req_table.setShowHorizontalLines(false);
-        req_table.setShowVerticalLines(false);
-        req_table.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                req_tableMouseEntered(evt);
-            }
-        });
-        jScrollPane4.setViewportView(req_table);
-
-        instructor.add(jScrollPane4);
-        jScrollPane4.setBounds(210, 100, 1010, 290);
-
-        jScrollPane3.setBackground(new java.awt.Color(255, 255, 255));
-
-        inst_list.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-                "ID", "Name", "Mail", "Phone", "Age", "Courses"
-            }
-        ));
-        inst_list.setEnabled(false);
-        inst_list.setFocusable(false);
-        inst_list.setGridColor(new java.awt.Color(255, 255, 255));
-        inst_list.setIntercellSpacing(new java.awt.Dimension(0, 0));
-        inst_list.setRowHeight(30);
-        inst_list.setSelectionBackground(new java.awt.Color(0, 204, 204));
-        inst_list.setSelectionForeground(new java.awt.Color(0, 0, 0));
-        inst_list.setShowHorizontalLines(false);
-        inst_list.setShowVerticalLines(false);
-        jScrollPane3.setViewportView(inst_list);
-
-        instructor.add(jScrollPane3);
-        jScrollPane3.setBounds(210, 460, 1010, 300);
-
-        jLabel19.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel19.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel19.setText("Instructors List :");
-        instructor.add(jLabel19);
-        jLabel19.setBounds(210, 420, 160, 40);
-
-        jLabel20.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel20.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel20.setText("Request List :");
-        instructor.add(jLabel20);
-        jLabel20.setBounds(210, 60, 130, 40);
-
-        btn_action.setText("Action");
-        instructor.add(btn_action);
-        btn_action.setBounds(1230, 400, 120, 50);
-
-        getContentPane().add(instructor);
-        instructor.setBounds(0, 0, 1370, 770);
 
         student.setBackground(new java.awt.Color(255, 255, 255));
         student.addMouseListener(new java.awt.event.MouseAdapter() {

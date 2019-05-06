@@ -216,8 +216,8 @@ public class JDBC {
             
             while(rst.next())
             {
-               // inst = new Instructor(rst.getInt("inst_id"),rst.getString("inst_name"), rst.getString("inst_mail"),rst.getString("inst_phone"),rst.getInt("inst_age"),rst.getInt("inst_courses"));
-                //List.add(inst);
+                inst = new Instructor(rst.getInt("inst_id"),rst.getString("inst_name"), rst.getString("inst_mail"),rst.getString("inst_phone"),rst.getInt("inst_age"),rst.getInt("inst_courses"));
+                List.add(inst);
             }
         }catch(SQLException e){
             System.err.println(e);
@@ -237,7 +237,7 @@ public class JDBC {
             row[2] = lst.get(i).mail;
             row[3] = lst.get(i).phone;
             row[4] = lst.get(i).age;
-           //row[5] = lst.get(i).coursesCode;
+            row[5] = lst.get(i).coursesCodes;
             model.addRow(row);
         }
     }
@@ -257,8 +257,8 @@ public class JDBC {
             {
                    //stud = new Student(String name, String emailAddress,String mobileNumber,int grades, int enrolledExamSessionsId,int id);
 
-                //stud = new Student(rst.getInt("id"),rst.getString("name"), rst.getString("emailAddress"),rst.getString("mobileNumber"),rst.getInt("enrolledExamSessionsId"),rst.getInt("grades"));
-                //List.add(stud);
+                stud = new Student(rst.getString("name"), rst.getString("emailAddress"),rst.getString("mobileNumber"),rst.getInt("enrolledExamSessionsId"),rst.getInt("grades"),rst.getInt("id"));
+                List.add(stud);
             }
         }catch(SQLException e){
             System.err.println(e);
