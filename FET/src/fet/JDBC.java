@@ -265,7 +265,7 @@ public class JDBC {
             {
                    //stud = new Student(String name, String emailAddress,String mobileNumber,int grades, int enrolledExamSessionsId,int id);
 
-                stud = new Student(rst.getString("name"), rst.getString("emailAddress"),rst.getString("mobileNumber"),rst.getInt("enrolledExamSessionsId"),rst.getInt("grades"),rst.getInt("id"));
+                stud = new Student(rst.getString("stud_name"), rst.getString("stud_mail"),rst.getString("stud_phone"),rst.getInt("stud_sessions"),rst.getInt("stud_grades"),rst.getInt("stud_id"));
                 List.add(stud);
             }
         }catch(SQLException e){
