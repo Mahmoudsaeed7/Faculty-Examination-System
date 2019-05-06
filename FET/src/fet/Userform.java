@@ -239,7 +239,7 @@ public class Userform extends javax.swing.JFrame {
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/FET/src/fet/Images/logout.png"))); // NOI18N
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/logout.png"))); // NOI18N
         jLabel8.setText("    Log Out");
         expandpanel.add(jLabel8);
         jLabel8.setBounds(10, 710, 190, 60);
@@ -247,7 +247,7 @@ public class Userform extends javax.swing.JFrame {
         jLabel9.setBackground(new java.awt.Color(39, 42, 54));
         jLabel9.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/FET/src/fet/Images/male-university-graduate-silhouette-with-the-cap.png"))); // NOI18N
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/male-university-graduate-silhouette-with-the-cap.png"))); // NOI18N
         jLabel9.setText("   Students");
         jLabel9.setOpaque(true);
         jLabel9.addMouseListener(new java.awt.event.MouseAdapter() {

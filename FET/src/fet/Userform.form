@@ -268,7 +268,7 @@
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/FET/src/fet/Images/logout.png"/>
+                  <Image iconType="3" name="/fet/Images/logout.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="    Log Out"/>
               </Properties>
@@ -290,7 +290,7 @@
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/FET/src/fet/Images/male-university-graduate-silhouette-with-the-cap.png"/>
+                  <Image iconType="3" name="/fet/Images/male-university-graduate-silhouette-with-the-cap.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="   Students"/>
                 <Property name="opaque" type="boolean" value="true"/>
