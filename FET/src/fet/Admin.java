@@ -8,6 +8,7 @@ package fet;
 import java.awt.Color;
 import fet.JDBC.*;
 import fet.Register;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -89,7 +90,8 @@ public class Admin extends javax.swing.JFrame {
         inst_list = new javax.swing.JTable();
         jLabel19 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
-        btn_action = new javax.swing.JButton();
+        btn_delete = new javax.swing.JButton();
+        btn_add2 = new javax.swing.JButton();
         student = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         stud_req = new javax.swing.JTable();
@@ -97,6 +99,8 @@ public class Admin extends javax.swing.JFrame {
         stud_list = new javax.swing.JTable();
         jLabel21 = new javax.swing.JLabel();
         jLabel22 = new javax.swing.JLabel();
+        btn_delete2 = new javax.swing.JButton();
+        btn_add = new javax.swing.JButton();
         addpanel = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
@@ -539,19 +543,12 @@ public class Admin extends javax.swing.JFrame {
 
             },
             new String [] {
-                "ID", "Name", "Mail", "Add", "Delete"
+                "ID", "Name", "Mail"
             }
         ) {
-            Class[] types = new Class [] {
-                java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Boolean.class, java.lang.Boolean.class
-            };
             boolean[] canEdit = new boolean [] {
-                false, false, false, true, true
+                false, false, false
             };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
                 return canEdit [columnIndex];
@@ -611,9 +608,23 @@ public class Admin extends javax.swing.JFrame {
         instructor.add(jLabel20);
         jLabel20.setBounds(210, 60, 130, 40);
 
-        btn_action.setText("Action");
-        instructor.add(btn_action);
-        btn_action.setBounds(1230, 400, 120, 50);
+        btn_delete.setLabel("Delete");
+        btn_delete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_deleteActionPerformed(evt);
+            }
+        });
+        instructor.add(btn_delete);
+        btn_delete.setBounds(1240, 240, 120, 50);
+
+        btn_add2.setLabel("Add");
+        btn_add2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_add2ActionPerformed(evt);
+            }
+        });
+        instructor.add(btn_add2);
+        btn_add2.setBounds(1240, 180, 120, 50);
 
         getContentPane().add(instructor);
         instructor.setBounds(0, 0, 1370, 770);
@@ -639,18 +650,17 @@ public class Admin extends javax.swing.JFrame {
 
             },
             new String [] {
-                "ID", "Name", "Mail", "Add", "Delete"
+                "ID", "Name", "Mail"
             }
         ) {
-            Class[] types = new Class [] {
-                java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Boolean.class, java.lang.Boolean.class
+            boolean[] canEdit = new boolean [] {
+                false, false, false
             };
 
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
             }
         });
-        stud_req.setEnabled(false);
         stud_req.setFocusable(false);
         stud_req.setGridColor(new java.awt.Color(255, 255, 255));
         stud_req.setIntercellSpacing(new java.awt.Dimension(0, 0));
@@ -674,7 +684,7 @@ public class Admin extends javax.swing.JFrame {
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false, true, true, true
+                false, false, true, false, true, true
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -704,6 +714,25 @@ public class Admin extends javax.swing.JFrame {
         jLabel22.setText("Students List :");
         student.add(jLabel22);
         jLabel22.setBounds(210, 430, 140, 40);
+
+        btn_delete2.setLabel("Delete");
+        btn_delete2.setName(""); // NOI18N
+        btn_delete2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_delete2ActionPerformed(evt);
+            }
+        });
+        student.add(btn_delete2);
+        btn_delete2.setBounds(1250, 250, 110, 60);
+
+        btn_add.setLabel("Add");
+        btn_add.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_addActionPerformed(evt);
+            }
+        });
+        student.add(btn_add);
+        btn_add.setBounds(1250, 180, 110, 60);
 
         getContentPane().add(student);
         student.setBounds(0, 0, 1370, 770);
@@ -1185,6 +1214,86 @@ public class Admin extends javax.swing.JFrame {
     private void btn_instActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_instActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btn_instActionPerformed
+
+    private void btn_addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_addActionPerformed
+        // TODO add your handling code here:
+        try{
+            for (int i = 0; i < stud_req.getModel().getRowCount(); i++) {
+                j.ID = (int)stud_req.getModel().getValueAt(i,0);
+                j.usName = (String)stud_req.getModel().getValueAt(i,1);
+                j.mail = (String)stud_req.getModel().getValueAt(i,2);
+            }
+            int selectedRow = stud_list.getSelectedRow();
+            for (int i = stud_list.getModel().getRowCount()-1; i >= 0; i--) {
+                j.studListTable.removeRow(i);
+            }
+            for (int i = stud_req.getModel().getRowCount()-1; i >= 0; i--) {
+                j.studReqTable.removeRow(i);
+            }
+            j.addStud(selectedRow);
+            j.studData();
+            j.showStudData();
+        }catch(Exception ex){
+            JOptionPane.showMessageDialog(null, ex);
+        }
+    }//GEN-LAST:event_btn_addActionPerformed
+
+    private void btn_add2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_add2ActionPerformed
+        // TODO add your handling code here:
+        try{
+            for (int i = 0; i < req_table.getModel().getRowCount(); i++) {
+                j.ID = (int)req_table.getModel().getValueAt(i,0);
+                j.usName = (String)req_table.getModel().getValueAt(i,1);
+                j.mail = (String)req_table.getModel().getValueAt(i,2);
+            }
+            int selectedRow = req_table.getSelectedRow();
+            for (int i = inst_list.getModel().getRowCount()-1; i>=0; i--) {
+                j.instListTable.removeRow(i);
+            }
+            for (int i = req_table.getModel().getRowCount()-1; i >=0 ; i--) {
+                j.instReqTable.removeRow(i);
+            }
+            j.addInst(selectedRow);
+            j.instData();
+            j.showInstData();
+        }catch(Exception ex){
+            JOptionPane.showMessageDialog(null, ex);
+        }
+    }//GEN-LAST:event_btn_add2ActionPerformed
+
+    private void btn_deleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_deleteActionPerformed
+        // TODO add your handling code here:
+        try{
+            for (int i = 0; i < req_table.getModel().getRowCount(); i++) {
+                j.ID = (int)req_table.getModel().getValueAt(i,0);
+            }
+            for (int i = req_table.getModel().getRowCount()-1; i >=0 ; i--) {
+                j.instReqTable.removeRow(i);
+            }
+            int selectedrow = req_table.getSelectedRow();
+            j.deleteInst(selectedrow);
+            j.showInstData();
+        }catch(Exception ex){
+            JOptionPane.showMessageDialog(null, ex);
+        }
+    }//GEN-LAST:event_btn_deleteActionPerformed
+
+    private void btn_delete2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_delete2ActionPerformed
+        // TODO add your handling code here:
+        try{
+            for (int i = 0; i < stud_req.getModel().getRowCount(); i++) {
+                j.ID = (int)stud_req.getModel().getValueAt(i,0);
+            }
+            for (int i = stud_req.getModel().getRowCount()-1; i >=0 ; i--) {
+                j.studReqTable.removeRow(i);
+            }
+            int selectedrow = stud_req.getSelectedRow();
+            j.deleteStud(selectedrow);
+            j.showStudData();
+        }catch(Exception ex){
+            JOptionPane.showMessageDialog(null, ex);
+        }
+    }//GEN-LAST:event_btn_delete2ActionPerformed
            
     /**
      * @param args the command line arguments
@@ -1229,7 +1338,10 @@ public class Admin extends javax.swing.JFrame {
     private javax.swing.JPanel admin;
     private javax.swing.JTextField admin_name;
     private javax.swing.JPasswordField admin_pass;
-    private javax.swing.JButton btn_action;
+    private javax.swing.JButton btn_add;
+    private javax.swing.JButton btn_add2;
+    private javax.swing.JButton btn_delete;
+    private javax.swing.JButton btn_delete2;
     private javax.swing.JButton btn_inst;
     private javax.swing.JButton btn_stud;
     private javax.swing.JPanel collapsedbar;

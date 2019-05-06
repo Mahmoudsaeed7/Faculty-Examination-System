@@ -22,6 +22,7 @@ public class JDBC {
     DefaultTableModel instListTable;
     DefaultTableModel studListTable;
     public String mail,usName,usPass;
+    public int ID;
     public String adminName , adminPass;
     public static  String USERNAME = "root";
     public static  String PASSWORD = "";
@@ -38,7 +39,6 @@ public class JDBC {
     }
     
     public void registration(JDBC j){
-        int req =0;
         try{
             Connection conn = DriverManager.getConnection(CONN_STRING,USERNAME,PASSWORD);
             Statement stmt = conn.createStatement();
@@ -181,23 +181,31 @@ public class JDBC {
         return Integer.valueOf(instCount)+Integer.valueOf(studCount);
     }
     
-    public void add(){
+    public void addInst(int row){
         try{
             Connection conn = DriverManager.getConnection(CONN_STRING,USERNAME,PASSWORD);
             String inst_sql = "INSERT INTO instructors(inst_id,inst_name,inst_mail,inst_phone,inst_age,inst_courses)"
                     + "VALUES(NULL,'"+usName+"','"+mail+"',NULL,NULL,NULL)";
-            
+            String delInst = "DELETE FROM inst_requests WHERE inst_id = '"+ID+"'";
+            Statement stmt = conn.createStatement();
+                stmt.executeUpdate(inst_sql);
+                stmt.executeUpdate(delInst);
+                JOptionPane.showMessageDialog(null, "Added Successfuly..");
+        }catch(SQLException e){
+            System.err.println(e);
+        }
+    }
+    
+    public void addStud(int row){
+        try{
+            Connection conn = DriverManager.getConnection(CONN_STRING,USERNAME,PASSWORD);
             String stud_sql = "INSERT INTO students(stud_id,stud_name,stud_pass,stud_phone,stud_mail,stud_sessions,stud_grades)"
                     + "VALUES(NULL,'"+usName+"','"+usPass+"',NULL,'"+mail+"',NULL,NULL)";
+            String delStud = "DELETE FROM stud_requests WHERE stud_id = '"+ID+"'";
             Statement stmt = conn.createStatement();
-            if (mail.contains("stud")) {
                 stmt.executeUpdate(stud_sql);
+                stmt.executeUpdate(delStud);
                 JOptionPane.showMessageDialog(null, "Added Successfuly..");
-            }
-            else if (mail.contains("inst")) {
-                stmt.executeUpdate(inst_sql);
-                JOptionPane.showMessageDialog(null, "Added Successfuly..");
-            }
         }catch(SQLException e){
             System.err.println(e);
         }
@@ -278,6 +286,30 @@ public class JDBC {
             row[4] = lst.get(i).getSessions();
             row[5] = lst.get(i).getGardes();
             model.addRow(row);
+        }
+    }
+    
+    public void deleteStud(int row){
+        try{
+            Connection conn = DriverManager.getConnection(CONN_STRING,USERNAME,PASSWORD);
+            String del = "DELETE FROM stud_requests WHERE stud_id = '"+ID+"'";
+            Statement stmt = conn.createStatement();
+            stmt.executeUpdate(del);
+            JOptionPane.showMessageDialog(null, "Deleted Successfuly..");
+        }catch(SQLException e){
+            System.err.println(e);
+        }
+    }
+    
+    public void deleteInst(int row){
+        try{
+            Connection conn = DriverManager.getConnection(CONN_STRING,USERNAME,PASSWORD);
+            String del = "DELETE FROM inst_requests WHERE inst_id = '"+ID+"'";
+            Statement stmt = conn.createStatement();
+            stmt.executeUpdate(del);
+            JOptionPane.showMessageDialog(null, "Deleted Successfuly..");
+        }catch(SQLException e){
+            System.err.println(e);
         }
     }
 }
