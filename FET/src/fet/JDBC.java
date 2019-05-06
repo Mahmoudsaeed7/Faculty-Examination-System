@@ -69,7 +69,7 @@ public class JDBC {
             ResultSet rs = pst.executeQuery();
 
             if(rs.next()){
-                Admin admin = new Admin();
+                AdminPanel admin = new AdminPanel();
                 admin.setVisible(true);
             }
             else

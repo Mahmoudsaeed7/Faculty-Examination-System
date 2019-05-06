@@ -4,46 +4,25 @@
  * and open the template in the editor.
  */
 package fet;
-
+import java.util.ArrayList;
 /**
  *
- * @author MAHMOUD SAEED
+ * @author admin
  */
-public class Student {
 
-    private int Id,sessions,gardes;
-    private String name , phone , mail;
-    
-    public Student(int ID , String Name , String Mail , String Phone , int Sessions , int Grades){
-        this.Id = ID;
-        this.name = Name;
-        this.mail = Mail;
-        this.phone = Phone;
-        this.sessions = Sessions;
-        this.gardes = Grades;
-    }
-    
-    public int getId() {
-        return Id;
-    }
-
-    public int getSessions() {
-        return sessions;
-    }
-
-    public int getGardes() {
-        return gardes;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getPhone() {
-        return phone;
-    }
-
-    public String getMail() {
-        return mail;
-    }
+     class Student extends User{
+        int id;
+        ArrayList<String> enrolledExamSessionsId = new ArrayList<String>();
+        ArrayList<String> grades = new ArrayList<String>();
+        
+        
+        Student(String stud_name , String stud_mail , String stud_phone , ArrayList<String> stud_grades ,  ArrayList<String> stud_sessions , int stud_id){
+            
+            super(stud_name,stud_phone,stud_mail);
+            
+            this.id = stud_id;
+            this.grades = stud_grades;
+            this.enrolledExamSessionsId = stud_sessions;
+     
 }
+     }
