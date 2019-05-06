@@ -6,13 +6,8 @@
 package fet;
 
 import javax.swing.DefaultCellEditor;
-import javax.swing.DefaultComboBoxModel;
 import javax.swing.JButton;
-import javax.swing.JComboBox;
-import javax.swing.Timer;
 import javax.swing.table.DefaultTableModel;
-import javax.swing.table.TableColumn;
-import javax.swing.table.TableColumnModel;
 
 /**
  *
@@ -23,16 +18,11 @@ public class Userform extends javax.swing.JFrame {
   
     public Userform() {
         initComponents();
-       collpanel.setVisible(false);
-       hm.setVisible(true);
-       exampanel.setVisible(false);
-       stdpanel.setVisible(false);
-       profilepanel.setVisible(false);
-//       DefaultTableModel model = (DefaultTableModel)jTable3.getModel();
-//        TableColumnModel cm=jTable3.getColumnModel();
-//        cm.getColumn(4).setCellEditor(new DefaultCellEditor(
-//    new JComboBox(new DefaultComboBoxModel(new String[]{} ))));
-    
+        
+//        DefaultTableModel model = (DefaultTableModel)jTable2.getModel();
+//        model.addRow(new Object[]{});
+//        JButton b =new JButton("add");
+//        jTable2.getColumnModel().getColumn(4).getCellRenderer(new DefaultCellEditor)
     }
 
     /**
@@ -90,6 +80,7 @@ public class Userform extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         hm = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         jLabel15 = new javax.swing.JLabel();
@@ -105,6 +96,9 @@ public class Userform extends javax.swing.JFrame {
         jTable3 = new javax.swing.JTable();
         jButton8 = new javax.swing.JButton();
         createexam = new javax.swing.JPanel();
+=======
+        expanel = new javax.swing.JPanel();
+>>>>>>> parent of ed0627c... Merge branch 'master' into MyFu-Branch
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jLabel27 = new javax.swing.JLabel();
@@ -116,6 +110,7 @@ public class Userform extends javax.swing.JFrame {
         jLabel31 = new javax.swing.JLabel();
         jTextField10 = new javax.swing.JTextField();
         jButton5 = new javax.swing.JButton();
+<<<<<<< HEAD
         questpanel = new javax.swing.JPanel();
 =======
 =======
@@ -143,6 +138,8 @@ public class Userform extends javax.swing.JFrame {
         stdpanel = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
+=======
+>>>>>>> parent of ed0627c... Merge branch 'master' into MyFu-Branch
         profilepanel = new javax.swing.JPanel();
         jLabel20 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
@@ -162,6 +159,7 @@ public class Userform extends javax.swing.JFrame {
         jLabel26 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> parent of 32787f9... ......
@@ -176,6 +174,8 @@ public class Userform extends javax.swing.JFrame {
         jLabel31 = new javax.swing.JLabel();
         jTextField10 = new javax.swing.JTextField();
         jButton5 = new javax.swing.JButton();
+=======
+>>>>>>> parent of ed0627c... Merge branch 'master' into MyFu-Branch
         hm = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         jLabel15 = new javax.swing.JLabel();
@@ -185,7 +185,10 @@ public class Userform extends javax.swing.JFrame {
         jLabel14 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
+<<<<<<< HEAD
 >>>>>>> parent of 32787f9... ......
+=======
+>>>>>>> parent of ed0627c... Merge branch 'master' into MyFu-Branch
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -377,35 +380,21 @@ public class Userform extends javax.swing.JFrame {
 
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/menu (1).png"))); // NOI18N
-        jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel3MouseClicked(evt);
-            }
-        });
         collpanel.add(jLabel3);
         jLabel3.setBounds(0, 0, 80, 40);
 
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/home-icon-silhouette (2).png"))); // NOI18N
-        jLabel10.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel10MouseClicked(evt);
-            }
-        });
         collpanel.add(jLabel10);
         jLabel10.setBounds(0, 200, 80, 60);
 
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/test (6).png"))); // NOI18N
-        jLabel11.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel11MouseClicked(evt);
-            }
-        });
         collpanel.add(jLabel11);
         jLabel11.setBounds(0, 260, 80, 60);
 
         jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/male-university-graduate-silhouette-with-the-cap.png"))); // NOI18N
@@ -420,6 +409,9 @@ public class Userform extends javax.swing.JFrame {
 =======
         jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/FET/src/fet/Images/male-university-graduate-silhouette-with-the-cap.png"))); // NOI18N
 >>>>>>> parent of 32787f9... ......
+=======
+        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/FET/src/fet/Images/male-university-graduate-silhouette-with-the-cap.png"))); // NOI18N
+>>>>>>> parent of ed0627c... Merge branch 'master' into MyFu-Branch
         collpanel.add(jLabel12);
         jLabel12.setBounds(0, 320, 80, 60);
 
@@ -438,11 +430,6 @@ public class Userform extends javax.swing.JFrame {
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/home-icon-silhouette (2).png"))); // NOI18N
         jLabel6.setText("   Home");
-        jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel6MouseClicked(evt);
-            }
-        });
         expandpanel.add(jLabel6);
         jLabel6.setBounds(10, 200, 190, 60);
 
@@ -458,11 +445,6 @@ public class Userform extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/menu.png"))); // NOI18N
-        jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel2MouseClicked(evt);
-            }
-        });
         expandpanel.add(jLabel2);
         jLabel2.setBounds(160, 0, 40, 40);
 
@@ -477,11 +459,6 @@ public class Userform extends javax.swing.JFrame {
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/test (6).png"))); // NOI18N
         jLabel7.setText("   Exam");
         jLabel7.setOpaque(true);
-        jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel7MouseClicked(evt);
-            }
-        });
         expandpanel.add(jLabel7);
         jLabel7.setBounds(10, 260, 190, 60);
 
@@ -498,11 +475,6 @@ public class Userform extends javax.swing.JFrame {
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/FET/src/fet/Images/male-university-graduate-silhouette-with-the-cap.png"))); // NOI18N
         jLabel9.setText("   Students");
         jLabel9.setOpaque(true);
-        jLabel9.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel9MouseClicked(evt);
-            }
-        });
         expandpanel.add(jLabel9);
         jLabel9.setBounds(10, 320, 190, 60);
 
@@ -514,6 +486,7 @@ public class Userform extends javax.swing.JFrame {
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/icons8-customer-40.png"))); // NOI18N
 =======
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/FET/src/fet/Images/icons8-customer-40.png"))); // NOI18N
@@ -521,10 +494,14 @@ public class Userform extends javax.swing.JFrame {
 =======
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/FET/src/fet/Images/icons8-customer-40.png"))); // NOI18N
 >>>>>>> parent of 32787f9... ......
+=======
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/FET/src/fet/Images/icons8-customer-40.png"))); // NOI18N
+>>>>>>> parent of ed0627c... Merge branch 'master' into MyFu-Branch
         jLabel1.setText("Name");
         instructor_panel.add(jLabel1);
         jLabel1.setBounds(1230, 0, 140, 60);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         hm.setBackground(new java.awt.Color(255, 255, 255));
@@ -641,6 +618,10 @@ public class Userform extends javax.swing.JFrame {
 >>>>>>> parent of 32787f9... ......
 =======
 >>>>>>> parent of 32787f9... ......
+=======
+        expanel.setBackground(new java.awt.Color(255, 255, 255));
+        expanel.setLayout(null);
+>>>>>>> parent of ed0627c... Merge branch 'master' into MyFu-Branch
 
         jScrollPane1.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -663,49 +644,50 @@ public class Userform extends javax.swing.JFrame {
         jTable1.getTableHeader().setReorderingAllowed(false);
         jScrollPane1.setViewportView(jTable1);
 
-        createexam.add(jScrollPane1);
+        expanel.add(jScrollPane1);
         jScrollPane1.setBounds(230, 90, 1010, 270);
 
         jLabel27.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel27.setText("Duration");
-        createexam.add(jLabel27);
+        expanel.add(jLabel27);
         jLabel27.setBounds(350, 600, 60, 17);
 
         jTextField6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        createexam.add(jTextField6);
+        expanel.add(jTextField6);
         jTextField6.setBounds(440, 590, 210, 40);
 
         jLabel28.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel28.setText("Date");
-        createexam.add(jLabel28);
+        expanel.add(jLabel28);
         jLabel28.setBounds(350, 680, 60, 17);
 
         jTextField7.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        createexam.add(jTextField7);
+        expanel.add(jTextField7);
         jTextField7.setBounds(440, 670, 210, 40);
 
         jLabel30.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel30.setText("Name");
-        createexam.add(jLabel30);
+        expanel.add(jLabel30);
         jLabel30.setBounds(350, 450, 60, 17);
 
         jTextField9.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        createexam.add(jTextField9);
+        expanel.add(jTextField9);
         jTextField9.setBounds(440, 440, 210, 40);
 
         jLabel31.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel31.setText("Course Name");
-        createexam.add(jLabel31);
+        expanel.add(jLabel31);
         jLabel31.setBounds(340, 520, 90, 17);
 
         jTextField10.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        createexam.add(jTextField10);
+        expanel.add(jTextField10);
         jTextField10.setBounds(440, 510, 210, 40);
 
         jButton5.setText("Create");
-        createexam.add(jButton5);
+        expanel.add(jButton5);
         jButton5.setBounds(790, 520, 170, 90);
 
+<<<<<<< HEAD
         questpanel.setBackground(new java.awt.Color(255, 255, 255));
         questpanel.setLayout(null);
 
@@ -812,13 +794,17 @@ public class Userform extends javax.swing.JFrame {
 
         instructor_panel.add(stdpanel);
         stdpanel.setBounds(0, 0, 1370, 770);
+=======
+        instructor_panel.add(expanel);
+        expanel.setBounds(0, 0, 1370, 770);
+>>>>>>> parent of ed0627c... Merge branch 'master' into MyFu-Branch
 
 <<<<<<< HEAD
         profilepanel.setBackground(new java.awt.Color(255, 255, 255));
         profilepanel.setLayout(null);
 
         jLabel20.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/user.png"))); // NOI18N
+        jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/FET/src/fet/Images/user.png"))); // NOI18N
         profilepanel.add(jLabel20);
         jLabel20.setBounds(280, 50, 190, 170);
 
@@ -963,72 +949,64 @@ public class Userform extends javax.swing.JFrame {
         hm.setBounds(0, 0, 1370, 770);
 >>>>>>> parent of 32787f9... ......
 
+        hm.setBackground(new java.awt.Color(255, 255, 255));
+        hm.setLayout(null);
+
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setLayout(null);
+
+        jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/test (7).png"))); // NOI18N
+        jPanel1.add(jLabel15);
+        jLabel15.setBounds(0, 0, 180, 140);
+
+        jLabel16.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel16.setText("Num of exams");
+        jPanel1.add(jLabel16);
+        jLabel16.setBounds(20, 140, 140, 30);
+
+        jLabel19.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel19.setText("Exams");
+        jPanel1.add(jLabel19);
+        jLabel19.setBounds(40, 180, 100, 30);
+
+        hm.add(jPanel1);
+        jPanel1.setBounds(830, 240, 180, 210);
+
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setLayout(null);
+
+        jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/icons8-students-100.png"))); // NOI18N
+        jPanel2.add(jLabel14);
+        jLabel14.setBounds(30, 30, 140, 100);
+
+        jLabel17.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel17.setText("Number of Students");
+        jPanel2.add(jLabel17);
+        jLabel17.setBounds(0, 140, 190, 30);
+
+        jLabel18.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel18.setText("Students");
+        jPanel2.add(jLabel18);
+        jLabel18.setBounds(40, 180, 120, 30);
+
+        hm.add(jPanel2);
+        jPanel2.setBounds(470, 240, 190, 220);
+
+        instructor_panel.add(hm);
+        hm.setBounds(0, 0, 1370, 770);
+
         getContentPane().add(instructor_panel);
         instructor_panel.setBounds(0, 0, 1366, 769);
 
         setSize(new java.awt.Dimension(1382, 808));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        
-    }//GEN-LAST:event_jButton6ActionPerformed
-
-    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton8ActionPerformed
-
-    private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
-        expandpanel.setVisible(false);
-        collpanel.setVisible(true);
-    }//GEN-LAST:event_jLabel2MouseClicked
-
-    private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
-        expandpanel.setVisible(true);
-        collpanel.setVisible(false);
-    }//GEN-LAST:event_jLabel3MouseClicked
-
-    private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
-       hm.setVisible(true);
-       exampanel.setVisible(false);
-       stdpanel.setVisible(false);
-       profilepanel.setVisible(false);
-    }//GEN-LAST:event_jLabel6MouseClicked
-
-    private void jLabel10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MouseClicked
-       hm.setVisible(true);
-       exampanel.setVisible(false);
-       stdpanel.setVisible(false);
-       profilepanel.setVisible(false);
-    }//GEN-LAST:event_jLabel10MouseClicked
-
-    private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
-       hm.setVisible(false);
-       exampanel.setVisible(true);
-       stdpanel.setVisible(false);
-       profilepanel.setVisible(false);
-    }//GEN-LAST:event_jLabel7MouseClicked
-
-    private void jLabel11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11MouseClicked
-        hm.setVisible(false);
-       exampanel.setVisible(true);
-       stdpanel.setVisible(false);
-       profilepanel.setVisible(false);
-    }//GEN-LAST:event_jLabel11MouseClicked
-
-    private void jLabel12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel12MouseClicked
-        hm.setVisible(false);
-       exampanel.setVisible(false);
-       stdpanel.setVisible(true);
-       profilepanel.setVisible(false);
-    }//GEN-LAST:event_jLabel12MouseClicked
-
-    private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseClicked
-        hm.setVisible(false);
-       exampanel.setVisible(false);
-       stdpanel.setVisible(true);
-       profilepanel.setVisible(false);
-    }//GEN-LAST:event_jLabel9MouseClicked
 
     /**
      * @param args the command line arguments
@@ -1067,9 +1045,8 @@ public class Userform extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel collpanel;
-    private javax.swing.JPanel createexam;
-    private javax.swing.JPanel exampanel;
     private javax.swing.JPanel expandpanel;
+    private javax.swing.JPanel expanel;
     private javax.swing.JPanel hm;
     private javax.swing.JPanel instructor_panel;
     private javax.swing.JButton jButton1;
@@ -1077,12 +1054,7 @@ public class Userform extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
     private javax.swing.JComboBox jComboBox1;
-    private javax.swing.JComboBox jComboBox2;
-    private javax.swing.JComboBox jComboBox3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1104,16 +1076,10 @@ public class Userform extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
-    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
-    private javax.swing.JLabel jLabel32;
-    private javax.swing.JLabel jLabel33;
-    private javax.swing.JLabel jLabel37;
-    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel40;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
@@ -1123,28 +1089,16 @@ public class Userform extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTable jTable1;
-    private javax.swing.JTable jTable2;
-    private javax.swing.JTable jTable3;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField11;
-    private javax.swing.JTextField jTextField12;
-    private javax.swing.JTextField jTextField14;
-    private javax.swing.JTextField jTextField15;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
     private javax.swing.JPanel profilepanel;
-    private javax.swing.JPanel questpanel;
-    private javax.swing.JPanel sessionpanel;
-    private javax.swing.JPanel stdpanel;
     // End of variables declaration//GEN-END:variables
 }
