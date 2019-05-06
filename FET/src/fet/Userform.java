@@ -45,6 +45,28 @@ public class Userform extends javax.swing.JFrame {
     private void initComponents() {
 
         instructor_panel = new javax.swing.JPanel();
+<<<<<<< HEAD
+=======
+        profilepanel = new javax.swing.JPanel();
+        jLabel20 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jPanel3 = new javax.swing.JPanel();
+        jLabel25 = new javax.swing.JLabel();
+        jTextField5 = new javax.swing.JTextField();
+        jLabel21 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jLabel24 = new javax.swing.JLabel();
+        jTextField4 = new javax.swing.JTextField();
+        jLabel22 = new javax.swing.JLabel();
+        jTextField2 = new javax.swing.JTextField();
+        jLabel23 = new javax.swing.JLabel();
+        jTextField3 = new javax.swing.JTextField();
+        jComboBox1 = new javax.swing.JComboBox();
+        jButton4 = new javax.swing.JButton();
+        jLabel26 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+>>>>>>> parent of 32787f9... ......
         collpanel = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
@@ -60,6 +82,7 @@ public class Userform extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+<<<<<<< HEAD
         hm = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         jLabel15 = new javax.swing.JLabel();
@@ -87,6 +110,10 @@ public class Userform extends javax.swing.JFrame {
         jTextField10 = new javax.swing.JTextField();
         jButton5 = new javax.swing.JButton();
         questpanel = new javax.swing.JPanel();
+=======
+        expanel = new javax.swing.JPanel();
+        jPanel4 = new javax.swing.JPanel();
+>>>>>>> parent of 32787f9... ......
         jLabel29 = new javax.swing.JLabel();
         jLabel32 = new javax.swing.JLabel();
         jTextField8 = new javax.swing.JTextField();
@@ -102,6 +129,7 @@ public class Userform extends javax.swing.JFrame {
         jButton7 = new javax.swing.JButton();
         jComboBox2 = new javax.swing.JComboBox();
         jComboBox3 = new javax.swing.JComboBox();
+<<<<<<< HEAD
         stdpanel = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
@@ -124,6 +152,28 @@ public class Userform extends javax.swing.JFrame {
         jLabel26 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+=======
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        jLabel27 = new javax.swing.JLabel();
+        jTextField6 = new javax.swing.JTextField();
+        jLabel28 = new javax.swing.JLabel();
+        jTextField7 = new javax.swing.JTextField();
+        jLabel30 = new javax.swing.JLabel();
+        jTextField9 = new javax.swing.JTextField();
+        jLabel31 = new javax.swing.JLabel();
+        jTextField10 = new javax.swing.JTextField();
+        jButton5 = new javax.swing.JButton();
+        hm = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+>>>>>>> parent of 32787f9... ......
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -132,6 +182,103 @@ public class Userform extends javax.swing.JFrame {
         instructor_panel.setPreferredSize(new java.awt.Dimension(1366, 769));
         instructor_panel.setLayout(null);
 
+<<<<<<< HEAD
+=======
+        profilepanel.setBackground(new java.awt.Color(255, 255, 255));
+        profilepanel.setLayout(null);
+
+        jLabel20.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/FET/src/fet/Images/user.png"))); // NOI18N
+        profilepanel.add(jLabel20);
+        jLabel20.setBounds(280, 50, 190, 170);
+
+        jButton1.setBackground(new java.awt.Color(39, 42, 54));
+        jButton1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("Upload Photo");
+        jButton1.setBorder(null);
+        profilepanel.add(jButton1);
+        jButton1.setBounds(310, 230, 130, 40);
+
+        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel3.setLayout(null);
+
+        jLabel25.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel25.setText("Name");
+        jPanel3.add(jLabel25);
+        jLabel25.setBounds(110, 90, 80, 20);
+
+        jTextField5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jPanel3.add(jTextField5);
+        jTextField5.setBounds(230, 80, 230, 40);
+
+        jLabel21.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel21.setText("Mobile Number");
+        jPanel3.add(jLabel21);
+        jLabel21.setBounds(110, 180, 100, 20);
+
+        jTextField1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jPanel3.add(jTextField1);
+        jTextField1.setBounds(230, 170, 230, 40);
+
+        jLabel24.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel24.setText("Add Course");
+        jPanel3.add(jLabel24);
+        jLabel24.setBounds(110, 500, 90, 20);
+
+        jTextField4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jPanel3.add(jTextField4);
+        jTextField4.setBounds(230, 260, 230, 40);
+
+        jLabel22.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel22.setText("Email Address");
+        jPanel3.add(jLabel22);
+        jLabel22.setBounds(110, 270, 100, 20);
+
+        jTextField2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jPanel3.add(jTextField2);
+        jTextField2.setBounds(230, 350, 230, 40);
+
+        jLabel23.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel23.setText("Age");
+        jPanel3.add(jLabel23);
+        jLabel23.setBounds(110, 360, 70, 20);
+
+        jTextField3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jPanel3.add(jTextField3);
+        jTextField3.setBounds(230, 490, 230, 40);
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "List Of Courses", " " }));
+        jPanel3.add(jComboBox1);
+        jComboBox1.setBounds(230, 440, 230, 20);
+
+        jButton4.setBackground(new java.awt.Color(39, 42, 54));
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/add (2).png"))); // NOI18N
+        jPanel3.add(jButton4);
+        jButton4.setBounds(470, 490, 40, 40);
+
+        jLabel26.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel26.setText("Courses");
+        jPanel3.add(jLabel26);
+        jLabel26.setBounds(110, 440, 90, 17);
+
+        profilepanel.add(jPanel3);
+        jPanel3.setBounds(510, 50, 540, 570);
+
+        jButton2.setBackground(new java.awt.Color(39, 42, 54));
+        jButton2.setText("Edit");
+        profilepanel.add(jButton2);
+        jButton2.setBounds(620, 640, 130, 40);
+
+        jButton3.setBackground(new java.awt.Color(39, 42, 54));
+        jButton3.setText("Save");
+        profilepanel.add(jButton3);
+        jButton3.setBounds(860, 640, 130, 40);
+
+        instructor_panel.add(profilepanel);
+        profilepanel.setBounds(0, 0, 1370, 770);
+
+>>>>>>> parent of 32787f9... ......
         collpanel.setBackground(new java.awt.Color(39, 42, 54));
         collpanel.setLayout(null);
 
@@ -166,12 +313,16 @@ public class Userform extends javax.swing.JFrame {
         jLabel11.setBounds(0, 260, 80, 60);
 
         jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+<<<<<<< HEAD
         jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/male-university-graduate-silhouette-with-the-cap.png"))); // NOI18N
         jLabel12.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel12MouseClicked(evt);
             }
         });
+=======
+        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/FET/src/fet/Images/male-university-graduate-silhouette-with-the-cap.png"))); // NOI18N
+>>>>>>> parent of 32787f9... ......
         collpanel.add(jLabel12);
         jLabel12.setBounds(0, 320, 80, 60);
 
@@ -219,7 +370,7 @@ public class Userform extends javax.swing.JFrame {
         jLabel2.setBounds(160, 0, 40, 40);
 
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/icons8-customer-64.png"))); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/FET/src/fet/Images/icons8-customer-64.png"))); // NOI18N
         expandpanel.add(jLabel5);
         jLabel5.setBounds(50, 70, 100, 60);
 
@@ -264,13 +415,22 @@ public class Userform extends javax.swing.JFrame {
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+<<<<<<< HEAD
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/icons8-customer-40.png"))); // NOI18N
+=======
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/FET/src/fet/Images/icons8-customer-40.png"))); // NOI18N
+>>>>>>> parent of 32787f9... ......
         jLabel1.setText("Name");
         instructor_panel.add(jLabel1);
         jLabel1.setBounds(1230, 0, 140, 60);
 
+<<<<<<< HEAD
         hm.setBackground(new java.awt.Color(255, 255, 255));
         hm.setLayout(null);
+=======
+        expanel.setBackground(new java.awt.Color(255, 255, 255));
+        expanel.setLayout(null);
+>>>>>>> parent of 32787f9... ......
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(null);
@@ -367,8 +527,13 @@ public class Userform extends javax.swing.JFrame {
         exampanel.add(sessionpanel);
         sessionpanel.setBounds(0, 0, 1370, 770);
 
+<<<<<<< HEAD
         createexam.setBackground(new java.awt.Color(255, 255, 255));
         createexam.setLayout(null);
+=======
+        expanel.add(jPanel4);
+        jPanel4.setBounds(0, 0, 1370, 770);
+>>>>>>> parent of 32787f9... ......
 
         jScrollPane1.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -540,6 +705,7 @@ public class Userform extends javax.swing.JFrame {
         instructor_panel.add(stdpanel);
         stdpanel.setBounds(0, 0, 1370, 770);
 
+<<<<<<< HEAD
         profilepanel.setBackground(new java.awt.Color(255, 255, 255));
         profilepanel.setLayout(null);
 
@@ -633,6 +799,59 @@ public class Userform extends javax.swing.JFrame {
 
         instructor_panel.add(profilepanel);
         profilepanel.setBounds(0, 0, 1370, 770);
+=======
+        hm.setBackground(new java.awt.Color(255, 255, 255));
+        hm.setLayout(null);
+
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setLayout(null);
+
+        jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/test (7).png"))); // NOI18N
+        jPanel1.add(jLabel15);
+        jLabel15.setBounds(0, 0, 180, 140);
+
+        jLabel16.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel16.setText("Num of exams");
+        jPanel1.add(jLabel16);
+        jLabel16.setBounds(20, 140, 140, 30);
+
+        jLabel19.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel19.setText("Exams");
+        jPanel1.add(jLabel19);
+        jLabel19.setBounds(40, 180, 100, 30);
+
+        hm.add(jPanel1);
+        jPanel1.setBounds(830, 240, 180, 210);
+
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setLayout(null);
+
+        jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/icons8-students-100.png"))); // NOI18N
+        jPanel2.add(jLabel14);
+        jLabel14.setBounds(30, 30, 140, 100);
+
+        jLabel17.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel17.setText("Number of Students");
+        jPanel2.add(jLabel17);
+        jLabel17.setBounds(0, 140, 190, 30);
+
+        jLabel18.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel18.setText("Students");
+        jPanel2.add(jLabel18);
+        jLabel18.setBounds(40, 180, 120, 30);
+
+        hm.add(jPanel2);
+        jPanel2.setBounds(470, 240, 190, 220);
+
+        instructor_panel.add(hm);
+        hm.setBounds(0, 0, 1370, 770);
+>>>>>>> parent of 32787f9... ......
 
         getContentPane().add(instructor_panel);
         instructor_panel.setBounds(0, 0, 1366, 769);
