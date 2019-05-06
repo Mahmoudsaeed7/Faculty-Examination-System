@@ -312,4 +312,10 @@ public class JDBC {
             System.err.println(e);
         }
     }
+    
+    public void addExam(){
+        
+    }
+    
+    
 }
