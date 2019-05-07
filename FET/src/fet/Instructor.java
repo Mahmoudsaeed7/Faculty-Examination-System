@@ -9,19 +9,15 @@ package fet;
  *
  * @author MAHMOUD SAEED
  */
-public class Instructor extends Person{
+public class Instructor {
     private int id,age,courses;
-    
-    public Instructor(int Id , String Name , String Mail){
-        super(Name , Mail);
-        this.id = Id;
-        this.name = Name;
-        this.mail = Mail;
-    }
+    private String name,mail,phone;
     
     public Instructor(int ID , String Name , String Mail , String Phone , int Age , int Courses){
-        super(Name,Mail,Phone);
         this.id = ID;
+        this.name = Name;
+        this.mail = Mail;
+        this.phone = Phone;
         this.age = Age;
         this.courses = Courses;
     }
