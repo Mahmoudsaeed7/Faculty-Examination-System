@@ -27,20 +27,136 @@ public class studpanel extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel2 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        jPanel3 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jCheckBox1 = new javax.swing.JCheckBox();
+        jCheckBox2 = new javax.swing.JCheckBox();
+        jCheckBox3 = new javax.swing.JCheckBox();
+        jCheckBox4 = new javax.swing.JCheckBox();
+        jButton2 = new javax.swing.JButton();
+        jRadioButton1 = new javax.swing.JRadioButton();
+        jRadioButton2 = new javax.swing.JRadioButton();
+        jRadioButton3 = new javax.swing.JRadioButton();
+        jRadioButton4 = new javax.swing.JRadioButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        jButton1 = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(1370, 770));
+        getContentPane().setLayout(null);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        jPanel2.setBackground(new java.awt.Color(39, 42, 54));
+        jPanel2.setLayout(null);
 
-        pack();
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/test (6).png"))); // NOI18N
+        jLabel1.setText("   Exams");
+        jPanel2.add(jLabel1);
+        jLabel1.setBounds(8, 184, 170, 70);
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/a-mark (2).png"))); // NOI18N
+        jLabel2.setText("   Grades");
+        jPanel2.add(jLabel2);
+        jLabel2.setBounds(10, 260, 170, 60);
+
+        getContentPane().add(jPanel2);
+        jPanel2.setBounds(0, 0, 180, 770);
+
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setLayout(null);
+
+        jPanel3.setLayout(null);
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel3.setText("Question");
+        jPanel3.add(jLabel3);
+        jLabel3.setBounds(300, 140, 1060, 60);
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel4.setText("1");
+        jPanel3.add(jLabel4);
+        jLabel4.setBounds(280, 150, 10, 40);
+
+        jCheckBox1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jCheckBox1.setText("jCheckBox1");
+        jPanel3.add(jCheckBox1);
+        jCheckBox1.setBounds(270, 390, 920, 60);
+
+        jCheckBox2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jCheckBox2.setText("jCheckBox1");
+        jPanel3.add(jCheckBox2);
+        jCheckBox2.setBounds(270, 470, 920, 60);
+
+        jCheckBox3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jCheckBox3.setText("jCheckBox1");
+        jPanel3.add(jCheckBox3);
+        jCheckBox3.setBounds(270, 550, 920, 60);
+
+        jCheckBox4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jCheckBox4.setText("jCheckBox1");
+        jPanel3.add(jCheckBox4);
+        jCheckBox4.setBounds(270, 320, 920, 60);
+
+        jButton2.setText("Next");
+        jPanel3.add(jButton2);
+        jButton2.setBounds(1140, 663, 120, 60);
+
+        jRadioButton1.setText("jRadioButton1");
+        jPanel3.add(jRadioButton1);
+        jRadioButton1.setBounds(760, 30, 93, 23);
+
+        jRadioButton2.setText("jRadioButton1");
+        jPanel3.add(jRadioButton2);
+        jRadioButton2.setBounds(930, 30, 93, 23);
+
+        jRadioButton3.setText("jRadioButton1");
+        jPanel3.add(jRadioButton3);
+        jRadioButton3.setBounds(1090, 30, 93, 23);
+
+        jRadioButton4.setText("jRadioButton1");
+        jPanel3.add(jRadioButton4);
+        jRadioButton4.setBounds(610, 30, 93, 23);
+
+        jPanel1.add(jPanel3);
+        jPanel3.setBounds(0, 0, 1370, 770);
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jTable1.setRowHeight(30);
+        jTable1.setShowHorizontalLines(false);
+        jTable1.setShowVerticalLines(false);
+        jScrollPane1.setViewportView(jTable1);
+
+        jPanel1.add(jScrollPane1);
+        jScrollPane1.setBounds(310, 50, 990, 510);
+
+        jButton1.setText("Enter");
+        jPanel1.add(jButton1);
+        jButton1.setBounds(720, 630, 190, 50);
+
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(0, 0, 1370, 770);
+
+        setSize(new java.awt.Dimension(1386, 809));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     /**
@@ -79,5 +195,24 @@ public class studpanel extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JCheckBox jCheckBox1;
+    private javax.swing.JCheckBox jCheckBox2;
+    private javax.swing.JCheckBox jCheckBox3;
+    private javax.swing.JCheckBox jCheckBox4;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JRadioButton jRadioButton1;
+    private javax.swing.JRadioButton jRadioButton2;
+    private javax.swing.JRadioButton jRadioButton3;
+    private javax.swing.JRadioButton jRadioButton4;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
 }
