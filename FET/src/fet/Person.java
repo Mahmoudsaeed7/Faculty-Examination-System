@@ -13,6 +13,7 @@ abstract class Person {
     String name;
     String mail;
     String phone;
+    String pass;
     Person(String Name , String Mail){
         this.name = Name;
         this.mail = Mail;

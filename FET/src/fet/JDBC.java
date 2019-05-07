@@ -17,10 +17,15 @@ import javax.swing.table.DefaultTableModel;
  * @author MAHMOUD SAEED
  */
 public class JDBC {
-    DefaultTableModel instReqTable , instListTable , studListTable ,studReqTable;
-    public int ID;
-    public String mail,usName,usPass;
-    public String adminName , adminPass;
+    Instructor inst = new Instructor();
+    DefaultTableModel instReqTable;
+    DefaultTableModel instListTable;
+    DefaultTableModel studListTable;
+    DefaultTableModel studReqTable;
+    
+    public int ID,instId;
+    public String mail,usName,usPass , adminName , 
+            adminPass , examName , courseName , examDuration , examDate , password;
     public static  String USERNAME = "root";
     public static  String PASSWORD = "";
     public static  String CONN_STRING = "jdbc:mysql://localhost:3306/fes";
@@ -61,19 +66,58 @@ public class JDBC {
         try{
             Connection conn = DriverManager.getConnection(CONN_STRING,USERNAME,PASSWORD);
             String sql = "SELECT * FROM administrator WHERE admin_username=? AND admin_pass=?";
-            PreparedStatement pst = conn.prepareStatement(sql);
-            pst.setString(1, usName);
-            pst.setString(2, usPass);
-            ResultSet rs = pst.executeQuery();
+            String instLog = "SELECT * FROM instructors WHERE inst_mail=? AND inst_pass=?";
+            String studLog = "SELECT * FROM students WHERE stud_mail=? AND stud_pass=?";
+            
+            if (usName.contains("stud")) {
+                PreparedStatement pst = conn.prepareStatement(studLog);
+                pst.setString(1, usName);
+                pst.setString(2, usPass);
+                ResultSet rs = pst.executeQuery();
 
-            if(rs.next()){
-                Admin admin = new Admin();
-                admin.setVisible(true);
+                if(rs.next()){
+                    Userform uf = new Userform();
+                    uf.setVisible(true);
+                }
+                else
+                {
+                    JOptionPane.showMessageDialog(null, "Invalid Login !");
+                }
+            }
+            else if (usName.contains("inst")) {
+                PreparedStatement pst = conn.prepareStatement(instLog);
+                pst.setString(1, usName);
+                pst.setString(2, usPass);
+                ResultSet rs = pst.executeQuery();
+                
+                if(rs.next()){
+                    instId = rs.getInt("inst_id");
+                    Userform uf = new Userform();
+                    uf.setVisible(true);
+                   JOptionPane.showMessageDialog(null, instId);
+                }
+                else
+                {
+                    JOptionPane.showMessageDialog(null, "Invalid Login !");
+                }
             }
             else
             {
-                JOptionPane.showMessageDialog(null, "Invalid Login !");
+                PreparedStatement pst = conn.prepareStatement(sql);
+                pst.setString(1, usName);
+                pst.setString(2, usPass);
+                ResultSet rs = pst.executeQuery();
+
+                if(rs.next()){
+                    Admin admin = new Admin();
+                    admin.setVisible(true);
+                }
+                else
+                {
+                    JOptionPane.showMessageDialog(null, "Invalid Login !");
+                }
             }
+            
         }catch(SQLException e){
             System.err.println(e);
         }
@@ -104,6 +148,7 @@ public class JDBC {
             
             while(rst.next()){
                 inst = new Instructor(rst.getInt("inst_id"), rst.getString("inst_name"), rst.getString("inst_mail"));
+                password = rst.getString("inst_pass");
                 instList.add(inst);
             }
             
@@ -182,8 +227,8 @@ public class JDBC {
     public void addInst(int row){
         try{
             Connection conn = DriverManager.getConnection(CONN_STRING,USERNAME,PASSWORD);
-            String inst_sql = "INSERT INTO instructors(inst_id,inst_name,inst_mail,inst_phone,inst_age,inst_courses)"
-                    + "VALUES(NULL,'"+usName+"','"+mail+"',NULL,NULL,NULL)";
+            String inst_sql = "INSERT INTO instructors(inst_id,inst_name,inst_mail,inst_phone,inst_age,inst_courses,inst_pass)"
+                    + "VALUES(NULL,'"+usName+"','"+mail+"',NULL,NULL,NULL,'"+password+"')";
             String delInst = "DELETE FROM inst_requests WHERE inst_id = '"+ID+"'";
             Statement stmt = conn.createStatement();
                 stmt.executeUpdate(inst_sql);
@@ -306,6 +351,19 @@ public class JDBC {
             Statement stmt = conn.createStatement();
             stmt.executeUpdate(del);
             JOptionPane.showMessageDialog(null, "Deleted Successfuly..");
+        }catch(SQLException e){
+            System.err.println(e);
+        }
+    }
+    
+    public void addExam(){
+        try{
+            Connection conn = DriverManager.getConnection(CONN_STRING,USERNAME,PASSWORD);
+            String sql = "INSERT INTO exams(exam_id,exam_name,duration,date,instID,course_name)"
+                    + "VALUES(NULL , '"+examName+"' , '"+examDuration+"' , '"+examDate+"' , '"+instId+"','"+courseName+"')";
+            Statement stmt = conn.createStatement();
+            stmt.executeUpdate(sql);
+            JOptionPane.showMessageDialog(null, "Added Successfuly..");
         }catch(SQLException e){
             System.err.println(e);
         }

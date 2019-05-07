@@ -5,6 +5,7 @@
  */
 package fet;
 
+import com.sun.org.apache.bcel.internal.generic.AALOAD;
 import javax.swing.DefaultCellEditor;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JButton;
@@ -13,6 +14,7 @@ import javax.swing.Timer;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumn;
 import javax.swing.table.TableColumnModel;
+import fet.JDBC.*;
 
 /**
  *
@@ -21,6 +23,8 @@ import javax.swing.table.TableColumnModel;
 public class Userform extends javax.swing.JFrame {
 
   
+    JDBC j = new JDBC();
+    
     public Userform() {
         initComponents();
        collpanel.setVisible(false);
@@ -60,31 +64,18 @@ public class Userform extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        hm = new javax.swing.JPanel();
-        jPanel1 = new javax.swing.JPanel();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
         exampanel = new javax.swing.JPanel();
-        sessionpanel = new javax.swing.JPanel();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        jTable3 = new javax.swing.JTable();
-        jButton8 = new javax.swing.JButton();
         createexam = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jLabel27 = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
+        exam_duration = new javax.swing.JTextField();
         jLabel28 = new javax.swing.JLabel();
-        jTextField7 = new javax.swing.JTextField();
+        exam_date = new javax.swing.JTextField();
         jLabel30 = new javax.swing.JLabel();
-        jTextField9 = new javax.swing.JTextField();
+        exam_name = new javax.swing.JTextField();
         jLabel31 = new javax.swing.JLabel();
-        jTextField10 = new javax.swing.JTextField();
+        course_name = new javax.swing.JTextField();
         jButton5 = new javax.swing.JButton();
         questpanel = new javax.swing.JPanel();
         jLabel29 = new javax.swing.JLabel();
@@ -102,6 +93,21 @@ public class Userform extends javax.swing.JFrame {
         jButton7 = new javax.swing.JButton();
         jComboBox2 = new javax.swing.JComboBox();
         jComboBox3 = new javax.swing.JComboBox();
+        sessionpanel = new javax.swing.JPanel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        exam_list = new javax.swing.JTable();
+        jButton8 = new javax.swing.JButton();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        exam_session = new javax.swing.JTable();
+        hm = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
         stdpanel = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
@@ -269,103 +275,9 @@ public class Userform extends javax.swing.JFrame {
         instructor_panel.add(jLabel1);
         jLabel1.setBounds(1230, 0, 140, 60);
 
-        hm.setBackground(new java.awt.Color(255, 255, 255));
-        hm.setLayout(null);
-
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setLayout(null);
-
-        jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/test (7).png"))); // NOI18N
-        jPanel1.add(jLabel15);
-        jLabel15.setBounds(0, 0, 180, 140);
-
-        jLabel16.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel16.setText("Num of exams");
-        jPanel1.add(jLabel16);
-        jLabel16.setBounds(20, 140, 140, 30);
-
-        jLabel19.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel19.setText("Exams");
-        jPanel1.add(jLabel19);
-        jLabel19.setBounds(40, 180, 100, 30);
-
-        hm.add(jPanel1);
-        jPanel1.setBounds(830, 240, 180, 210);
-
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel2.setLayout(null);
-
-        jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/icons8-students-100.png"))); // NOI18N
-        jPanel2.add(jLabel14);
-        jLabel14.setBounds(30, 30, 140, 100);
-
-        jLabel17.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel17.setText("Number of Students");
-        jPanel2.add(jLabel17);
-        jLabel17.setBounds(0, 140, 190, 30);
-
-        jLabel18.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel18.setText("Students");
-        jPanel2.add(jLabel18);
-        jLabel18.setBounds(40, 180, 120, 30);
-
-        hm.add(jPanel2);
-        jPanel2.setBounds(470, 240, 190, 220);
-
-        instructor_panel.add(hm);
-        hm.setBounds(0, 0, 1370, 770);
-
         exampanel.setBackground(new java.awt.Color(255, 255, 255));
         exampanel.setMinimumSize(new java.awt.Dimension(1370, 770));
         exampanel.setLayout(null);
-
-        sessionpanel.setBackground(new java.awt.Color(255, 255, 255));
-        sessionpanel.setLayout(null);
-
-        jTable3.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.String.class
-            };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-        });
-        jTable3.setRowHeight(30);
-        jTable3.setShowHorizontalLines(false);
-        jTable3.setShowVerticalLines(false);
-        jScrollPane3.setViewportView(jTable3);
-
-        sessionpanel.add(jScrollPane3);
-        jScrollPane3.setBounds(230, 80, 1000, 500);
-
-        jButton8.setText("Assign");
-        jButton8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton8ActionPerformed(evt);
-            }
-        });
-        sessionpanel.add(jButton8);
-        jButton8.setBounds(720, 640, 160, 50);
-
-        exampanel.add(sessionpanel);
-        sessionpanel.setBounds(0, 0, 1370, 770);
 
         createexam.setBackground(new java.awt.Color(255, 255, 255));
         createexam.setLayout(null);
@@ -399,38 +311,43 @@ public class Userform extends javax.swing.JFrame {
         createexam.add(jLabel27);
         jLabel27.setBounds(350, 600, 60, 17);
 
-        jTextField6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        createexam.add(jTextField6);
-        jTextField6.setBounds(440, 590, 210, 40);
+        exam_duration.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        createexam.add(exam_duration);
+        exam_duration.setBounds(440, 590, 210, 40);
 
         jLabel28.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel28.setText("Date");
         createexam.add(jLabel28);
         jLabel28.setBounds(350, 680, 60, 17);
 
-        jTextField7.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        createexam.add(jTextField7);
-        jTextField7.setBounds(440, 670, 210, 40);
+        exam_date.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        createexam.add(exam_date);
+        exam_date.setBounds(440, 670, 210, 40);
 
         jLabel30.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel30.setText("Name");
         createexam.add(jLabel30);
         jLabel30.setBounds(350, 450, 60, 17);
 
-        jTextField9.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        createexam.add(jTextField9);
-        jTextField9.setBounds(440, 440, 210, 40);
+        exam_name.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        createexam.add(exam_name);
+        exam_name.setBounds(440, 440, 210, 40);
 
         jLabel31.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel31.setText("Course Name");
         createexam.add(jLabel31);
         jLabel31.setBounds(340, 520, 90, 17);
 
-        jTextField10.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        createexam.add(jTextField10);
-        jTextField10.setBounds(440, 510, 210, 40);
+        course_name.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        createexam.add(course_name);
+        course_name.setBounds(440, 510, 210, 40);
 
         jButton5.setText("Create");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
         createexam.add(jButton5);
         jButton5.setBounds(790, 520, 170, 90);
 
@@ -508,8 +425,123 @@ public class Userform extends javax.swing.JFrame {
         exampanel.add(createexam);
         createexam.setBounds(0, 0, 1370, 770);
 
+        sessionpanel.setBackground(new java.awt.Color(255, 255, 255));
+        sessionpanel.setLayout(null);
+
+        exam_list.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.String.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        exam_list.setRowHeight(30);
+        exam_list.setShowHorizontalLines(false);
+        exam_list.setShowVerticalLines(false);
+        jScrollPane3.setViewportView(exam_list);
+
+        sessionpanel.add(jScrollPane3);
+        jScrollPane3.setBounds(230, 330, 1000, 220);
+
+        jButton8.setText("Assign");
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
+        sessionpanel.add(jButton8);
+        jButton8.setBounds(720, 640, 160, 50);
+
+        exam_session.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.String.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        exam_session.setRowHeight(30);
+        exam_session.setShowHorizontalLines(false);
+        exam_session.setShowVerticalLines(false);
+        jScrollPane4.setViewportView(exam_session);
+
+        sessionpanel.add(jScrollPane4);
+        jScrollPane4.setBounds(230, 80, 1000, 220);
+
+        exampanel.add(sessionpanel);
+        sessionpanel.setBounds(0, 0, 1370, 770);
+
         instructor_panel.add(exampanel);
         exampanel.setBounds(0, 0, 1370, 770);
+
+        hm.setBackground(new java.awt.Color(255, 255, 255));
+        hm.setLayout(null);
+
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setLayout(null);
+
+        jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/test (7).png"))); // NOI18N
+        jPanel1.add(jLabel15);
+        jLabel15.setBounds(0, 0, 180, 140);
+
+        jLabel16.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel16.setText("Num of exams");
+        jPanel1.add(jLabel16);
+        jLabel16.setBounds(20, 140, 140, 30);
+
+        jLabel19.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel19.setText("Exams");
+        jPanel1.add(jLabel19);
+        jLabel19.setBounds(40, 180, 100, 30);
+
+        hm.add(jPanel1);
+        jPanel1.setBounds(830, 240, 180, 210);
+
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setLayout(null);
+
+        jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/icons8-students-100.png"))); // NOI18N
+        jPanel2.add(jLabel14);
+        jLabel14.setBounds(30, 30, 140, 100);
+
+        jLabel17.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel17.setText("Number of Students");
+        jPanel2.add(jLabel17);
+        jLabel17.setBounds(0, 140, 190, 30);
+
+        jLabel18.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel18.setText("Students");
+        jPanel2.add(jLabel18);
+        jLabel18.setBounds(40, 180, 120, 30);
+
+        hm.add(jPanel2);
+        jPanel2.setBounds(470, 240, 190, 220);
+
+        instructor_panel.add(hm);
+        hm.setBounds(0, 0, 1370, 770);
 
         stdpanel.setBackground(new java.awt.Color(255, 255, 255));
         stdpanel.setLayout(null);
@@ -606,7 +638,7 @@ public class Userform extends javax.swing.JFrame {
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "List Of Courses", " " }));
         jPanel3.add(jComboBox1);
-        jComboBox1.setBounds(230, 440, 230, 20);
+        jComboBox1.setBounds(230, 440, 230, 19);
 
         jButton4.setBackground(new java.awt.Color(39, 42, 54));
         jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/add (2).png"))); // NOI18N
@@ -701,6 +733,15 @@ public class Userform extends javax.swing.JFrame {
        profilepanel.setVisible(false);
     }//GEN-LAST:event_jLabel9MouseClicked
 
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+        j.examName = exam_name.getText();
+        j.courseName = course_name.getText();
+        j.examDuration = exam_duration.getText();
+        j.examDate = exam_date.getText();
+        j.addExam();
+    }//GEN-LAST:event_jButton5ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -738,7 +779,13 @@ public class Userform extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel collpanel;
+    private javax.swing.JTextField course_name;
     private javax.swing.JPanel createexam;
+    private javax.swing.JTextField exam_date;
+    private javax.swing.JTextField exam_duration;
+    private javax.swing.JTable exam_list;
+    private javax.swing.JTextField exam_name;
+    private javax.swing.JTable exam_session;
     private javax.swing.JPanel exampanel;
     private javax.swing.JPanel expandpanel;
     private javax.swing.JPanel hm;
@@ -796,11 +843,10 @@ public class Userform extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
-    private javax.swing.JTable jTable3;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField10;
     private javax.swing.JTextField jTextField11;
     private javax.swing.JTextField jTextField12;
     private javax.swing.JTextField jTextField14;
@@ -809,10 +855,7 @@ public class Userform extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField9;
     private javax.swing.JPanel profilepanel;
     private javax.swing.JPanel questpanel;
     private javax.swing.JPanel sessionpanel;

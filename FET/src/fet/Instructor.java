@@ -11,6 +11,22 @@ package fet;
  */
 public class Instructor extends Person {
     private int id,age,courses;
+
+    public Instructor() {
+        super(null, null);
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public void setCourses(int courses) {
+        this.courses = courses;
+    }
     
     public Instructor(int Id , String Name , String Mail){
         super(Name , Mail);

@@ -95,7 +95,7 @@ public class Admin extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         stud_req = new javax.swing.JTable();
         jScrollPane5 = new javax.swing.JScrollPane();
-        jTable4 = new javax.swing.JTable();
+        stud_list = new javax.swing.JTable();
         jLabel21 = new javax.swing.JLabel();
         jLabel22 = new javax.swing.JLabel();
         addstud = new javax.swing.JButton();
@@ -609,6 +609,11 @@ public class Admin extends javax.swing.JFrame {
         add_ins.setBounds(1270, 170, 110, 70);
 
         del_ins.setText("Delete");
+        del_ins.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                del_insActionPerformed(evt);
+            }
+        });
         instructor.add(del_ins);
         del_ins.setBounds(1270, 280, 110, 70);
 
@@ -639,7 +644,6 @@ public class Admin extends javax.swing.JFrame {
                 "ID", "Name", "Mail"
             }
         ));
-        stud_req.setEnabled(false);
         stud_req.setFocusable(false);
         stud_req.setGridColor(new java.awt.Color(255, 255, 255));
         stud_req.setIntercellSpacing(new java.awt.Dimension(0, 0));
@@ -653,34 +657,31 @@ public class Admin extends javax.swing.JFrame {
         student.add(jScrollPane2);
         jScrollPane2.setBounds(210, 120, 1030, 250);
 
-        jTable4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jTable4.setModel(new javax.swing.table.DefaultTableModel(
+        stud_list.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        stud_list.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "ID", "Name", "Mail"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false, false
+                false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
                 return canEdit [columnIndex];
             }
         });
-        jTable4.setFocusable(false);
-        jTable4.setIntercellSpacing(new java.awt.Dimension(0, 0));
-        jTable4.setRowHeight(30);
-        jTable4.setSelectionBackground(new java.awt.Color(0, 204, 51));
-        jTable4.setShowHorizontalLines(false);
-        jTable4.setShowVerticalLines(false);
-        jTable4.getTableHeader().setReorderingAllowed(false);
-        jScrollPane5.setViewportView(jTable4);
+        stud_list.setFocusable(false);
+        stud_list.setIntercellSpacing(new java.awt.Dimension(0, 0));
+        stud_list.setRowHeight(30);
+        stud_list.setSelectionBackground(new java.awt.Color(0, 204, 51));
+        stud_list.setShowHorizontalLines(false);
+        stud_list.setShowVerticalLines(false);
+        stud_list.getTableHeader().setReorderingAllowed(false);
+        jScrollPane5.setViewportView(stud_list);
 
         student.add(jScrollPane5);
         jScrollPane5.setBounds(210, 470, 1030, 280);
@@ -698,10 +699,20 @@ public class Admin extends javax.swing.JFrame {
         jLabel22.setBounds(210, 430, 140, 40);
 
         addstud.setText("Add");
+        addstud.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addstudActionPerformed(evt);
+            }
+        });
         student.add(addstud);
         addstud.setBounds(1270, 170, 110, 70);
 
         delstud.setText("Delete");
+        delstud.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                delstudActionPerformed(evt);
+            }
+        });
         student.add(delstud);
         delstud.setBounds(1270, 280, 110, 70);
 
@@ -1057,8 +1068,10 @@ public class Admin extends javax.swing.JFrame {
         exampanel.setVisible(false);
         
         j.instReqTable = (DefaultTableModel)req_table.getModel();
+        j.instListTable = (DefaultTableModel)inst_list.getModel();
         if(r.reg){
             j.showInstData();
+            j.instData();
             r.reg = false;
         }
         
@@ -1076,8 +1089,10 @@ public class Admin extends javax.swing.JFrame {
         instructor.setVisible(false);
         exampanel.setVisible(false);
         j.studReqTable = (DefaultTableModel)stud_req.getModel();
+        j.studListTable = (DefaultTableModel)stud_list.getModel();
         if(r.reg2){
             j.showStudData();
+            j.studData();
             r.reg2 = false;
         }
     }//GEN-LAST:event_add_studMouseClicked
@@ -1132,8 +1147,10 @@ public class Admin extends javax.swing.JFrame {
         instructor.setVisible(false);
         exampanel.setVisible(false);
         j.studReqTable = (DefaultTableModel)stud_req.getModel();
+        j.studListTable = (DefaultTableModel)stud_list.getModel();
         if(r.reg2){
             j.showStudData();
+            j.studData();
             r.reg2 = false;
         }
     }//GEN-LAST:event_btn_studMouseClicked
@@ -1149,6 +1166,7 @@ public class Admin extends javax.swing.JFrame {
         j.instListTable = (DefaultTableModel)inst_list.getModel();
         if(r.reg){
             j.showInstData();
+            j.instData();
             r.reg = false;
         }
     }//GEN-LAST:event_btn_instMouseClicked
@@ -1202,6 +1220,63 @@ public class Admin extends javax.swing.JFrame {
         }
 
     }//GEN-LAST:event_add_insActionPerformed
+
+    private void del_insActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_del_insActionPerformed
+        // TODO add your handling code here:
+        try{
+            for (int i = 0; i < req_table.getModel().getRowCount(); i++) {
+                j.ID = (int)req_table.getModel().getValueAt(i,0);
+            }
+            for (int i = req_table.getModel().getRowCount()-1; i >=0 ; i--) {
+                j.instReqTable.removeRow(i);
+            }
+            int selectedrow = req_table.getSelectedRow();
+            j.deleteInst(selectedrow);
+            j.showInstData();
+        }catch(Exception ex){
+            JOptionPane.showMessageDialog(null, ex);
+        }
+    }//GEN-LAST:event_del_insActionPerformed
+
+    private void addstudActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addstudActionPerformed
+        // TODO add your handling code here:
+        try{
+            for (int i = 0; i < stud_req.getModel().getRowCount(); i++) {
+                j.ID = (int)stud_req.getModel().getValueAt(i,0);
+                j.usName = (String)stud_req.getModel().getValueAt(i,1);
+                j.mail = (String)stud_req.getModel().getValueAt(i,2);
+            }
+            int selectedRow = stud_req.getSelectedRow();
+            for (int i = stud_list.getModel().getRowCount()-1; i >= 0; i--) {
+                j.studListTable.removeRow(i);
+            }
+            for (int i = stud_req.getModel().getRowCount()-1; i >= 0; i--) {
+                j.studReqTable.removeRow(i);
+            }
+            j.addStud(selectedRow);
+            j.studData();
+            j.showStudData();
+        }catch(Exception ex){
+            JOptionPane.showMessageDialog(null, ex);
+        }
+    }//GEN-LAST:event_addstudActionPerformed
+
+    private void delstudActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_delstudActionPerformed
+        // TODO add your handling code here:
+        try{
+            for (int i = 0; i < stud_req.getModel().getRowCount(); i++) {
+                j.ID = (int)stud_req.getModel().getValueAt(i,0);
+            }
+            for (int i = stud_req.getModel().getRowCount()-1; i >=0 ; i--) {
+                j.studReqTable.removeRow(i);
+            }
+            int selectedrow = stud_req.getSelectedRow();
+            j.deleteStud(selectedrow);
+            j.showStudData();
+        }catch(Exception ex){
+            JOptionPane.showMessageDialog(null, ex);
+        }
+    }//GEN-LAST:event_delstudActionPerformed
            
     /**
      * @param args the command line arguments
@@ -1296,11 +1371,11 @@ public class Admin extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
-    private javax.swing.JTable jTable4;
     private javax.swing.JTable jTable5;
     private javax.swing.JTable jTable6;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTable req_table;
+    private javax.swing.JTable stud_list;
     private javax.swing.JTable stud_req;
     private javax.swing.JPanel student;
     // End of variables declaration//GEN-END:variables
