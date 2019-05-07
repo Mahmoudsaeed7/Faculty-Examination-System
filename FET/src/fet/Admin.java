@@ -8,6 +8,7 @@ package fet;
 import java.awt.Color;
 import fet.JDBC.*;
 import fet.Register;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -37,7 +38,6 @@ public class Admin extends javax.swing.JFrame {
         admin.setVisible(false);
         instructor.setVisible(false);
         exampanel.setVisible(false);
-        jLabel15.setText(j.numOfRequests()+" Pending Requests");
     }
 
     /**
@@ -86,7 +86,7 @@ public class Admin extends javax.swing.JFrame {
         jScrollPane4 = new javax.swing.JScrollPane();
         req_table = new javax.swing.JTable();
         jScrollPane3 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
+        inst_list = new javax.swing.JTable();
         jLabel19 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
         add_ins = new javax.swing.JButton();
@@ -565,24 +565,24 @@ public class Admin extends javax.swing.JFrame {
 
         jScrollPane3.setBackground(new java.awt.Color(255, 255, 255));
 
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+        inst_list.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "ID", "Name", "Mail"
             }
         ));
-        jTable2.setEnabled(false);
-        jTable2.setFocusable(false);
-        jTable2.setGridColor(new java.awt.Color(255, 255, 255));
-        jTable2.setIntercellSpacing(new java.awt.Dimension(0, 0));
-        jTable2.setRowHeight(30);
-        jTable2.setSelectionBackground(new java.awt.Color(0, 204, 204));
-        jTable2.setSelectionForeground(new java.awt.Color(0, 0, 0));
-        jTable2.setShowHorizontalLines(false);
-        jTable2.setShowVerticalLines(false);
-        jScrollPane3.setViewportView(jTable2);
+        inst_list.setEnabled(false);
+        inst_list.setFocusable(false);
+        inst_list.setGridColor(new java.awt.Color(255, 255, 255));
+        inst_list.setIntercellSpacing(new java.awt.Dimension(0, 0));
+        inst_list.setRowHeight(30);
+        inst_list.setSelectionBackground(new java.awt.Color(0, 204, 204));
+        inst_list.setSelectionForeground(new java.awt.Color(0, 0, 0));
+        inst_list.setShowHorizontalLines(false);
+        inst_list.setShowVerticalLines(false);
+        jScrollPane3.setViewportView(inst_list);
 
         instructor.add(jScrollPane3);
         jScrollPane3.setBounds(210, 460, 1010, 300);
@@ -600,6 +600,11 @@ public class Admin extends javax.swing.JFrame {
         jLabel20.setBounds(210, 60, 130, 40);
 
         add_ins.setText("Add");
+        add_ins.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                add_insActionPerformed(evt);
+            }
+        });
         instructor.add(add_ins);
         add_ins.setBounds(1270, 170, 110, 70);
 
@@ -1141,6 +1146,7 @@ public class Admin extends javax.swing.JFrame {
         instructor.setVisible(true);
         exampanel.setVisible(false);
         j.instReqTable = (DefaultTableModel)req_table.getModel();
+        j.instListTable = (DefaultTableModel)inst_list.getModel();
         if(r.reg){
             j.showInstData();
             r.reg = false;
@@ -1172,6 +1178,30 @@ public class Admin extends javax.swing.JFrame {
     private void btn_instActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_instActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btn_instActionPerformed
+
+    private void add_insActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_add_insActionPerformed
+        // TODO add your handling code here:
+        try{
+            for (int i = 0; i < req_table.getModel().getRowCount(); i++) {
+                j.ID = (int)req_table.getModel().getValueAt(i,0);
+                j.usName = (String)req_table.getModel().getValueAt(i,1);
+                j.mail = (String)req_table.getModel().getValueAt(i,2);
+            }
+            int selectedRow = req_table.getSelectedRow();
+            for (int i = inst_list.getModel().getRowCount()-1; i>=0; i--) {
+                j.instListTable.removeRow(i);
+            }
+            for (int i = req_table.getModel().getRowCount()-1; i >=0 ; i--) {
+                j.instReqTable.removeRow(i);
+            }
+            j.addInst(selectedRow);
+            j.instData();
+            j.showInstData();
+        }catch(Exception ex){
+            JOptionPane.showMessageDialog(null, ex);
+        }
+
+    }//GEN-LAST:event_add_insActionPerformed
            
     /**
      * @param args the command line arguments
@@ -1226,6 +1256,7 @@ public class Admin extends javax.swing.JFrame {
     private javax.swing.JPanel exampanel;
     private javax.swing.JPanel expandedbar;
     private javax.swing.JPanel homepanel;
+    private javax.swing.JTable inst_list;
     private javax.swing.JPanel instructor;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
@@ -1265,7 +1296,6 @@ public class Admin extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
-    private javax.swing.JTable jTable2;
     private javax.swing.JTable jTable4;
     private javax.swing.JTable jTable5;
     private javax.swing.JTable jTable6;
