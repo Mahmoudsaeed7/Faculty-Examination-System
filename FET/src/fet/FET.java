@@ -26,7 +26,8 @@ public class FET {
         Splash s=new Splash();
         s.setVisible(true);
        Login l=new Login();
-      
+        s.setVisible(true);
+     //  Login l=new Login();
         try {
             for (int i = 0; i < 100; i++) {
             Thread.sleep(5);                     
