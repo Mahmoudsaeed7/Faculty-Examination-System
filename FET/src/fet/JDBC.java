@@ -92,18 +92,18 @@ public class JDBC {
         }
     }
     
-    public ArrayList<inst_requests> instList(){
-        ArrayList<inst_requests> instList = new ArrayList<>();
+    public ArrayList<Instructor> instList(){
+        ArrayList<Instructor> instList = new ArrayList<>();
         
         try{ 
             Connection conn = DriverManager.getConnection(CONN_STRING,USERNAME,PASSWORD);
             String sql = "SELECT * FROM inst_requests";
             Statement stmt = conn.createStatement();
             ResultSet rst = stmt.executeQuery(sql);
-            inst_requests inst;
+            Instructor inst;
             
             while(rst.next()){
-                inst = new inst_requests(rst.getInt("inst_id"), rst.getString("inst_name"), rst.getString("inst_mail"));
+                inst = new Instructor(rst.getInt("inst_id"), rst.getString("inst_name"), rst.getString("inst_mail"));
                 instList.add(inst);
             }
             
@@ -114,7 +114,7 @@ public class JDBC {
     }
     
     public void showInstData(){
-        ArrayList<inst_requests> List = instList();
+        ArrayList<Instructor> List = instList();
         
         DefaultTableModel model = instReqTable;
         Object[] row = new Object[3];
@@ -126,18 +126,18 @@ public class JDBC {
         }
     }
     
-    public ArrayList<stud_requests> studList(){
-        ArrayList<stud_requests> studList = new ArrayList<>();
+    public ArrayList<Student> studList(){
+        ArrayList<Student> studList = new ArrayList<>();
         
         try{ 
             Connection conn = DriverManager.getConnection(CONN_STRING,USERNAME,PASSWORD);
             String sql = "SELECT * FROM stud_requests";
             Statement stmt = conn.createStatement();
             ResultSet rst = stmt.executeQuery(sql);
-            stud_requests stud;
+            Student stud;
             
             while(rst.next()){
-                stud = new stud_requests(rst.getInt("stud_id"), rst.getString("stud_name"), rst.getString("stud_mail"));
+                stud = new Student(rst.getInt("stud_id"), rst.getString("stud_name"), rst.getString("stud_mail"));
                 studList.add(stud);
             }
             
@@ -148,7 +148,7 @@ public class JDBC {
     }
     
     public void showStudData(){
-        ArrayList<stud_requests> List = studList();
+        ArrayList<Student> List = studList();
         
         DefaultTableModel model = studReqTable;
         Object[] row = new Object[3];
