@@ -17,8 +17,8 @@ import javax.swing.table.DefaultTableModel;
  * @author MAHMOUD SAEED
  */
 public class JDBC {
-    DefaultTableModel instReqTable;
-    DefaultTableModel studReqTable;
+    DefaultTableModel instReqTable , instListTable , studListTable ,studReqTable;
+    public int ID;
     public String mail,usName,usPass;
     public String adminName , adminPass;
     public static  String USERNAME = "root";
