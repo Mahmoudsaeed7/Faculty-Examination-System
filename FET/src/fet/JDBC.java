@@ -179,7 +179,135 @@ public class JDBC {
         return Integer.valueOf(instCount)+Integer.valueOf(studCount);
     }
     
-    public void add(){
+    public void addInst(int row){
+        try{
+            Connection conn = DriverManager.getConnection(CONN_STRING,USERNAME,PASSWORD);
+            String inst_sql = "INSERT INTO instructors(inst_id,inst_name,inst_mail,inst_phone,inst_age,inst_courses)"
+                    + "VALUES(NULL,'"+usName+"','"+mail+"',NULL,NULL,NULL)";
+            String delInst = "DELETE FROM inst_requests WHERE inst_id = '"+ID+"'";
+            Statement stmt = conn.createStatement();
+                stmt.executeUpdate(inst_sql);
+                stmt.executeUpdate(delInst);
+                JOptionPane.showMessageDialog(null, "Added Successfuly..");
+        }catch(SQLException e){
+            System.err.println(e);
+        }
+    }
+    
+    public void addStud(int row){
+        try{
+            Connection conn = DriverManager.getConnection(CONN_STRING,USERNAME,PASSWORD);
+            String stud_sql = "INSERT INTO students(stud_id,stud_name,stud_pass,stud_phone,stud_mail,stud_sessions,stud_grades)"
+                    + "VALUES(NULL,'"+usName+"','"+usPass+"',NULL,'"+mail+"',NULL,NULL)";
+            String delStud = "DELETE FROM stud_requests WHERE stud_id = '"+ID+"'";
+            Statement stmt = conn.createStatement();
+                stmt.executeUpdate(stud_sql);
+                stmt.executeUpdate(delStud);
+                JOptionPane.showMessageDialog(null, "Added Successfuly..");
+        }catch(SQLException e){
+            System.err.println(e);
+        }
+    }
+    
+    public ArrayList<Instructor> instructorList(){
+        ArrayList<Instructor> List = new ArrayList<>();
         
+        try{
+            Connection conn = DriverManager.getConnection(CONN_STRING,USERNAME,PASSWORD);
+            String sql = "SELECT * FROM instructors";
+            Statement stmt = conn.createStatement();
+            ResultSet rst = stmt.executeQuery(sql);
+            
+            Instructor inst;
+            
+            while(rst.next())
+            {
+                inst = new Instructor(rst.getInt("inst_id"),rst.getString("inst_name"), rst.getString("inst_mail"),rst.getString("inst_phone"),rst.getInt("inst_age"),rst.getInt("inst_courses"));
+                List.add(inst);
+            }
+        }catch(SQLException e){
+            System.err.println(e);
+        }
+        return List;
+    }
+    
+    public void instData(){
+        ArrayList<Instructor> lst = instructorList();
+        
+        DefaultTableModel model = instListTable;
+        Object[] row = new Object[6];
+        for(int i=0; i<lst.size(); i++)
+        {
+            row[0] = lst.get(i).getId();
+            row[1] = lst.get(i).getName();
+            row[2] = lst.get(i).getMail();
+            row[3] = lst.get(i).getPhone();
+            row[4] = lst.get(i).getAge();
+            row[5] = lst.get(i).getCourses();
+            model.addRow(row);
+        }
+    }
+    
+    public ArrayList<Student> studentList(){
+        ArrayList<Student> List = new ArrayList<>();
+        
+        try{
+            Connection conn = DriverManager.getConnection(CONN_STRING,USERNAME,PASSWORD);
+            String sql = "SELECT * FROM students";
+            Statement stmt = conn.createStatement();
+            ResultSet rst = stmt.executeQuery(sql);
+            
+            Student stud;
+            
+            while(rst.next())
+            {
+                stud = new Student(rst.getInt("stud_id"),rst.getString("stud_name"), rst.getString("stud_mail"),rst.getString("stud_phone"),rst.getInt("stud_sessions"),rst.getInt("stud_grades"));
+                List.add(stud);
+            }
+        }catch(SQLException e){
+            System.err.println(e);
+        }
+        return List;
+    }
+    
+    public void studData(){
+        ArrayList<Student> lst = studentList();
+        
+        DefaultTableModel model = studListTable;
+        Object[] row = new Object[6];
+        for(int i=0; i<lst.size(); i++)
+        {
+            row[0] = lst.get(i).getId();
+            row[1] = lst.get(i).getName();
+            row[2] = lst.get(i).getMail();
+            row[3] = lst.get(i).getPhone();
+            row[4] = lst.get(i).getSessions();
+            row[5] = lst.get(i).getGardes();
+            model.addRow(row);
+        }
+    }
+    
+    public void deleteStud(int row){
+        try{
+            Connection conn = DriverManager.getConnection(CONN_STRING,USERNAME,PASSWORD);
+            String del = "DELETE FROM stud_requests WHERE stud_id = '"+ID+"'";
+            Statement stmt = conn.createStatement();
+            stmt.executeUpdate(del);
+            JOptionPane.showMessageDialog(null, "Deleted Successfuly..");
+        }catch(SQLException e){
+            System.err.println(e);
+        }
+    }
+    
+    public void deleteInst(int row){
+        try{
+            Connection conn = DriverManager.getConnection(CONN_STRING,USERNAME,PASSWORD);
+            String del = "DELETE FROM inst_requests WHERE inst_id = '"+ID+"'";
+            Statement stmt = conn.createStatement();
+            stmt.executeUpdate(del);
+            JOptionPane.showMessageDialog(null, "Deleted Successfuly..");
+        }catch(SQLException e){
+            System.err.println(e);
+        }
     }
 }
