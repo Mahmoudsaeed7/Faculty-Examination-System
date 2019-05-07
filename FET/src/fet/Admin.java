@@ -89,6 +89,8 @@ public class Admin extends javax.swing.JFrame {
         jTable2 = new javax.swing.JTable();
         jLabel19 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
+        add_ins = new javax.swing.JButton();
+        del_ins = new javax.swing.JButton();
         student = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         stud_req = new javax.swing.JTable();
@@ -96,6 +98,8 @@ public class Admin extends javax.swing.JFrame {
         jTable4 = new javax.swing.JTable();
         jLabel21 = new javax.swing.JLabel();
         jLabel22 = new javax.swing.JLabel();
+        addstud = new javax.swing.JButton();
+        delstud = new javax.swing.JButton();
         addpanel = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
@@ -530,19 +534,12 @@ public class Admin extends javax.swing.JFrame {
 
             },
             new String [] {
-                "ID", "Name", "Mail", "Add", "Delete"
+                "ID", "Name", "Mail"
             }
         ) {
-            Class[] types = new Class [] {
-                java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Boolean.class, java.lang.Boolean.class
-            };
             boolean[] canEdit = new boolean [] {
-                false, false, false, true, true
+                false, false, false
             };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
                 return canEdit [columnIndex];
@@ -573,17 +570,9 @@ public class Admin extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4", "Title 5", "Title 6"
+                "Title 1", "Title 2", "Title 3", "Title 4"
             }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Boolean.class, java.lang.Boolean.class
-            };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-        });
+        ));
         jTable2.setEnabled(false);
         jTable2.setFocusable(false);
         jTable2.setGridColor(new java.awt.Color(255, 255, 255));
@@ -610,6 +599,14 @@ public class Admin extends javax.swing.JFrame {
         instructor.add(jLabel20);
         jLabel20.setBounds(210, 60, 130, 40);
 
+        add_ins.setText("Add");
+        instructor.add(add_ins);
+        add_ins.setBounds(1270, 170, 110, 70);
+
+        del_ins.setText("Delete");
+        instructor.add(del_ins);
+        del_ins.setBounds(1270, 280, 110, 70);
+
         getContentPane().add(instructor);
         instructor.setBounds(0, 0, 1370, 770);
 
@@ -634,17 +631,9 @@ public class Admin extends javax.swing.JFrame {
 
             },
             new String [] {
-                "ID", "Name", "Mail", "Add", "Delete"
+                "ID", "Name", "Mail"
             }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Boolean.class, java.lang.Boolean.class
-            };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-        });
+        ));
         stud_req.setEnabled(false);
         stud_req.setFocusable(false);
         stud_req.setGridColor(new java.awt.Color(255, 255, 255));
@@ -662,25 +651,18 @@ public class Admin extends javax.swing.JFrame {
         jTable4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jTable4.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4", "Add", "Delete"
+                "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ) {
-            Class[] types = new Class [] {
-                java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Boolean.class, java.lang.Boolean.class
-            };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, true, true
+                false, false, false, false
             };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
                 return canEdit [columnIndex];
@@ -709,6 +691,14 @@ public class Admin extends javax.swing.JFrame {
         jLabel22.setText("Students List :");
         student.add(jLabel22);
         jLabel22.setBounds(210, 430, 140, 40);
+
+        addstud.setText("Add");
+        student.add(addstud);
+        addstud.setBounds(1270, 170, 110, 70);
+
+        delstud.setText("Delete");
+        student.add(delstud);
+        delstud.setBounds(1270, 280, 110, 70);
 
         getContentPane().add(student);
         student.setBounds(0, 0, 1370, 770);
@@ -1220,15 +1210,19 @@ public class Admin extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton add_admin;
+    private javax.swing.JButton add_ins;
     private javax.swing.JLabel add_inst;
     private javax.swing.JLabel add_stud;
     private javax.swing.JPanel addpanel;
+    private javax.swing.JButton addstud;
     private javax.swing.JPanel admin;
     private javax.swing.JTextField admin_name;
     private javax.swing.JPasswordField admin_pass;
     private javax.swing.JButton btn_inst;
     private javax.swing.JButton btn_stud;
     private javax.swing.JPanel collapsedbar;
+    private javax.swing.JButton del_ins;
+    private javax.swing.JButton delstud;
     private javax.swing.JPanel exampanel;
     private javax.swing.JPanel expandedbar;
     private javax.swing.JPanel homepanel;
