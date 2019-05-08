@@ -81,6 +81,12 @@ public class Userform extends javax.swing.JFrame {
         jLabel31 = new javax.swing.JLabel();
         course_name = new javax.swing.JTextField();
         jButton5 = new javax.swing.JButton();
+        sessionpanel = new javax.swing.JPanel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        exam_list = new javax.swing.JTable();
+        jButton8 = new javax.swing.JButton();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        exam_session = new javax.swing.JTable();
         questpanel = new javax.swing.JPanel();
         jLabel29 = new javax.swing.JLabel();
         jLabel32 = new javax.swing.JLabel();
@@ -96,12 +102,6 @@ public class Userform extends javax.swing.JFrame {
         next_btn = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
         correct_cb = new javax.swing.JComboBox();
-        sessionpanel = new javax.swing.JPanel();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        exam_list = new javax.swing.JTable();
-        jButton8 = new javax.swing.JButton();
-        jScrollPane4 = new javax.swing.JScrollPane();
-        exam_session = new javax.swing.JTable();
         hm = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         jLabel15 = new javax.swing.JLabel();
@@ -350,72 +350,6 @@ public class Userform extends javax.swing.JFrame {
         createexam.add(jButton5);
         jButton5.setBounds(790, 520, 170, 90);
 
-        questpanel.setBackground(new java.awt.Color(255, 255, 255));
-        questpanel.setLayout(null);
-
-        jLabel29.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
-        jLabel29.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel29.setText("Question ");
-        questpanel.add(jLabel29);
-        jLabel29.setBounds(620, 20, 290, 120);
-
-        jLabel32.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel32.setText("Question");
-        questpanel.add(jLabel32);
-        jLabel32.setBounds(350, 260, 70, 20);
-        questpanel.add(quest_tf);
-        quest_tf.setBounds(430, 250, 720, 40);
-
-        jLabel33.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel33.setText("Choose 3:");
-        questpanel.add(jLabel33);
-        jLabel33.setBounds(430, 560, 80, 30);
-        questpanel.add(choose_3_tf);
-        choose_3_tf.setBounds(430, 590, 650, 30);
-
-        jLabel37.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel37.setText("Choose 4:");
-        questpanel.add(jLabel37);
-        jLabel37.setBounds(430, 640, 80, 30);
-        questpanel.add(choose_4_tf);
-        choose_4_tf.setBounds(430, 670, 650, 30);
-
-        jLabel39.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel39.setText("Choose 1:");
-        questpanel.add(jLabel39);
-        jLabel39.setBounds(430, 410, 80, 30);
-        questpanel.add(choose_1_tf);
-        choose_1_tf.setBounds(430, 440, 650, 30);
-
-        jLabel40.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel40.setText("Choose 2:");
-        questpanel.add(jLabel40);
-        jLabel40.setBounds(430, 480, 80, 30);
-        questpanel.add(choose_2_tf);
-        choose_2_tf.setBounds(430, 510, 650, 30);
-
-        next_btn.setText("Next");
-        next_btn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                next_btnActionPerformed(evt);
-            }
-        });
-        questpanel.add(next_btn);
-        next_btn.setBounds(1110, 710, 120, 40);
-
-        jButton7.setText("Finish");
-        jButton7.setToolTipText("");
-        questpanel.add(jButton7);
-        jButton7.setBounds(1250, 710, 110, 40);
-
-        correct_cb.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        correct_cb.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Choose the correct answer", "1", "2", "3", "4", " ", " " }));
-        questpanel.add(correct_cb);
-        correct_cb.setBounds(560, 340, 330, 30);
-
-        createexam.add(questpanel);
-        questpanel.setBounds(0, 0, 1370, 770);
-
         exampanel.add(createexam);
         createexam.setBounds(0, 0, 1370, 770);
 
@@ -481,6 +415,72 @@ public class Userform extends javax.swing.JFrame {
 
         exampanel.add(sessionpanel);
         sessionpanel.setBounds(0, 0, 1370, 770);
+
+        questpanel.setBackground(new java.awt.Color(255, 255, 255));
+        questpanel.setLayout(null);
+
+        jLabel29.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
+        jLabel29.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel29.setText("Question ");
+        questpanel.add(jLabel29);
+        jLabel29.setBounds(620, 20, 290, 120);
+
+        jLabel32.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel32.setText("Question");
+        questpanel.add(jLabel32);
+        jLabel32.setBounds(350, 260, 70, 20);
+        questpanel.add(quest_tf);
+        quest_tf.setBounds(430, 250, 720, 40);
+
+        jLabel33.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel33.setText("Choose 3:");
+        questpanel.add(jLabel33);
+        jLabel33.setBounds(430, 560, 80, 30);
+        questpanel.add(choose_3_tf);
+        choose_3_tf.setBounds(430, 590, 650, 30);
+
+        jLabel37.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel37.setText("Choose 4:");
+        questpanel.add(jLabel37);
+        jLabel37.setBounds(430, 640, 80, 30);
+        questpanel.add(choose_4_tf);
+        choose_4_tf.setBounds(430, 670, 650, 30);
+
+        jLabel39.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel39.setText("Choose 1:");
+        questpanel.add(jLabel39);
+        jLabel39.setBounds(430, 410, 80, 30);
+        questpanel.add(choose_1_tf);
+        choose_1_tf.setBounds(430, 440, 650, 30);
+
+        jLabel40.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel40.setText("Choose 2:");
+        questpanel.add(jLabel40);
+        jLabel40.setBounds(430, 480, 80, 30);
+        questpanel.add(choose_2_tf);
+        choose_2_tf.setBounds(430, 510, 650, 30);
+
+        next_btn.setText("Next");
+        next_btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                next_btnActionPerformed(evt);
+            }
+        });
+        questpanel.add(next_btn);
+        next_btn.setBounds(1110, 710, 120, 40);
+
+        jButton7.setText("Finish");
+        jButton7.setToolTipText("");
+        questpanel.add(jButton7);
+        jButton7.setBounds(1250, 710, 110, 40);
+
+        correct_cb.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        correct_cb.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Choose the correct answer", "1", "2", "3", "4", " ", " " }));
+        questpanel.add(correct_cb);
+        correct_cb.setBounds(560, 340, 330, 30);
+
+        exampanel.add(questpanel);
+        questpanel.setBounds(0, 0, 1370, 770);
 
         instructor_panel.add(exampanel);
         exampanel.setBounds(0, 0, 1370, 770);
@@ -675,7 +675,7 @@ public class Userform extends javax.swing.JFrame {
         j.choose_3 = choose_3_tf.getText();
         j.choose_4 = choose_4_tf.getText();
         for (int i = 0; i < examTable.getModel().getRowCount(); i++) {
-            j.examID = (int)examTable.getModel().getValueAt(i, 0);
+            Emergency.ID = (int)examTable.getModel().getValueAt(i, 0);
         }
         j.questionNum++;
         j.addQuest();
@@ -749,13 +749,17 @@ public class Userform extends javax.swing.JFrame {
         j.examTable = (DefaultTableModel)examTable.getModel();
         j.examName = exam_name.getText();
         j.courseName = course_name.getText();
-        j.examDuration = exam_duration.getText();
+        j.examDuration = Integer.parseInt(exam_duration.getText());
         j.examDate = exam_date.getText();
-        j.addExam();
         for (int i = examTable.getModel().getRowCount()-1; i >= 0; i--) {
             j.examTable.removeRow(i);
         }
+        j.addExam();
         j.showExams();
+        for (int i = 0; i < examTable.getModel().getRowCount(); i++){
+            Emergency.ID = (int)examTable.getModel().getValueAt(i, 0);
+        }
+        j.createSession();
     }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
