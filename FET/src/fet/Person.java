@@ -14,6 +14,9 @@ abstract class Person {
     String mail;
     String phone;
     String pass;
+    Person(String Name){
+        this.name = Name;
+    }
     Person(String Name , String Mail){
         this.name = Name;
         this.mail = Mail;

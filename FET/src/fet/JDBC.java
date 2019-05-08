@@ -23,11 +23,13 @@ public class JDBC {
     DefaultTableModel studListTable;
     DefaultTableModel studReqTable;
     DefaultTableModel examTable;
+    DefaultTableModel studentNames;
+    DefaultTableModel sessionsTable;
     
-    public int ID,questionNum=0,examID;
+    public int ID,questionNum=0,examID,examDuration;
     public String mail,usName,usPass , adminName , 
-            adminPass , examName , courseName , examDuration , examDate , password ,
-            question , choose_1 , choose_2 , choose_3 , choose_4 , correctAns;
+            adminPass , examName , courseName , password ,
+            question , choose_1 , choose_2 , choose_3 , choose_4 , correctAns,studName ,examDate;
     public static  String USERNAME = "root";
     public static  String PASSWORD = "";
     public static  String CONN_STRING = "jdbc:mysql://localhost:3306/fes";
@@ -379,7 +381,7 @@ public class JDBC {
              ResultSet rst = stmt.executeQuery(exam);
              Exam ex;
              while(rst.next()){
-                 ex = new Exam(rst.getInt("exam_id"), rst.getString("exam_name"), rst.getInt("duration"), rst.getInt("date"), rst.getString("course_name"));
+                 ex = new Exam(rst.getInt("exam_id"), rst.getString("exam_name"), rst.getInt("duration"), rst.getString("date"), rst.getString("course_name"));
                  examLst.add(ex);
              }
         }catch(SQLException e){
@@ -411,6 +413,110 @@ public class JDBC {
             Statement stmt = conn.createStatement();
             stmt.executeUpdate(addQuest);
             JOptionPane.showMessageDialog(null, "Added Successfuly..");
+        }catch(SQLException e){
+            System.err.println(e);
+        }
+    }
+    
+    public ArrayList<Student> studNames(){
+        ArrayList<Student> List = new ArrayList<>();
+        
+        try{
+            Connection conn = DriverManager.getConnection(CONN_STRING,USERNAME,PASSWORD);
+            String sql = "SELECT * FROM students";
+            Statement stmt = conn.createStatement();
+            ResultSet rst = stmt.executeQuery(sql);
+            
+            Student stud;
+            
+            while(rst.next())
+            {
+                stud = new Student(rst.getString("stud_name"));
+                List.add(stud);
+            }
+        }catch(SQLException e){
+            System.err.println(e);
+        }
+        return List;
+    }
+    
+    public void studentsNames(){
+        ArrayList<Student> lst = studNames();
+        
+        DefaultTableModel model = studentNames;
+        Object[] row = new Object[1];
+        for(int i=0; i<lst.size(); i++)
+        {
+            row[0] = lst.get(i).getName();
+            model.addRow(row);
+        }
+    }
+    
+    public ArrayList<ExamSession> sessionsList(){
+        ArrayList<ExamSession> sessionsLst = new ArrayList<>();
+        try{
+            Connection conn = DriverManager.getConnection(CONN_STRING,USERNAME,PASSWORD);
+            String examData = "SELECT * FROM exam_sessions WHERE stud_names = '0'";
+            Statement stmt = conn.createStatement();
+            ResultSet rst = stmt.executeQuery(examData);
+
+            ExamSession ex;
+            
+            while(rst.next()){
+                ex = new ExamSession(rst.getInt("sessionID"), rst.getInt("examID"),rst.getString("acceptance"));
+                sessionsLst.add(ex);
+            }
+        }catch(SQLException e){
+            System.err.println(e);
+        }
+        return sessionsLst;
+    }
+    
+    public void showSessions(){
+        ArrayList<ExamSession> lst = sessionsList();
+        
+        DefaultTableModel model = sessionsTable;
+        Object [] row = new Object[3];
+        for (int i = 0; i < lst.size(); i++) {
+            row[0] = lst.get(i).getSessionID();
+            row[1] = lst.get(i).getExamID();
+            row[2] = lst.get(i).getAcceptance();
+            model.addRow(row);
+        }
+    }
+    
+    public void createSession(){
+        try{
+            Connection conn = DriverManager.getConnection(CONN_STRING,USERNAME,PASSWORD);
+            String SQL = "INSERT INTO exam_sessions(sessionID,examID,stud_names,acceptance)"
+                    + "VALUES(NULL,'"+Emergency.ID+"','0','close')";
+            Statement stmt = conn.createStatement();
+            stmt.executeUpdate(SQL);
+        }catch(SQLException e){
+            System.err.println(e);
+        }
+    }
+    
+    public void addSession(int row1 , int row2){
+        try{
+            Connection conn = DriverManager.getConnection(CONN_STRING,USERNAME,PASSWORD);
+            String SQL = "INSERT INTO exam_sessions(sessionID,examID,stud_names)"
+                    + "VALUES(NULL,'"+Emergency.ID+"','"+studName+"')";
+            Statement stmt = conn.createStatement();
+            stmt.executeUpdate(SQL);
+            JOptionPane.showMessageDialog(null, "Added Successfuly..");
+        }catch(SQLException e){
+            System.err.println(e);
+        }
+    }
+    
+    public void updateAcceptance(int row){
+        try{
+            Connection conn = DriverManager.getConnection(CONN_STRING,USERNAME,PASSWORD);
+            String update = "UPDATE exam_sessions SET acceptance = 'open' WHERE examID = '"+Emergency.ID+"'";
+            Statement stmt = conn.createStatement();
+            stmt.executeUpdate(update);
+            JOptionPane.showMessageDialog(null, "Updated Successfuly..");
         }catch(SQLException e){
             System.err.println(e);
         }
