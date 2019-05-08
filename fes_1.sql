@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 11, 2019 at 12:23 PM
+-- Generation Time: May 01, 2019 at 06:48 PM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.3.2
 
@@ -34,6 +34,13 @@ CREATE TABLE `administrator` (
   `admin_pass` varchar(64) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `administrator`
+--
+
+INSERT INTO `administrator` (`admin_id`, `admin_username`, `admin_pass`) VALUES
+(1, 'admin', '123');
+
 -- --------------------------------------------------------
 
 --
@@ -63,6 +70,26 @@ CREATE TABLE `instructors` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `inst_requests`
+--
+
+CREATE TABLE `inst_requests` (
+  `inst_id` int(11) NOT NULL,
+  `inst_name` varchar(30) NOT NULL,
+  `inst_pass` varchar(64) NOT NULL,
+  `inst_mail` varchar(150) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `inst_requests`
+--
+
+INSERT INTO `inst_requests` (`inst_id`, `inst_name`, `inst_pass`, `inst_mail`) VALUES
+(1, 'Mahmoud Saeed', '4566', 'Mahmoud_saeed@inst');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `questions`
 --
 
@@ -81,12 +108,42 @@ CREATE TABLE `questions` (
 
 CREATE TABLE `students` (
   `stud_id` int(11) NOT NULL,
-  `stud_name` varchar(30) NOT NULL,
+  `stud_name` varchar(50) NOT NULL,
+  `stud_pass` varchar(30) NOT NULL,
   `stud_phone` varchar(15) NOT NULL,
-  `stud_mail` varchar(50) NOT NULL,
+  `stud_mail` varchar(100) NOT NULL,
   `stud_sessions` int(11) NOT NULL,
   `stud_grades` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `students`
+--
+
+INSERT INTO `students` (`stud_id`, `stud_name`, `stud_pass`, `stud_phone`, `stud_mail`, `stud_sessions`, `stud_grades`) VALUES
+(1, 'mahmoudsaeed', '123', '01115736084', 'mahmoudsaeed@stud', 5, 10),
+(2, 'mostafa khaled', '456', '01115736084', 'mostafa@stud', 5, 10);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `stud_requests`
+--
+
+CREATE TABLE `stud_requests` (
+  `stud_id` int(11) NOT NULL,
+  `stud_name` varchar(30) NOT NULL,
+  `stud_pass` varchar(64) NOT NULL,
+  `stud_mail` varchar(150) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `stud_requests`
+--
+
+INSERT INTO `stud_requests` (`stud_id`, `stud_name`, `stud_pass`, `stud_mail`) VALUES
+(1, 'Mostafa Khaled', '245354', 'Mostafa_khaled@stud'),
+(2, 'khaled ahmed', 'dsafsdf', 'Khaled_ahmed_16@stud');
 
 --
 -- Indexes for dumped tables
@@ -112,6 +169,12 @@ ALTER TABLE `instructors`
   ADD PRIMARY KEY (`inst_id`);
 
 --
+-- Indexes for table `inst_requests`
+--
+ALTER TABLE `inst_requests`
+  ADD PRIMARY KEY (`inst_id`);
+
+--
 -- Indexes for table `questions`
 --
 ALTER TABLE `questions`
@@ -125,6 +188,12 @@ ALTER TABLE `students`
   ADD PRIMARY KEY (`stud_id`);
 
 --
+-- Indexes for table `stud_requests`
+--
+ALTER TABLE `stud_requests`
+  ADD PRIMARY KEY (`stud_id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -132,7 +201,7 @@ ALTER TABLE `students`
 -- AUTO_INCREMENT for table `administrator`
 --
 ALTER TABLE `administrator`
-  MODIFY `admin_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `admin_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `exams`
@@ -147,6 +216,12 @@ ALTER TABLE `instructors`
   MODIFY `inst_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `inst_requests`
+--
+ALTER TABLE `inst_requests`
+  MODIFY `inst_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `questions`
 --
 ALTER TABLE `questions`
@@ -156,7 +231,13 @@ ALTER TABLE `questions`
 -- AUTO_INCREMENT for table `students`
 --
 ALTER TABLE `students`
-  MODIFY `stud_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `stud_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `stud_requests`
+--
+ALTER TABLE `stud_requests`
+  MODIFY `stud_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Constraints for dumped tables

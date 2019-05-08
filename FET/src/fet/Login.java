@@ -5,6 +5,7 @@
  */
 package fet;
 import fet.JDBC.*;
+import javax.swing.JOptionPane;
 
 //import javafx.scene.paint.Color;
 
@@ -14,7 +15,9 @@ import fet.JDBC.*;
  */
 public class Login extends javax.swing.JFrame {
 
+    
     JDBC j = new JDBC();
+    public String Mail;
     /**
      * Creates new form Login
      */
@@ -121,7 +124,7 @@ public class Login extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel4.setText("Username or Email");
         jPanel1.add(jLabel4);
-        jLabel4.setBounds(550, 110, 130, 40);
+        jLabel4.setBounds(550, 110, 170, 40);
 
         jLabel5.setBackground(new java.awt.Color(255, 255, 255));
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -185,9 +188,11 @@ public class Login extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        Mail = Tf_usname.getText();
         j.usName = Tf_usname.getText();
         j.usPass = Tf_pass.getText();
         j.Login(j);
+        //JOptionPane.showMessageDialog(null, uf.instId);
         Tf_usname.setText("");
         Tf_pass.setText("");
     }//GEN-LAST:event_jButton1ActionPerformed

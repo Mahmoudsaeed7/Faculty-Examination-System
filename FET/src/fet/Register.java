@@ -16,6 +16,8 @@ import fet.JDBC.*;
 public class Register extends javax.swing.JFrame {
 
     JDBC j = new JDBC();
+    public boolean reg = true;
+    public boolean reg2 = true;
     
     /**
      * Creates new form Register
