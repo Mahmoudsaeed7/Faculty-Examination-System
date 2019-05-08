@@ -10,15 +10,20 @@ package fet;
  * @author MAHMOUD SAEED
  */
 public class Exam {
-    private int examID , duration;
+    private int examID , duration , grades;
     private String examName , courseName , date;
     
-    Exam(int id , String exName , int exDuration , String exDate , String cName){
+    Exam(int id , String exName , int exDuration , String exDate , String cName , int Grades){
         this.examID = id;
         this.examName = exName;
         this.duration = exDuration;
         this.date = exDate;
         this.courseName = cName;
+        this.grades = Grades;
+    }
+
+    public int getGrades() {
+        return grades;
     }
 
     public int getDuration() {

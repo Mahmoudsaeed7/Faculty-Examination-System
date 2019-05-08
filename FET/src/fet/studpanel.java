@@ -6,6 +6,9 @@
 package fet;
 
 import java.awt.Panel;
+import java.util.*;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -13,10 +16,22 @@ import java.awt.Panel;
  */
 public class studpanel extends javax.swing.JFrame {
 
-    
+    public int total=0;
+    JDBC j = new JDBC();
+    public int questCounter = 0;
     public studpanel() {
         initComponents();
         
+        buttonGroup1.add(quest_1);
+        buttonGroup1.add(quest_2);
+        buttonGroup1.add(quest_3);
+        buttonGroup1.add(quest_4);
+        j.exTable = (DefaultTableModel)exTable.getModel();
+        j.exList();
+        for (int i = 0; i < exTable.getModel().getRowCount(); i++) {
+            Emergency.ID = (int)exTable.getModel().getValueAt(i, 0);
+            exTable.setValueAt(j.getAcceptanceStatus(), i, 5);
+        }
         jPanel3.setVisible(false);
     }
 
@@ -29,24 +44,26 @@ public class studpanel extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        Grades = new javax.swing.JPanel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
+        jLabel3 = new javax.swing.JLabel();
         Exam = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        jButton1 = new javax.swing.JButton();
+        exTable = new javax.swing.JTable();
         jPanel3 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        questLabel = new javax.swing.JLabel();
+        numLabel = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
-        jRadioButton4 = new javax.swing.JRadioButton();
-        jRadioButton5 = new javax.swing.JRadioButton();
-        jRadioButton6 = new javax.swing.JRadioButton();
-        jRadioButton7 = new javax.swing.JRadioButton();
+        quest_2 = new javax.swing.JRadioButton();
+        quest_3 = new javax.swing.JRadioButton();
+        quest_4 = new javax.swing.JRadioButton();
+        quest_1 = new javax.swing.JRadioButton();
+        jButton1 = new javax.swing.JButton();
+        Grades = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        gradesTable = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1370, 770));
@@ -79,55 +96,87 @@ public class studpanel extends javax.swing.JFrame {
         jPanel2.add(jLabel2);
         jLabel2.setBounds(10, 260, 170, 60);
 
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/logout.png"))); // NOI18N
+        jLabel3.setText("   Log Out");
+        jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel3MouseClicked(evt);
+            }
+        });
+        jPanel2.add(jLabel3);
+        jLabel3.setBounds(10, 710, 170, 60);
+
         getContentPane().add(jPanel2);
         jPanel2.setBounds(0, 0, 180, 770);
-
-        Grades.setBackground(new java.awt.Color(255, 255, 255));
-        Grades.setLayout(null);
-
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
-            }
-        ));
-        jTable2.setRowHeight(30);
-        jTable2.setShowHorizontalLines(false);
-        jTable2.setShowVerticalLines(false);
-        jScrollPane2.setViewportView(jTable2);
-
-        Grades.add(jScrollPane2);
-        jScrollPane2.setBounds(320, 70, 970, 520);
-
-        getContentPane().add(Grades);
-        Grades.setBounds(0, 0, 1370, 770);
 
         Exam.setBackground(new java.awt.Color(255, 255, 255));
         Exam.setLayout(null);
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        exTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "ID", "Exam Name", "Duration", "Date", "Course Name", "Acceptance"
             }
         ));
-        jTable1.setRowHeight(30);
-        jTable1.setShowHorizontalLines(false);
-        jTable1.setShowVerticalLines(false);
-        jScrollPane1.setViewportView(jTable1);
+        exTable.setRowHeight(30);
+        exTable.setShowHorizontalLines(false);
+        exTable.setShowVerticalLines(false);
+        jScrollPane1.setViewportView(exTable);
 
         Exam.add(jScrollPane1);
         jScrollPane1.setBounds(310, 50, 990, 510);
+
+        jPanel3.setLayout(null);
+
+        questLabel.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        questLabel.setText("Question");
+        jPanel3.add(questLabel);
+        questLabel.setBounds(300, 140, 1060, 60);
+
+        numLabel.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jPanel3.add(numLabel);
+        numLabel.setBounds(230, 150, 60, 40);
+
+        jButton2.setText("Next");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(jButton2);
+        jButton2.setBounds(1200, 690, 120, 60);
+
+        quest_2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        quest_2.setText("jRadioButton1");
+        jPanel3.add(quest_2);
+        quest_2.setBounds(280, 410, 890, 80);
+
+        quest_3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        quest_3.setText("jRadioButton1");
+        jPanel3.add(quest_3);
+        quest_3.setBounds(280, 500, 890, 80);
+
+        quest_4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        quest_4.setText("jRadioButton1");
+        jPanel3.add(quest_4);
+        quest_4.setBounds(280, 600, 890, 80);
+
+        quest_1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        quest_1.setText("jRadioButton1");
+        quest_1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                quest_1ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(quest_1);
+        quest_1.setBounds(280, 320, 890, 80);
+
+        Exam.add(jPanel3);
+        jPanel3.setBounds(0, 0, 1370, 770);
 
         jButton1.setText("Enter");
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -138,47 +187,30 @@ public class studpanel extends javax.swing.JFrame {
         Exam.add(jButton1);
         jButton1.setBounds(720, 630, 190, 50);
 
-        jPanel3.setLayout(null);
-
-        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel3.setText("Question");
-        jPanel3.add(jLabel3);
-        jLabel3.setBounds(300, 140, 1060, 60);
-
-        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel4.setText("1");
-        jPanel3.add(jLabel4);
-        jLabel4.setBounds(280, 150, 10, 40);
-
-        jButton2.setText("Next");
-        jPanel3.add(jButton2);
-        jButton2.setBounds(1200, 690, 120, 60);
-
-        jRadioButton4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jRadioButton4.setText("jRadioButton1");
-        jPanel3.add(jRadioButton4);
-        jRadioButton4.setBounds(280, 410, 890, 80);
-
-        jRadioButton5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jRadioButton5.setText("jRadioButton1");
-        jPanel3.add(jRadioButton5);
-        jRadioButton5.setBounds(280, 500, 890, 80);
-
-        jRadioButton6.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jRadioButton6.setText("jRadioButton1");
-        jPanel3.add(jRadioButton6);
-        jRadioButton6.setBounds(280, 600, 890, 80);
-
-        jRadioButton7.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jRadioButton7.setText("jRadioButton1");
-        jPanel3.add(jRadioButton7);
-        jRadioButton7.setBounds(280, 320, 890, 80);
-
-        Exam.add(jPanel3);
-        jPanel3.setBounds(0, 0, 1370, 770);
-
         getContentPane().add(Exam);
         Exam.setBounds(0, 0, 1370, 770);
+
+        Grades.setBackground(new java.awt.Color(255, 255, 255));
+        Grades.setLayout(null);
+
+        gradesTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "ID", "Exam Name", "Duration", "Date", "Course Name"
+            }
+        ));
+        gradesTable.setRowHeight(30);
+        gradesTable.setShowHorizontalLines(false);
+        gradesTable.setShowVerticalLines(false);
+        jScrollPane2.setViewportView(gradesTable);
+
+        Grades.add(jScrollPane2);
+        jScrollPane2.setBounds(320, 70, 970, 520);
+
+        getContentPane().add(Grades);
+        Grades.setBounds(0, 0, 1370, 770);
 
         setSize(new java.awt.Dimension(1386, 809));
         setLocationRelativeTo(null);
@@ -195,10 +227,72 @@ public class studpanel extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel1MouseClicked
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+       
+        int selectedRow = exTable.getSelectedRow();
+      
+            if (exTable.getModel().getValueAt(selectedRow, 5).equals("close")) {
+                
+            JOptionPane.showMessageDialog(null, "Can't enter the exam");
+        }
+            else{
         jPanel3.setVisible(true);
         jScrollPane1.setVisible(false);
         jButton1.setVisible(false);
+         ArrayList<question> lst = j.questList();
+        String correctAns = (String)lst.get(questCounter).getCorrectAns();
+        
+            Emergency.ID = (int)exTable.getModel().getValueAt(selectedRow, 0);
+                quest_1.setText(lst.get(questCounter).getChoose_1());
+                quest_2.setText(lst.get(questCounter).getChoose_2());
+                quest_3.setText(lst.get(questCounter).getChoose_3());
+                quest_4.setText(lst.get(questCounter).getChoose_4());
+                questLabel.setText(lst.get(questCounter).getQuestion_num());
+                numLabel.setText(""+(questCounter+1));
+                questCounter++;
+            }
     }//GEN-LAST:event_jButton1MouseClicked
+
+    private void quest_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quest_1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_quest_1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        int selectedRow = exTable.getSelectedRow();
+        j.questList();
+        String correctAns ;
+        Emergency.ID = (int)exTable.getModel().getValueAt(selectedRow, 0);
+        Emergency.numOfQuest=(int)j.questList().get(Emergency.ID).getQuestionNum();
+        correctAns = (String)j.questList().get(questCounter).getCorrectAns();
+        if(quest_1.isSelected()&& correctAns.equals(correctAns)){
+            total+=(Emergency.grade/Emergency.numOfQuest);
+            
+         //   JOptionPane.showMessageDialog(null, total);
+        }        
+         
+        j.examList();
+       
+     //   JOptionPane.showMessageDialog(null, Emergency.numOfQuest);
+   //     JOptionPane.showMessageDialog(null, Emergency.totalGrade);
+//        questCounter++;
+       ArrayList<question> lst = j.questList();
+      // String correctAns = (String)lst.get(questCounter).getCorrectAns();
+//        int selectedRow = exTable.getSelectedRow();
+            Emergency.ID = (int)exTable.getModel().getValueAt(selectedRow, 0);
+                quest_1.setText(lst.get(questCounter).getChoose_1());
+                quest_2.setText(lst.get(questCounter).getChoose_2());
+                quest_3.setText(lst.get(questCounter).getChoose_3());
+                quest_4.setText(lst.get(questCounter).getChoose_4());
+                questLabel.setText(lst.get(questCounter).getQuestion_num());
+                numLabel.setText(""+(questCounter+1));
+                questCounter++;
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
+        Login lg=new Login();
+        lg.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jLabel3MouseClicked
 
     /**
      * @param args the command line arguments
@@ -238,21 +332,23 @@ public class studpanel extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Exam;
     private javax.swing.JPanel Grades;
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JTable exTable;
+    private javax.swing.JTable gradesTable;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JRadioButton jRadioButton4;
-    private javax.swing.JRadioButton jRadioButton5;
-    private javax.swing.JRadioButton jRadioButton6;
-    private javax.swing.JRadioButton jRadioButton7;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTable jTable2;
+    private javax.swing.JLabel numLabel;
+    private javax.swing.JLabel questLabel;
+    private javax.swing.JRadioButton quest_1;
+    private javax.swing.JRadioButton quest_2;
+    private javax.swing.JRadioButton quest_3;
+    private javax.swing.JRadioButton quest_4;
     // End of variables declaration//GEN-END:variables
 }

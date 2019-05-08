@@ -73,7 +73,6 @@ public class Admin extends javax.swing.JFrame {
         btn_inst = new javax.swing.JButton();
         examBtn = new javax.swing.JButton();
         jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
         exampanel = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         studTable = new javax.swing.JTable();
@@ -81,6 +80,7 @@ public class Admin extends javax.swing.JFrame {
         jButton9 = new javax.swing.JButton();
         jScrollPane7 = new javax.swing.JScrollPane();
         sessionTable = new javax.swing.JTable();
+        jButton4 = new javax.swing.JButton();
         instructor = new javax.swing.JPanel();
         jScrollPane4 = new javax.swing.JScrollPane();
         req_table = new javax.swing.JTable();
@@ -215,6 +215,11 @@ public class Admin extends javax.swing.JFrame {
         jLabel13.setForeground(new java.awt.Color(255, 255, 255));
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/logout.png"))); // NOI18N
         jLabel13.setText("  Log Out");
+        jLabel13.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel13MouseClicked(evt);
+            }
+        });
         expandedbar.add(jLabel13);
         jLabel13.setBounds(10, 710, 190, 60);
 
@@ -298,6 +303,11 @@ public class Admin extends javax.swing.JFrame {
 
         jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fet/Images/logout.png"))); // NOI18N
+        jLabel12.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel12MouseClicked(evt);
+            }
+        });
         collapsedbar.add(jLabel12);
         jLabel12.setBounds(0, 710, 80, 60);
 
@@ -450,13 +460,6 @@ public class Admin extends javax.swing.JFrame {
         homepanel.add(jLabel14);
         jLabel14.setBounds(610, 230, 290, 310);
 
-        jLabel15.setBackground(new java.awt.Color(255, 153, 153));
-        jLabel15.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel15.setOpaque(true);
-        homepanel.add(jLabel15);
-        jLabel15.setBounds(430, 170, 610, 50);
-
         getContentPane().add(homepanel);
         homepanel.setBounds(0, 0, 1370, 770);
 
@@ -542,6 +545,15 @@ public class Admin extends javax.swing.JFrame {
 
         exampanel.add(jScrollPane7);
         jScrollPane7.setBounds(340, 10, 880, 200);
+
+        jButton4.setText("Close");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+        exampanel.add(jButton4);
+        jButton4.setBounds(680, 590, 100, 30);
 
         getContentPane().add(exampanel);
         exampanel.setBounds(0, 0, 1370, 770);
@@ -1345,6 +1357,7 @@ public class Admin extends javax.swing.JFrame {
         int selectedRow2 = studTable.getSelectedRow();
         j.studName = (String)studTable.getModel().getValueAt(selectedRow2, 0);
         Emergency.ID = (int)sessionTable.getModel().getValueAt(selectedRow, 1);
+        j.accept = (String)sessionTable.getModel().getValueAt(selectedRow, 2);
         j.addSession(selectedRow, selectedRow2);
     }//GEN-LAST:event_jButton9ActionPerformed
 
@@ -1353,9 +1366,29 @@ public class Admin extends javax.swing.JFrame {
         j.sessionsTable = (DefaultTableModel)sessionTable.getModel();
         int selectedRow = sessionTable.getSelectedRow();
         Emergency.ID = (int)sessionTable.getModel().getValueAt(selectedRow, 1);
-        j.sessionsTable.setValueAt("open",selectedRow, 2);
+        j.sessionsTable.setValueAt("Opened",selectedRow, 2);
         j.updateAcceptance(selectedRow);
     }//GEN-LAST:event_openBtnActionPerformed
+
+    private void jLabel13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel13MouseClicked
+        Login lg=new Login();
+        lg.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jLabel13MouseClicked
+
+    private void jLabel12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel12MouseClicked
+        Login lg=new Login();
+        lg.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jLabel12MouseClicked
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        j.sessionsTable = (DefaultTableModel)sessionTable.getModel();
+        int selectedRow = sessionTable.getSelectedRow();
+        Emergency.ID = (int)sessionTable.getModel().getValueAt(selectedRow, 1);
+        j.sessionsTable.setValueAt("Closed",selectedRow, 2);
+        j.updateAcceptance2(selectedRow);
+    }//GEN-LAST:event_jButton4ActionPerformed
            
     /**
      * @param args the command line arguments
@@ -1417,6 +1450,7 @@ public class Admin extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -1424,7 +1458,6 @@ public class Admin extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;

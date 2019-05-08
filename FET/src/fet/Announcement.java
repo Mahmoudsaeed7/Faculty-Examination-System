@@ -9,9 +9,6 @@ package fet;
  *
  * @author MAHMOUD SAEED
  */
-public final class Emergency {
-    static int ID;
-    static int grade;
-    static int totalGrade =0;
-    static int numOfQuest;
+public class Announcement {
+    
 }

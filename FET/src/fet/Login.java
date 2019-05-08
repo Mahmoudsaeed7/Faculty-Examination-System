@@ -191,8 +191,8 @@ public class Login extends javax.swing.JFrame {
         Mail = Tf_usname.getText();
         j.usName = Tf_usname.getText();
         j.usPass = Tf_pass.getText();
+        this.setVisible(false);
         j.Login(j);
-        //JOptionPane.showMessageDialog(null, uf.instId);
         Tf_usname.setText("");
         Tf_pass.setText("");
     }//GEN-LAST:event_jButton1ActionPerformed

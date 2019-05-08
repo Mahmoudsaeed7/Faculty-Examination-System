@@ -5,12 +5,15 @@
  */
 package fet;
 
+import java.util.*;
+
 /**
  *
  * @author MAHMOUD SAEED
  */
 public class Instructor extends Person {
     private int id,age,courses;
+    ArrayList<String>listofcourses;
 
     public Instructor() {
         super(null, null);
