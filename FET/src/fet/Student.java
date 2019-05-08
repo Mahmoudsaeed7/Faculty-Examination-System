@@ -5,13 +5,16 @@
  */
 package fet;
 
+import java.util.*;
+
 /**
  *
  * @author MAHMOUD SAEED
  */
 public class Student extends Person{
     private int Id,sessions,gardes;
-    
+    ArrayList<ExamSession>lstsession;
+    ArrayList<Integer>lstgrades;
     public Student(String Name){
         super(Name);
     }

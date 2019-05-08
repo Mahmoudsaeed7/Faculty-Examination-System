@@ -10,5 +10,17 @@ package fet;
  * @author MAHMOUD SAEED
  */
 public class ExamReport {
-    
+    private int examid;
+
+    public int getExamid() {
+        return examid;
+    }
+
+    public void setExamid(int examid) {
+        this.examid = examid;
+    }
+    public void generateHisotgram()
+    {
+        
+    }
 }

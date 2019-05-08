@@ -10,5 +10,23 @@ package fet;
  * @author MAHMOUD SAEED
  */
 public class Announcement {
+    private  String instname;
+    private String message;
+
+    public void setInstname(String instname) {
+        this.instname = instname;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    public String getInstname() {
+        return instname;
+    }
+
+    public String getMessage() {
+        return message;
+    }
     
 }
